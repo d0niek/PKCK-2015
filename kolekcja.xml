@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kolekcja>
+
+	<notatka>
+		<autorzy>
+		</autorzy>
+	</notatka>
+
+	<płyty>
+
+		<płyta>
+			<tytuł></tytuł>
+			<wykonawca id="1">fdhgfdhs</wykonawca>
+			<czas_trwania></czas_trwania>
+			<okładka></okładka>
+			<cena></cena>
+			<status></status>
+			<lista_utworów>
+				<utwór numer = "">
+					<tytuł></tytuł>
+					<długość></długość>
+				</utwór>
+				<utwór numer = "">
+					<tytuł></tytuł>
+					<długość></długość>
+				</utwór>
+				<utwór numer = "">
+					<tytuł></tytuł>
+					<długość></długość>
+				</utwór>
+				<utwór numer = "">
+					<tytuł></tytuł>
+					<długość></długość>
+				</utwór>
+			</lista_utworów>
+		</płyta>
+
+	</płyty>
+
+	<wykonawcy>
+	</wykonawcy>
+
+</kolekcja>
