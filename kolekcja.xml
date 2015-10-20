@@ -1,74 +1,70 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <kolekcja>
 
-  <nagłówek>
-    <opis>Katalog płyt</opis>
-    <data dzień="1" miesiąc="11" rok="2111"/>
-    <autorzy>
-      <autor>
-        <imię>Abcd</imię>
-        <nazwisko>Efg</nazwisko>
-        <numer_indeksu>123123</numer_indeksu>
-        <kierunek>Informatyka, Technologie XML</kierunek>
-      </autor>
-      <autor>
-        <imię>Abcd</imię>
-        <nazwisko>Efg</nazwisko>
-        <numer_indeksu>123124</numer_indeksu>
-        <kierunek>Informatyka, Inżynieria CSS</kierunek>
-      </autor>
-    </autorzy>
-  </nagłówek>
+    <nagłówek>
+        <opis>Katalog płyt</opis>
+        <data dzień="26" miesiąc="10" rok="2015"/>
+        <autorzy>
+            <autor>
+                <imię>Bogna</imię>
+                <nazwisko>Dudaczyk</nazwisko>
+                <numer_indeksu>189650</numer_indeksu>
+                <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
+            </autor>
+            <autor>
+                <imię></imię>
+                <nazwisko></nazwisko>
+                <numer_indeksu></numer_indeksu>
+                <kierunek></kierunek>
+            </autor>
+        </autorzy>
+    </nagłówek>
 
-  <płyty>
+    <płyty>
 
-    <płyta id="1" wykonawca="1">
-      <tytuł>Szanty</tytuł>
-      <wykonawca>Piraci z Bałut</wykonawca>
-      <czas_trwania>44:55</czas_trwania>
-      <okładka></okładka>
-      <cena>29,99</cena>
-      <lista_utworów>
-        <utwór nr="1">
-          <tytuł>Arrr</tytuł>
-          <długość>4:20</długość>
-        </utwór>
-        <utwór nr="2">
-          <tytuł>Arr</tytuł>
-          <długość>4:20</długość>
-        </utwór>
-        <utwór nr="3">
-          <tytuł>Arrrr</tytuł>
-          <długość>4:20</długość>
-        </utwór>
-        <utwór nr="4">
-          <tytuł>Arrrr</tytuł>
-          <długość>4:20</długość>
-        </utwór>
-      </lista_utworów>
-    </płyta>
+        <płyta płyta_id="CD1" wykonawca="WYK1">
+            <tytuł>Szanty</tytuł>
+            <wykonawca>Piraci z Bałut</wykonawca>
+            <czas_trwania>44:55</czas_trwania>
+            <cena>29,99</cena>
+            <lista_utworów>
+                <utwór nr="1">
+                    <tytuł>Arrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="2">
+                    <tytuł>Arr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="3">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="4">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+            </lista_utworów>
+        </płyta>
 
-    <płyta id="2" wykonawca="2">
-      <tytuł>Na trąbce</tytuł>
-      <wykonawca>Człowiek orkiestra</wykonawca>
-      <czas_trwania>20:00</czas_trwania>
-      <okładka></okładka>
-      <cena>19,99</cena>
-      <lista_utworów>
-        <utwór nr="1">
-          <tytuł>Granie na trąbce</tytuł>
-          <długość>20:00</długość>
-        </utwór>
-      </lista_utworów>
+        <płyta płyta_id="CD2" wykonawca="WYK2">
+            <tytuł>Na trąbce</tytuł>
+            <wykonawca>Człowiek orkiestra</wykonawca>
+            <czas_trwania>20:00</czas_trwania>
+            <cena>19,99</cena>
+            <lista_utworów>
+                <utwór nr="1">
+                    <tytuł>Granie na trąbce</tytuł>
+                    <długość>20:00</długość>
+                </utwór>
+            </lista_utworów>
+        </płyta>
 
-    </płyta>
+    </płyty>
 
-  </płyty>
-
-  <wykonawcy>
-    <!-- Gatunek - ATTLIST, tylko ze zbioru dopuszczalnych wartości-->
-    <wykonawca id="1" nazwa="Piraci z Bałut" gatunek="Arrr" członków="3"/>
-    <wykonawca id="2" nazwa="Człowiek orkiestra" gatunek="wszystkie" członków="1"/>
-  </wykonawcy>
+    <wykonawcy>
+        <wykonawca wykonawca_id="WYK1" nazwa="Piraci z Bałut" gatunek="Arrr" członków="3"/>
+        <wykonawca wykonawca_id="WYK2" nazwa="Człowiek orkiestra" gatunek="wszystkie" członków="1"/>
+    </wykonawcy>
 
 </kolekcja>
