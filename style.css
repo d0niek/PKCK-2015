@@ -1,0 +1,100 @@
+[class="block"] {
+    display: block;
+}
+
+/* Header */
+nagłówek {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+}
+
+nagłówek > opis {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    padding: 10px;
+    width: 18%;
+}
+
+nagłówek autor {
+    float: left;
+    padding: 10px;
+    width: 36%;
+}
+
+autor > numer_indeksu::before {
+    content: "(";
+}
+
+autor > numer_indeksu::after {
+    content: ")";
+}
+/* END Header */
+
+płyty {
+    margin: 56px auto 0;
+    width: 1060px;
+}
+
+płyta {
+    color: rgb(255, 255, 255);
+    float: left;
+    font-weight: bold;
+    height: 470px;
+    margin: 15px;
+    padding: 15px;
+    width: 470px;
+}
+
+płyta > tytuł::before {
+    content: "Tytuł: ";
+    font-weight: normal;
+}
+
+płyta > wykonawca::before {
+    content: "Wykonawca: ";
+    font-weight: normal;
+}
+
+płyta > czas_trwania::before {
+    content: "Łączny czas nagrań: ";
+    font-weight: normal;
+}
+
+płyta > cena::before {
+    content: "Cena: ";
+    font-weight: normal;
+}
+
+płyta > cena {
+    margin-bottom: 8px;
+}
+
+płyta > lista_utworów > utwór {
+    background: url("img/point.png") no-repeat;
+    background-size: auto 100%;
+    display: block;
+    font-weight: normal;
+    margin-left: 8px;
+    padding-left: 20px;
+}
+
+utwór > długość {
+    float: right;
+}
+
+/* CD cover */
+płyta[płyta_id="CD1"] {
+    background: url("img/okladka_1.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+płyta[płyta_id="CD2"] {
+    background: url("img/okladka_2.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+płyta[płyta_id="CD3"] {
+    background: url("img/okladka_3.jpg") no-repeat 0 0 / 100% 100%;
+}
+/* END CD cover */

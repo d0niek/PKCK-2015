@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="style.css"?>
 <kolekcja>
 
-    <nagłówek>
+    <nagłówek class="block">
         <opis>Katalog płyt</opis>
         <data dzień="26" miesiąc="10" rok="2015"/>
         <autorzy>
@@ -9,24 +10,23 @@
                 <imię>Bogna</imię>
                 <nazwisko>Dudaczyk</nazwisko>
                 <numer_indeksu>189650</numer_indeksu>
-                <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
+                <kierunek class="block">Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
             <autor>
-                <imię></imię>
-                <nazwisko></nazwisko>
-                <numer_indeksu></numer_indeksu>
-                <kierunek></kierunek>
+                <imię>Damian</imię>
+                <nazwisko>Glinkowski</nazwisko>
+                <numer_indeksu>185051</numer_indeksu>
+                <kierunek class="block">Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
         </autorzy>
     </nagłówek>
 
-    <płyty>
-
+    <płyty class="block">
         <płyta płyta_id="CD1" wykonawca="WYK1">
-            <tytuł>Szanty</tytuł>
-            <wykonawca>Piraci z Bałut</wykonawca>
-            <czas_trwania>44:55</czas_trwania>
-            <cena>29,99</cena>
+            <tytuł class="block">Szanty</tytuł>
+            <wykonawca class="block">Piraci z Bałut</wykonawca>
+            <czas_trwania class="block">44:55</czas_trwania>
+            <cena class="block">29,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Arrr</tytuł>
@@ -46,12 +46,11 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-
         <płyta płyta_id="CD2" wykonawca="WYK2">
-            <tytuł>Na trąbce</tytuł>
-            <wykonawca>Człowiek orkiestra</wykonawca>
-            <czas_trwania>20:00</czas_trwania>
-            <cena>19,99</cena>
+            <tytuł class="block">Na trąbce</tytuł>
+            <wykonawca class="block">Człowiek orkiestra</wykonawca>
+            <czas_trwania class="block">20:00</czas_trwania>
+            <cena class="block">19,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Granie na trąbce</tytuł>
@@ -59,7 +58,30 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-
+        <płyta płyta_id="CD3" wykonawca="WYK1">
+            <tytuł class="block">Szanty</tytuł>
+            <wykonawca class="block">Piraci z Bałut</wykonawca>
+            <czas_trwania class="block">44:55</czas_trwania>
+            <cena class="block">29,99</cena>
+            <lista_utworów>
+                <utwór nr="1">
+                    <tytuł>Arrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="2">
+                    <tytuł>Arr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="3">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="4">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+            </lista_utworów>
+        </płyta>
     </płyty>
 
     <wykonawcy>
