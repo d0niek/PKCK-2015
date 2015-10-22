@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="style.css"?>
 <kolekcja>
 
     <nagłówek>
@@ -12,16 +13,15 @@
                 <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
             <autor>
-                <imię></imię>
-                <nazwisko></nazwisko>
-                <numer_indeksu></numer_indeksu>
-                <kierunek></kierunek>
+                <imię>Damian</imię>
+                <nazwisko>Glinkowski</nazwisko>
+                <numer_indeksu>185051</numer_indeksu>
+                <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
         </autorzy>
     </nagłówek>
 
     <płyty>
-
         <płyta płyta_id="CD1" wykonawca="WYK1">
             <tytuł>Szanty</tytuł>
             <wykonawca>Piraci z Bałut</wykonawca>
@@ -46,7 +46,6 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-
         <płyta płyta_id="CD2" wykonawca="WYK2">
             <tytuł>Na trąbce</tytuł>
             <wykonawca>Człowiek orkiestra</wykonawca>
@@ -59,7 +58,6 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-
     </płyty>
 
     <wykonawcy>
