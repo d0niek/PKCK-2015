@@ -34,17 +34,17 @@ autor > numer_indeksu::after {
 /* END Header */
 
 płyty {
-    margin-top: 56px;
-    text-align: center;
+    margin: 56px auto 0;
+    width: 1060px;
 }
 
 płyta {
-    display: inline-block;
+    color: rgb(255, 255, 255);
+    float: left;
     font-weight: bold;
     height: 470px;
     margin: 15px;
     padding: 15px;
-    text-align: left;
     width: 470px;
 }
 
@@ -73,7 +73,7 @@ płyta > cena {
 }
 
 płyta > lista_utworów > utwór {
-    background: url("img/point.jpg") no-repeat;
+    background: url("img/point.png") no-repeat;
     background-size: auto 100%;
     display: block;
     font-weight: normal;
@@ -84,3 +84,17 @@ płyta > lista_utworów > utwór {
 utwór > długość {
     float: right;
 }
+
+/* CD cover */
+płyta[płyta_id="CD1"] {
+    background: url("img/okladka_1.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+płyta[płyta_id="CD2"] {
+    background: url("img/okladka_2.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+płyta[płyta_id="CD3"] {
+    background: url("img/okladka_3.jpg") no-repeat 0 0 / 100% 100%;
+}
+/* END CD cover */
