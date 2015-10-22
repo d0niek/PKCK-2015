@@ -58,6 +58,30 @@
                 </utwór>
             </lista_utworów>
         </płyta>
+        <płyta płyta_id="CD3" wykonawca="WYK1">
+            <tytuł class="block">Szanty</tytuł>
+            <wykonawca class="block">Piraci z Bałut</wykonawca>
+            <czas_trwania class="block">44:55</czas_trwania>
+            <cena class="block">29,99</cena>
+            <lista_utworów>
+                <utwór nr="1">
+                    <tytuł>Arrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="2">
+                    <tytuł>Arr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="3">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+                <utwór nr="4">
+                    <tytuł>Arrrr</tytuł>
+                    <długość>4:20</długość>
+                </utwór>
+            </lista_utworów>
+        </płyta>
     </płyty>
 
     <wykonawcy>
