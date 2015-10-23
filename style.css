@@ -48,12 +48,12 @@ płyta {
     width: 470px;
 }
 
-płyta > tytuł::before {
+płyta > tytuł_płyty::before {
     content: "Tytuł: ";
     font-weight: normal;
 }
 
-płyta > wykonawca::before {
+płyta > wykonawca_płyty::before {
     content: "Wykonawca: ";
     font-weight: normal;
 }

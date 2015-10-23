@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="style.css"?>
+<!DOCTYPE kolekcja SYSTEM "kolekcja.dtd">
 <kolekcja>
 
     <nagłówek class="block">
         <opis>Katalog płyt</opis>
-        <data dzień="26" miesiąc="10" rok="2015"/>
+        <data dzień="26" miesiąc="10"/>
         <autorzy>
             <autor>
                 <imię>Bogna</imię>
@@ -20,11 +21,11 @@
             </autor>
         </autorzy>
     </nagłówek>
-
+    
     <płyty class="block">
         <płyta płyta_id="CD1" wykonawca="WYK1">
-            <tytuł class="block">Szanty</tytuł>
-            <wykonawca class="block">Piraci z Bałut</wykonawca>
+            <tytuł_płyty class="block">Szanty</tytuł_płyty>
+            <wykonawca_płyty class="block">Piraci z Bałut</wykonawca_płyty>
             <czas_trwania class="block">44:55</czas_trwania>
             <cena class="block">29,99</cena>
             <lista_utworów>
@@ -47,8 +48,8 @@
             </lista_utworów>
         </płyta>
         <płyta płyta_id="CD2" wykonawca="WYK2">
-            <tytuł class="block">Na trąbce</tytuł>
-            <wykonawca class="block">Człowiek orkiestra</wykonawca>
+            <tytuł_płyty class="block">Na trąbce</tytuł_płyty>
+            <wykonawca_płyty class="block">Człowiek orkiestra</wykonawca_płyty>
             <czas_trwania class="block">20:00</czas_trwania>
             <cena class="block">19,99</cena>
             <lista_utworów>
@@ -59,8 +60,8 @@
             </lista_utworów>
         </płyta>
         <płyta płyta_id="CD3" wykonawca="WYK1">
-            <tytuł class="block">Szanty</tytuł>
-            <wykonawca class="block">Piraci z Bałut</wykonawca>
+            <tytuł_płyty class="block">Szanty</tytuł_płyty>
+            <wykonawca_płyty class="block">Piraci z Bałut</wykonawca_płyty>
             <czas_trwania class="block">44:55</czas_trwania>
             <cena class="block">29,99</cena>
             <lista_utworów>
@@ -83,10 +84,15 @@
             </lista_utworów>
         </płyta>
     </płyty>
-
+    
     <wykonawcy>
-        <wykonawca wykonawca_id="WYK1" nazwa="Piraci z Bałut" gatunek="Arrr" członków="3"/>
-        <wykonawca wykonawca_id="WYK2" nazwa="Człowiek orkiestra" gatunek="wszystkie" członków="1"/>
+        <wykonawca wykonawca_id="WYK1" nazwa="Piraci z Bałut" gatunek="rap" członków="3">
+            <wydał nagranie="CD1"/>
+            <wydał nagranie="CD3"/>
+        </wykonawca>
+        <wykonawca wykonawca_id="WYK2" nazwa="Człowiek orkiestra" gatunek="rap">
+            <wydał nagranie="CD2"/>
+        </wykonawca>
     </wykonawcy>
-
+    
 </kolekcja>
