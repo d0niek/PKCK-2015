@@ -140,8 +140,8 @@
             </lista_utworów>
         </płyta>
         <płyta płyta_id="CD3" wykonawca="WYK3" rok_wydania="2012">
-            <tytuł_płyty class="block">Ocean</tytuł_płyty>
-            <wykonawca_płyty class="block">Waterfall</wykonawca_płyty>
+            <tytuł_płyty class="block">Waterfall</tytuł_płyty>
+            <wykonawca_płyty class="block">Ocean</wykonawca_płyty>
             <czas_trwania class="block">44:55</czas_trwania>
             <cena class="block">29,99</cena>
             <lista_utworów>
