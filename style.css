@@ -65,11 +65,12 @@ płyta > tytuł_płyty::before {
 }
 
 płyta > tytuł_płyty {
+    text-align: center;
     text-transform:capitalize;
     padding: 5px;
     font-variant:small-caps;
     font-size: x-large;
-    background: rgba(0, 0, 0, 0.6)
+    background: rgba(0, 0, 0, 0.7)
 }
 
 płyta > wykonawca_płyty::before {
@@ -78,11 +79,12 @@ płyta > wykonawca_płyty::before {
 }
 
 płyta > wykonawca_płyty {
+    text-align: center;
     padding: 5px;
     text-transform:capitalize;
     font-variant:small-caps;
     font-size: large;
-    background: rgba(0, 0, 0, 0.6)
+    background: rgba(0, 0, 0, 0.7)
 }
 
 płyta > czas_trwania::before {
@@ -93,7 +95,7 @@ płyta > czas_trwania::before {
 
 płyta > czas_trwania {
     margin-top: 5px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     width: 220px;
     text-align: center;
 }
@@ -105,7 +107,7 @@ płyta > cena::before {
 }
 
 płyta > cena {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     width: 50px;
     text-align: center;
     margin-top: 5px;
@@ -122,7 +124,7 @@ płyta > lista_utworów > utwór::before {
 }
 
 płyta > lista_utworów > utwór {
-    background: rgba(0, 0, 0, 0.6) url("img/point.png") no-repeat;
+    background: rgba(0, 0, 0, 0.7) url("img/point.png") no-repeat;
     background-size: auto 100%;
     display: block;
     font-weight: normal;
