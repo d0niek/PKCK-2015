@@ -4,10 +4,12 @@
 
 /* Header */
 nagłówek {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(21, 23, 27);
     color: rgb(255, 255, 255);
     position: fixed;
     width: 100%;
+    border-bottom: rgb(200, 229, 145) 2px solid;
+    z-index: 1;
 }
 
 nagłówek > opis {
@@ -33,9 +35,16 @@ autor > numer_indeksu::after {
 }
 /* END Header */
 
+kolekcja {
+    background-image: url("img/pattern.png");
+}
+
 płyty {
+    background: rgba(0, 0, 0, 0.8);
     margin: 56px auto 0;
-    width: 1060px;
+    width: 1068px;
+    padding: 10px;
+    overflow: auto;
 }
 
 płyta {
@@ -46,6 +55,8 @@ płyta {
     margin: 15px;
     padding: 15px;
     width: 470px;
+    border: rgb(183, 173, 113) outset 2px;
+    position: relative;
 }
 
 płyta > tytuł_płyty::before {
@@ -53,32 +64,70 @@ płyta > tytuł_płyty::before {
     font-weight: normal;
 }
 
+płyta > tytuł_płyty {
+    text-transform:capitalize;
+    padding: 5px;
+    font-variant:small-caps;
+    font-size: x-large;
+    background: rgba(0, 0, 0, 0.6)
+}
+
 płyta > wykonawca_płyty::before {
     content: "Wykonawca: ";
     font-weight: normal;
 }
 
+płyta > wykonawca_płyty {
+    padding: 5px;
+    text-transform:capitalize;
+    font-variant:small-caps;
+    font-size: large;
+    background: rgba(0, 0, 0, 0.6)
+}
+
 płyta > czas_trwania::before {
+    padding: 5px;
     content: "Łączny czas nagrań: ";
     font-weight: normal;
 }
 
+płyta > czas_trwania {
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 220px;
+    text-align: center;
+}
+
 płyta > cena::before {
+    padding: 5px;
     content: "Cena: ";
     font-weight: normal;
 }
 
 płyta > cena {
-    margin-bottom: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+płyta > lista_utworów {
+    position: absolute;
+    bottom: 15px;
+    width: 94%;
+}
+
+płyta > lista_utworów > utwór::before {
+    content: attr(nr) ". ";
 }
 
 płyta > lista_utworów > utwór {
-    background: url("img/point.png") no-repeat;
+    background: rgba(0, 0, 0, 0.6) url("img/point.png") no-repeat;
     background-size: auto 100%;
     display: block;
     font-weight: normal;
-    margin-left: 8px;
-    padding-left: 20px;
+    padding-left: 25px;
+    margin-top: 3px;
 }
 
 utwór > długość {
