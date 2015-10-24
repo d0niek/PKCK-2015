@@ -30,7 +30,8 @@
 <!ELEMENT płyta (tytuł_płyty, wykonawca_płyty, czas_trwania, cena, lista_utworów)>
 <!ATTLIST płyta
         płyta_id ID #REQUIRED
-        wykonawca IDREF #REQUIRED>
+        wykonawca IDREF #REQUIRED
+        rok wydania %lata; #IMPLIED>
 <!ELEMENT tytuł_płyty (#PCDATA)>
 <!ATTLIST tytuł_płyty
         class CDATA "Bez tytułu">
@@ -53,7 +54,7 @@
 <!ATTLIST wykonawca
         wykonawca_id ID #REQUIRED
         nazwa CDATA "Bez nazwy"
-        gatunek (metal|rap|discopolo|indie) "indie"
+        gatunek (metal|rock|rap|hip-hop|drum and bass|disco-polo|art pop|sludge|indie) "indie"
         członków CDATA #IMPLIED>
 <!ELEMENT wykonawca (wydał*)>
 <!ELEMENT wydał EMPTY>
