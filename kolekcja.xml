@@ -21,9 +21,9 @@
             </autor>
         </autorzy>
     </nagłówek>
-    
+
     <płyty class="block">
-        <płyta płyta_id="CD1" wykonawca="WYK1" rok_wydania="2012">
+        <płyta id="CD1" wykonawca="WYK1" rok_wydania="2012">
             <tytuł_płyty class="block">Odkupienie</tytuł_płyty>
             <wykonawca_płyty class="block">Tede</wykonawca_płyty>
             <czas_trwania class="block">44:55</czas_trwania>
@@ -83,7 +83,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD2" wykonawca="WYK2" rok_wydania="2004">
+        <płyta id="CD2" wykonawca="WYK2" rok_wydania="2004">
             <tytuł_płyty class="block">Hopes and Fears</tytuł_płyty>
             <wykonawca_płyty class="block">Keane</wykonawca_płyty>
             <czas_trwania class="block">50:37</czas_trwania>
@@ -139,7 +139,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD3" wykonawca="WYK3" rok_wydania="2012">
+        <płyta id="CD3" wykonawca="WYK3" rok_wydania="2012">
             <tytuł_płyty class="block">Waterfall</tytuł_płyty>
             <wykonawca_płyty class="block">Ocean</wykonawca_płyty>
             <czas_trwania class="block">44:55</czas_trwania>
@@ -187,7 +187,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD4" wykonawca="WYK4" rok_wydania="2014">
+        <płyta id="CD4" wykonawca="WYK4" rok_wydania="2014">
             <tytuł_płyty class="block">Serpents Unleashed</tytuł_płyty>
             <wykonawca_płyty class="block">Skeletonwitch</wykonawca_płyty>
             <czas_trwania class="block">31:41</czas_trwania>
@@ -239,7 +239,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD5" wykonawca="WYK5" rok_wydania="2014">
+        <płyta id="CD5" wykonawca="WYK5" rok_wydania="2014">
             <tytuł_płyty class="block">Aura</tytuł_płyty>
             <wykonawca_płyty class="block">Saor</wykonawca_płyty>
             <czas_trwania class="block">56:37</czas_trwania>
@@ -267,7 +267,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD6" wykonawca="WYK" rok_wydania="2014">
+        <płyta id="CD6" wykonawca="WYK" rok_wydania="2014">
             <tytuł_płyty class="block">St. Vincent</tytuł_płyty>
             <wykonawca_płyty class="block">St. Vincent</wykonawca_płyty>
             <czas_trwania class="block">40:04</czas_trwania>
@@ -319,7 +319,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD7" wykonawca="WYK7" rok_wydania="2009">
+        <płyta id="CD7" wykonawca="WYK7" rok_wydania="2009">
             <tytuł_płyty class="block">Skyforger</tytuł_płyty>
             <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
             <czas_trwania class="block">47:42</czas_trwania>
@@ -367,7 +367,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD8" wykonawca="WYK7" rok_wydania="2011">
+        <płyta id="CD8" wykonawca="WYK7" rok_wydania="2011">
             <tytuł_płyty class="block">The Beginning of Times</tytuł_płyty>
             <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
             <czas_trwania class="block">58:49</czas_trwania>
@@ -423,7 +423,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD9" wykonawca="WYK7" rok_wydania="2015">
+        <płyta id="CD9" wykonawca="WYK7" rok_wydania="2015">
             <tytuł_płyty class="block">Under the Red Cloud</tytuł_płyty>
             <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
             <czas_trwania class="block">49:56</czas_trwania>
@@ -471,7 +471,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD10" wykonawca="WYK5" rok_wydania="2013">
+        <płyta id="CD10" wykonawca="WYK5" rok_wydania="2013">
             <tytuł_płyty class="block">Roots</tytuł_płyty>
             <wykonawca_płyty class="block">Saor</wykonawca_płyty>
             <czas_trwania class="block">49:57</czas_trwania>
@@ -495,7 +495,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD11" wykonawca="WYK10" rok_wydania="2014">
+        <płyta id="CD11" wykonawca="WYK10" rok_wydania="2014">
             <tytuł_płyty class="block">Roads to the North</tytuł_płyty>
             <wykonawca_płyty class="block">Panopticon</wykonawca_płyty>
             <czas_trwania class="block">01:11:03</czas_trwania>
@@ -535,7 +535,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD12" wykonawca="WYK13" rok_wydania="1999">
+        <płyta id="CD12" wykonawca="WYK13" rok_wydania="1999">
             <tytuł_płyty class="block">Ecliptica</tytuł_płyty>
             <wykonawca_płyty class="block">Sonata Arctica</wykonawca_płyty>
             <czas_trwania class="block">47:22</czas_trwania>
@@ -583,7 +583,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD13" wykonawca="WYK8" rok_wydania="2002">
+        <płyta id="CD13" wykonawca="WYK8" rok_wydania="2002">
             <tytuł_płyty class="block">The Mantle</tytuł_płyty>
             <wykonawca_płyty class="block">Agalloch</wykonawca_płyty>
             <czas_trwania class="block">01:08:25</czas_trwania>
@@ -627,7 +627,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD14" wykonawca="WYK8" rok_wydania="2010">
+        <płyta id="CD14" wykonawca="WYK8" rok_wydania="2010">
             <tytuł_płyty class="block">Marrow of the Spirit</tytuł_płyty>
             <wykonawca_płyty class="block">Agalloch</wykonawca_płyty>
             <czas_trwania class="block">01:05:32</czas_trwania>
@@ -659,7 +659,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD15" wykonawca="WYK13" rok_wydania="2004">
+        <płyta id="CD15" wykonawca="WYK13" rok_wydania="2004">
             <tytuł_płyty class="block">Reckoning Night</tytuł_płyty>
             <wykonawca_płyty class="block">Sonata Arctica</wykonawca_płyty>
             <czas_trwania class="block">52:30</czas_trwania>
@@ -707,7 +707,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD16" wykonawca="WYK9" rok_wydania="2010">
+        <płyta id="CD16" wykonawca="WYK9" rok_wydania="2010">
             <tytuł_płyty class="block">My Beautiful Dark Twisted Fantasy</tytuł_płyty>
             <wykonawca_płyty class="block">Kanye West</wykonawca_płyty>
             <czas_trwania class="block">68:36</czas_trwania>
@@ -767,7 +767,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD17" wykonawca="WYK11" rok_wydania="2004">
+        <płyta id="CD17" wykonawca="WYK11" rok_wydania="2004">
             <tytuł_płyty class="block">Leviathan</tytuł_płyty>
             <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
             <czas_trwania class="block">46:43</czas_trwania>
@@ -815,7 +815,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD18" wykonawca="WYK11" rok_wydania="2006">
+        <płyta id="CD18" wykonawca="WYK11" rok_wydania="2006">
             <tytuł_płyty class="block">Blood Mountain</tytuł_płyty>
             <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
             <czas_trwania class="block">01:07:49</czas_trwania>
@@ -871,7 +871,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD19" wykonawca="WYK11" rok_wydania="2009">
+        <płyta id="CD19" wykonawca="WYK11" rok_wydania="2009">
             <tytuł_płyty class="block">Crack the Skye</tytuł_płyty>
             <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
             <czas_trwania class="block">50:06</czas_trwania>
@@ -907,7 +907,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD20" wykonawca="WYK12" rok_wydania="2001">
+        <płyta id="CD20" wykonawca="WYK12" rok_wydania="2001">
             <tytuł_płyty class="block">Darkness and Hope</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">49:28</czas_trwania>
@@ -955,7 +955,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD21" wykonawca="WYK12" rok_wydania="2003">
+        <płyta id="CD21" wykonawca="WYK12" rok_wydania="2003">
             <tytuł_płyty class="block">The Antidote</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">54:28</czas_trwania>
@@ -1003,7 +1003,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD22" wykonawca="WYK12" rok_wydania="1996">
+        <płyta id="CD22" wykonawca="WYK12" rok_wydania="1996">
             <tytuł_płyty class="block">Irreligious</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">42:20</czas_trwania>
@@ -1055,7 +1055,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD23" wykonawca="WYK12" rok_wydania="2008">
+        <płyta id="CD23" wykonawca="WYK12" rok_wydania="2008">
             <tytuł_płyty class="block">Night Eternal</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">44:15</czas_trwania>
@@ -1099,7 +1099,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD24" wykonawca="WYK12" rok_wydania="">
+        <płyta id="CD24" wykonawca="WYK12" rok_wydania="">
             <tytuł_płyty class="block">Alpha Noir</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">40:34   </czas_trwania>
@@ -1143,7 +1143,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta płyta_id="CD25" wykonawca="WYK10" rok_wydania="2015">
+        <płyta id="CD25" wykonawca="WYK10" rok_wydania="2015">
             <tytuł_płyty class="block">Autumn Eternal</tytuł_płyty>
             <wykonawca_płyty class="block">Panopticon</wykonawca_płyty>
             <czas_trwania class="block">01:01:41</czas_trwania>
@@ -1184,59 +1184,59 @@
             </lista_utworów>
         </płyta>
     </płyty>
-    
+
     <wykonawcy>
-        <wykonawca wykonawca_id="WYK1" nazwa="Tede" gatunek="hip-hop">
+        <wykonawca id="WYK1" nazwa="Tede" gatunek="hip-hop">
             <wydał nagranie="CD1"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK2" nazwa="Keane" gatunek="rock" członków="4">
+        <wykonawca id="WYK2" nazwa="Keane" gatunek="rock" członków="4">
             <wydał nagranie="CD2"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK3" nazwa="Ocean" gatunek="rock" członków="3">
+        <wykonawca id="WYK3" nazwa="Ocean" gatunek="rock" członków="3">
             <wydał nagranie="CD3"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK4" nazwa="Skeletonwitch" gatunek="metal" członków="4">
+        <wykonawca id="WYK4" nazwa="Skeletonwitch" gatunek="metal" członków="4">
             <wydał nagranie="CD4"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK5" nazwa="Saor" gatunek="metal">
+        <wykonawca id="WYK5" nazwa="Saor" gatunek="metal">
             <wydał nagranie="CD5"/>
             <wydał nagranie="CD10"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK6" nazwa="Anne Clark" gatunek="art pop">
+        <wykonawca id="WYK6" nazwa="Anne Clark" gatunek="art-pop">
             <wydał nagranie="CD6"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK7" nazwa="Amorphis" gatunek="metal" członków="6">
+        <wykonawca id="WYK7" nazwa="Amorphis" gatunek="metal" członków="6">
             <wydał nagranie="CD7"/>
             <wydał nagranie="CD8"/>
             <wydał nagranie="CD9"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK8" nazwa="Agalloch" gatunek="metal" członków="3">
+        <wykonawca id="WYK8" nazwa="Agalloch" gatunek="metal" członków="3">
             <wydał nagranie="CD13"/>
             <wydał nagranie="CD14"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK9" nazwa="Kanye West" gatunek="hip-hop">
+        <wykonawca id="WYK9" nazwa="Kanye West" gatunek="hip-hop">
             <wydał nagranie="CD16"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK10" nazwa="Panopticon" gatunek="metal">
+        <wykonawca id="WYK10" nazwa="Panopticon" gatunek="metal">
             <wydał nagranie="CD11"/>
             <wydał nagranie="CD25"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK11" nazwa="Mastodon" gatunek="sludge" członków="4">
+        <wykonawca id="WYK11" nazwa="Mastodon" gatunek="sludge" członków="4">
             <wydał nagranie="CD17"/>
             <wydał nagranie="CD18"/>
             <wydał nagranie="CD19"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK12" nazwa="Moonspell" gatunek="metal" członków="5">
+        <wykonawca id="WYK12" nazwa="Moonspell" gatunek="metal" członków="5">
             <wydał nagranie="CD20"/>
             <wydał nagranie="CD21"/>
             <wydał nagranie="CD22"/>
             <wydał nagranie="CD23"/>
             <wydał nagranie="CD24"/>
         </wykonawca>
-        <wykonawca wykonawca_id="WYK13" nazwa="Sonata Arctica" gatunek="metal" członków="5">
+        <wykonawca id="WYK13" nazwa="Sonata Arctica" gatunek="metal" członków="5">
             <wydał nagranie="CD12"/>
             <wydał nagranie="CD15"/>
         </wykonawca>
     </wykonawcy>
-    
+
 </kolekcja>
