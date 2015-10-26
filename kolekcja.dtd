@@ -24,7 +24,7 @@
             <!ATTLIST płyta
                 id ID #REQUIRED
                 wykonawca IDREF #REQUIRED
-                data_wydania %lata; #IMPLIED>
+                data_wydania CDATA #IMPLIED>
             <!ELEMENT tytuł_płyty (#PCDATA)>
             <!ELEMENT wykonawca_płyty (#PCDATA)>
             <!ELEMENT ranking (#PCDATA)>
