@@ -1,4 +1,4 @@
-[class="block"] {
+nagłówek, autor > kierunek, płyty, płyta > tytuł_płyty, płyta > cena, płyta > wykonawca_płyty, płyta > czas_trwania {
     display: block;
 }
 

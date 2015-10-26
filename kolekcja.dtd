@@ -3,12 +3,9 @@
 <!ENTITY % miesiące "(1|2|3|4|5|6|7|8|9|10|11|12)">
 <!ENTITY % lata "(1994|1995|1996|1997|1998|1999|2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015)">
 <!ENTITY % nr_utworu "(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15)">
-<!ENTITY % gatunki "(metal|rap|disco-polo)">
 
 <!ELEMENT kolekcja (nagłówek, płyty+, wykonawcy)>
     <!ELEMENT nagłówek (opis, data, autorzy)>
-        <!ATTLIST nagłówek
-            class CDATA #REQUIRED>
         <!ELEMENT opis (#PCDATA)>
         <!ELEMENT data EMPTY>
             <!ATTLIST data
@@ -22,28 +19,17 @@
             <!ELEMENT nazwisko (#PCDATA)>
             <!ELEMENT numer_indeksu (#PCDATA)>
             <!ELEMENT kierunek (#PCDATA)>
-                <!ATTLIST kierunek
-                    class CDATA #REQUIRED>
     <!ELEMENT płyty (płyta*)>
-        <!ATTLIST płyty
-            class CDATA #REQUIRED>
-        <!ELEMENT płyta (tytuł_płyty, wykonawca_płyty, czas_trwania, cena, lista_utworów)>
+        <!ELEMENT płyta (tytuł_płyty, wykonawca_płyty, ranking, czas_trwania, cena, lista_utworów)>
             <!ATTLIST płyta
                 id ID #REQUIRED
                 wykonawca IDREF #REQUIRED
-                rok_wydania %lata; #IMPLIED>
+                data_wydania %lata; #IMPLIED>
             <!ELEMENT tytuł_płyty (#PCDATA)>
-                <!ATTLIST tytuł_płyty
-                    class CDATA "Bez tytułu">
             <!ELEMENT wykonawca_płyty (#PCDATA)>
-                <!ATTLIST wykonawca_płyty
-                    class CDATA #REQUIRED>
+            <!ELEMENT ranking (#PCDATA)>
             <!ELEMENT czas_trwania (#PCDATA)>
-                <!ATTLIST czas_trwania
-                    class CDATA #REQUIRED>
             <!ELEMENT cena (#PCDATA)>
-                <!ATTLIST cena
-                    class CDATA #REQUIRED>
             <!ELEMENT lista_utworów (utwór+)>
             <!ELEMENT utwór (tytuł, długość)>
                 <!ATTLIST utwór
