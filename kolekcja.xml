@@ -267,7 +267,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD6" wykonawca="WYK" rok_wydania="2014">
+        <płyta id="CD6" wykonawca="WYK6" rok_wydania="2014">
             <tytuł_płyty class="block">St. Vincent</tytuł_płyty>
             <wykonawca_płyty class="block">St. Vincent</wykonawca_płyty>
             <czas_trwania class="block">40:04</czas_trwania>
@@ -1099,7 +1099,7 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD24" wykonawca="WYK12" rok_wydania="">
+        <płyta id="CD24" wykonawca="WYK12" rok_wydania="2015">
             <tytuł_płyty class="block">Alpha Noir</tytuł_płyty>
             <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
             <czas_trwania class="block">40:34   </czas_trwania>
