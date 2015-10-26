@@ -3,7 +3,7 @@
 <!DOCTYPE kolekcja SYSTEM "kolekcja.dtd">
 <kolekcja>
 
-    <nagłówek class="block">
+    <nagłówek>
         <opis>Katalog płyt</opis>
         <data dzień="26" miesiąc="10"/>
         <autorzy>
@@ -11,23 +11,24 @@
                 <imię>Bogna</imię>
                 <nazwisko>Dudaczyk</nazwisko>
                 <numer_indeksu>189650</numer_indeksu>
-                <kierunek class="block">Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
+                <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
             <autor>
                 <imię>Damian</imię>
                 <nazwisko>Glinkowski</nazwisko>
                 <numer_indeksu>185051</numer_indeksu>
-                <kierunek class="block">Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
+                <kierunek>Informatyka, Technologie Gier i Symulacji Komputerowych</kierunek>
             </autor>
         </autorzy>
     </nagłówek>
 
-    <płyty class="block">
-        <płyta id="CD1" wykonawca="WYK1" rok_wydania="2012">
-            <tytuł_płyty class="block">Odkupienie</tytuł_płyty>
-            <wykonawca_płyty class="block">Tede</wykonawca_płyty>
-            <czas_trwania class="block">44:55</czas_trwania>
-            <cena class="block">29,99</cena>
+    <płyty>
+        <płyta id="CD1" wykonawca="WYK1" data_wydania="2012-05-10">
+            <tytuł_płyty>Odkupienie</tytuł_płyty>
+            <wykonawca_płyty>Tede</wykonawca_płyty>
+            <ranking>7.0</ranking>
+            <czas_trwania>44:55</czas_trwania>
+            <cena>29,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Miliony rąk tu</tytuł>
@@ -83,11 +84,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD2" wykonawca="WYK2" rok_wydania="2004">
-            <tytuł_płyty class="block">Hopes and Fears</tytuł_płyty>
-            <wykonawca_płyty class="block">Keane</wykonawca_płyty>
-            <czas_trwania class="block">50:37</czas_trwania>
-            <cena class="block">39,99</cena>
+        <płyta id="CD2" wykonawca="WYK2" data_wydania="2004-05-10">
+            <tytuł_płyty>Hopes and Fears</tytuł_płyty>
+            <wykonawca_płyty>Keane</wykonawca_płyty>
+            <ranking>5.0</ranking>
+            <czas_trwania>50:37</czas_trwania>
+            <cena>39,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Somewhere Only We Know</tytuł>
@@ -139,11 +141,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD3" wykonawca="WYK3" rok_wydania="2012">
-            <tytuł_płyty class="block">Waterfall</tytuł_płyty>
-            <wykonawca_płyty class="block">Ocean</wykonawca_płyty>
-            <czas_trwania class="block">44:55</czas_trwania>
-            <cena class="block">29,99</cena>
+        <płyta id="CD3" wykonawca="WYK3" data_wydania="2012-05-10">
+            <tytuł_płyty>Waterfall</tytuł_płyty>
+            <wykonawca_płyty>Ocean</wykonawca_płyty>
+            <ranking>7.5</ranking>
+            <czas_trwania>44:55</czas_trwania>
+            <cena>29,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Waterfall</tytuł>
@@ -187,11 +190,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD4" wykonawca="WYK4" rok_wydania="2014">
-            <tytuł_płyty class="block">Serpents Unleashed</tytuł_płyty>
-            <wykonawca_płyty class="block">Skeletonwitch</wykonawca_płyty>
-            <czas_trwania class="block">31:41</czas_trwania>
-            <cena class="block">34,99</cena>
+        <płyta id="CD4" wykonawca="WYK4" data_wydania="2014-05-10">
+            <tytuł_płyty>Serpents Unleashed</tytuł_płyty>
+            <wykonawca_płyty>Skeletonwitch</wykonawca_płyty>
+            <ranking>3.0</ranking>
+            <czas_trwania>31:41</czas_trwania>
+            <cena>34,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Serpents Unleashed</tytuł>
@@ -239,11 +243,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD5" wykonawca="WYK5" rok_wydania="2014">
-            <tytuł_płyty class="block">Aura</tytuł_płyty>
-            <wykonawca_płyty class="block">Saor</wykonawca_płyty>
-            <czas_trwania class="block">56:37</czas_trwania>
-            <cena class="block">39,99</cena>
+        <płyta id="CD5" wykonawca="WYK5" data_wydania="2014-05-10">
+            <tytuł_płyty>Aura</tytuł_płyty>
+            <wykonawca_płyty>Saor</wykonawca_płyty>
+            <ranking>7.0</ranking>
+            <czas_trwania>56:37</czas_trwania>
+            <cena>39,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Children of the Mist</tytuł>
@@ -267,11 +272,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD6" wykonawca="WYK6" rok_wydania="2014">
-            <tytuł_płyty class="block">St. Vincent</tytuł_płyty>
-            <wykonawca_płyty class="block">St. Vincent</wykonawca_płyty>
-            <czas_trwania class="block">40:04</czas_trwania>
-            <cena class="block">34,90</cena>
+        <płyta id="CD6" wykonawca="WYK6" data_wydania="2014-05-10">
+            <tytuł_płyty>St. Vincent</tytuł_płyty>
+            <wykonawca_płyty>St. Vincent</wykonawca_płyty>
+            <ranking>6.5</ranking>
+            <czas_trwania>40:04</czas_trwania>
+            <cena>34,90</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Rattlesnake</tytuł>
@@ -319,11 +325,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD7" wykonawca="WYK7" rok_wydania="2009">
-            <tytuł_płyty class="block">Skyforger</tytuł_płyty>
-            <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
-            <czas_trwania class="block">47:42</czas_trwania>
-            <cena class="block">47,50</cena>
+        <płyta id="CD7" wykonawca="WYK7" data_wydania="2009-05-10">
+            <tytuł_płyty>Skyforger</tytuł_płyty>
+            <wykonawca_płyty>Amorphis</wykonawca_płyty>
+            <ranking>5.0</ranking>
+            <czas_trwania>47:42</czas_trwania>
+            <cena>47,50</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Sampo</tytuł>
@@ -367,11 +374,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD8" wykonawca="WYK7" rok_wydania="2011">
-            <tytuł_płyty class="block">The Beginning of Times</tytuł_płyty>
-            <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
-            <czas_trwania class="block">58:49</czas_trwania>
-            <cena class="block">32,00</cena>
+        <płyta id="CD8" wykonawca="WYK7" data_wydania="2011-05-10">
+            <tytuł_płyty>The Beginning of Times</tytuł_płyty>
+            <wykonawca_płyty>Amorphis</wykonawca_płyty>
+            <ranking>1.5</ranking>
+            <czas_trwania>58:49</czas_trwania>
+            <cena>32,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Battle for Light </tytuł>
@@ -423,11 +431,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD9" wykonawca="WYK7" rok_wydania="2015">
-            <tytuł_płyty class="block">Under the Red Cloud</tytuł_płyty>
-            <wykonawca_płyty class="block">Amorphis</wykonawca_płyty>
-            <czas_trwania class="block">49:56</czas_trwania>
-            <cena class="block">32,00</cena>
+        <płyta id="CD9" wykonawca="WYK7" data_wydania="2015-05-10">
+            <tytuł_płyty>Under the Red Cloud</tytuł_płyty>
+            <wykonawca_płyty>Amorphis</wykonawca_płyty>
+            <ranking>5.5</ranking>
+            <czas_trwania>49:56</czas_trwania>
+            <cena>32,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Under the Red Cloud</tytuł>
@@ -471,11 +480,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD10" wykonawca="WYK5" rok_wydania="2013">
-            <tytuł_płyty class="block">Roots</tytuł_płyty>
-            <wykonawca_płyty class="block">Saor</wykonawca_płyty>
-            <czas_trwania class="block">49:57</czas_trwania>
-            <cena class="block">38,00</cena>
+        <płyta id="CD10" wykonawca="WYK5" data_wydania="2013-05-10">
+            <tytuł_płyty>Roots</tytuł_płyty>
+            <wykonawca_płyty>Saor</wykonawca_płyty>
+            <ranking>7.5</ranking>
+            <czas_trwania>49:57</czas_trwania>
+            <cena>38,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Roots</tytuł>
@@ -495,11 +505,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD11" wykonawca="WYK10" rok_wydania="2014">
-            <tytuł_płyty class="block">Roads to the North</tytuł_płyty>
-            <wykonawca_płyty class="block">Panopticon</wykonawca_płyty>
-            <czas_trwania class="block">01:11:03</czas_trwania>
-            <cena class="block">46,70</cena>
+        <płyta id="CD11" wykonawca="WYK10" data_wydania="2014-05-10">
+            <tytuł_płyty>Roads to the North</tytuł_płyty>
+            <wykonawca_płyty>Panopticon</wykonawca_płyty>
+            <ranking>6.5</ranking>
+            <czas_trwania>01:11:03</czas_trwania>
+            <cena>46,70</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>The Echoes of a Dissonant Evensong</tytuł>
@@ -535,11 +546,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD12" wykonawca="WYK13" rok_wydania="1999">
-            <tytuł_płyty class="block">Ecliptica</tytuł_płyty>
-            <wykonawca_płyty class="block">Sonata Arctica</wykonawca_płyty>
-            <czas_trwania class="block">47:22</czas_trwania>
-            <cena class="block">24,50</cena>
+        <płyta id="CD12" wykonawca="WYK13" data_wydania="1999-05-10">
+            <tytuł_płyty>Ecliptica</tytuł_płyty>
+            <wykonawca_płyty>Sonata Arctica</wykonawca_płyty>
+            <ranking>7.5</ranking>
+            <czas_trwania>47:22</czas_trwania>
+            <cena>24,50</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Blank File</tytuł>
@@ -583,11 +595,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD13" wykonawca="WYK8" rok_wydania="2002">
-            <tytuł_płyty class="block">The Mantle</tytuł_płyty>
-            <wykonawca_płyty class="block">Agalloch</wykonawca_płyty>
-            <czas_trwania class="block">01:08:25</czas_trwania>
-            <cena class="block">50,00</cena>
+        <płyta id="CD13" wykonawca="WYK8" data_wydania="2002-05-10">
+            <tytuł_płyty>The Mantle</tytuł_płyty>
+            <wykonawca_płyty>Agalloch</wykonawca_płyty>
+            <ranking>3.5</ranking>
+            <czas_trwania>01:08:25</czas_trwania>
+            <cena>50,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>A Celebration for the Death of Man...</tytuł>
@@ -627,11 +640,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD14" wykonawca="WYK8" rok_wydania="2010">
-            <tytuł_płyty class="block">Marrow of the Spirit</tytuł_płyty>
-            <wykonawca_płyty class="block">Agalloch</wykonawca_płyty>
-            <czas_trwania class="block">01:05:32</czas_trwania>
-            <cena class="block">24,99</cena>
+        <płyta id="CD14" wykonawca="WYK8" data_wydania="2010-05-10">
+            <tytuł_płyty>Marrow of the Spirit</tytuł_płyty>
+            <wykonawca_płyty>Agalloch</wykonawca_płyty>
+            <ranking>4.5</ranking>
+            <czas_trwania>01:05:32</czas_trwania>
+            <cena>24,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>They Escaped the Weight of Darkness</tytuł>
@@ -659,11 +673,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD15" wykonawca="WYK13" rok_wydania="2004">
-            <tytuł_płyty class="block">Reckoning Night</tytuł_płyty>
-            <wykonawca_płyty class="block">Sonata Arctica</wykonawca_płyty>
-            <czas_trwania class="block">52:30</czas_trwania>
-            <cena class="block">24,50</cena>
+        <płyta id="CD15" wykonawca="WYK13" data_wydania="2004-05-10">
+            <tytuł_płyty>Reckoning Night</tytuł_płyty>
+            <wykonawca_płyty>Sonata Arctica</wykonawca_płyty>
+            <ranking>8.0</ranking>
+            <czas_trwania>52:30</czas_trwania>
+            <cena>24,50</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Misplaced</tytuł>
@@ -707,11 +722,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD16" wykonawca="WYK9" rok_wydania="2010">
-            <tytuł_płyty class="block">My Beautiful Dark Twisted Fantasy</tytuł_płyty>
-            <wykonawca_płyty class="block">Kanye West</wykonawca_płyty>
-            <czas_trwania class="block">68:36</czas_trwania>
-            <cena class="block">70,00</cena>
+        <płyta id="CD16" wykonawca="WYK9" data_wydania="2010-05-10">
+            <tytuł_płyty>My Beautiful Dark Twisted Fantasy</tytuł_płyty>
+            <wykonawca_płyty>Kanye West</wykonawca_płyty>
+            <ranking>9.0</ranking>
+            <czas_trwania>68:36</czas_trwania>
+            <cena>70,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Dark Fantasy</tytuł>
@@ -767,11 +783,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD17" wykonawca="WYK11" rok_wydania="2004">
-            <tytuł_płyty class="block">Leviathan</tytuł_płyty>
-            <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
-            <czas_trwania class="block">46:43</czas_trwania>
-            <cena class="block">35,99</cena>
+        <płyta id="CD17" wykonawca="WYK11" data_wydania="2004-05-10">
+            <tytuł_płyty>Leviathan</tytuł_płyty>
+            <wykonawca_płyty>Mastodon</wykonawca_płyty>
+            <ranking>7.0</ranking>
+            <czas_trwania>46:43</czas_trwania>
+            <cena>35,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Blood and Thunder</tytuł>
@@ -815,11 +832,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD18" wykonawca="WYK11" rok_wydania="2006">
-            <tytuł_płyty class="block">Blood Mountain</tytuł_płyty>
-            <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
-            <czas_trwania class="block">01:07:49</czas_trwania>
-            <cena class="block">40,00</cena>
+        <płyta id="CD18" wykonawca="WYK11" data_wydania="2006-05-10">
+            <tytuł_płyty>Blood Mountain</tytuł_płyty>
+            <wykonawca_płyty>Mastodon</wykonawca_płyty>
+            <ranking>6.5</ranking>
+            <czas_trwania>01:07:49</czas_trwania>
+            <cena>40,00</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>The Wolf Is Loose</tytuł>
@@ -871,11 +889,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD19" wykonawca="WYK11" rok_wydania="2009">
-            <tytuł_płyty class="block">Crack the Skye</tytuł_płyty>
-            <wykonawca_płyty class="block">Mastodon</wykonawca_płyty>
-            <czas_trwania class="block">50:06</czas_trwania>
-            <cena class="block">38,99</cena>
+        <płyta id="CD19" wykonawca="WYK11" data_wydania="2009-05-10">
+            <tytuł_płyty>Crack the Skye</tytuł_płyty>
+            <wykonawca_płyty>Mastodon</wykonawca_płyty>
+            <ranking>4.5</ranking>
+            <czas_trwania>50:06</czas_trwania>
+            <cena>38,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Oblivion</tytuł>
@@ -907,11 +926,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD20" wykonawca="WYK12" rok_wydania="2001">
-            <tytuł_płyty class="block">Darkness and Hope</tytuł_płyty>
-            <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
-            <czas_trwania class="block">49:28</czas_trwania>
-            <cena class="block">29,99</cena>
+        <płyta id="CD20" wykonawca="WYK12" data_wydania="2001-05-10">
+            <tytuł_płyty>Darkness and Hope</tytuł_płyty>
+            <wykonawca_płyty>Moonspell</wykonawca_płyty>
+            <ranking>8.5</ranking>
+            <czas_trwania>49:28</czas_trwania>
+            <cena>29,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Darkness and Hope</tytuł>
@@ -955,11 +975,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD21" wykonawca="WYK12" rok_wydania="2003">
-            <tytuł_płyty class="block">The Antidote</tytuł_płyty>
-            <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
-            <czas_trwania class="block">54:28</czas_trwania>
-            <cena class="block">29,90</cena>
+        <płyta id="CD21" wykonawca="WYK12" data_wydania="2003-05-10">
+            <tytuł_płyty>The Antidote</tytuł_płyty>
+            <wykonawca_płyty>Moonspell</wykonawca_płyty>
+            <ranking>7.5</ranking>
+            <czas_trwania>54:28</czas_trwania>
+            <cena>29,90</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>In and Above Men</tytuł>
@@ -1003,11 +1024,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD22" wykonawca="WYK12" rok_wydania="1996">
-            <tytuł_płyty class="block">Irreligious</tytuł_płyty>
-            <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
-            <czas_trwania class="block">42:20</czas_trwania>
-            <cena class="block">19,99</cena>
+        <płyta id="CD22" wykonawca="WYK12" data_wydania="1996-05-10">
+            <tytuł_płyty>Irreligious</tytuł_płyty>
+            <wykonawca_płyty>Moonspell</wykonawca_płyty>
+            <ranking>8.0</ranking>
+            <czas_trwania>42:20</czas_trwania>
+            <cena>19,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Perverse... Almost Religious</tytuł>
@@ -1055,11 +1077,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD23" wykonawca="WYK12" rok_wydania="2008">
-            <tytuł_płyty class="block">Night Eternal</tytuł_płyty>
-            <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
-            <czas_trwania class="block">44:15</czas_trwania>
-            <cena class="block">29,99</cena>
+        <płyta id="CD23" wykonawca="WYK12" data_wydania="2008-05-10">
+            <tytuł_płyty>Night Eternal</tytuł_płyty>
+            <wykonawca_płyty>Moonspell</wykonawca_płyty>
+            <ranking>4.5</ranking>
+            <czas_trwania>44:15</czas_trwania>
+            <cena>29,99</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>At Tragic Heights </tytuł>
@@ -1099,11 +1122,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD24" wykonawca="WYK12" rok_wydania="2015">
-            <tytuł_płyty class="block">Alpha Noir</tytuł_płyty>
-            <wykonawca_płyty class="block">Moonspell</wykonawca_płyty>
-            <czas_trwania class="block">40:34   </czas_trwania>
-            <cena class="block">29,90</cena>
+        <płyta id="CD24" wykonawca="WYK12" data_wydania="2015-05-10">
+            <tytuł_płyty>Alpha Noir</tytuł_płyty>
+            <wykonawca_płyty>Moonspell</wykonawca_płyty>
+            <ranking>4.0</ranking>
+            <czas_trwania>40:34</czas_trwania>
+            <cena>29,90</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Axis Mundi</tytuł>
@@ -1127,7 +1151,7 @@
                 </utwór>
                 <utwór nr="6">
                     <tytuł>Opera Carne</tytuł>
-                    <długość>Opera Carne</długość>
+                    <długość>04:15</długość>
                 </utwór>
                 <utwór nr="7">
                     <tytuł>Love Is Blasphemy</tytuł>
@@ -1143,11 +1167,12 @@
                 </utwór>
             </lista_utworów>
         </płyta>
-        <płyta id="CD25" wykonawca="WYK10" rok_wydania="2015">
-            <tytuł_płyty class="block">Autumn Eternal</tytuł_płyty>
-            <wykonawca_płyty class="block">Panopticon</wykonawca_płyty>
-            <czas_trwania class="block">01:01:41</czas_trwania>
-            <cena class="block">47,60</cena>
+        <płyta id="CD25" wykonawca="WYK10" data_wydania="2015-05-10">
+            <tytuł_płyty>Autumn Eternal</tytuł_płyty>
+            <wykonawca_płyty>Panopticon</wykonawca_płyty>
+            <ranking>7.5</ranking>
+            <czas_trwania>01:01:41</czas_trwania>
+            <cena>47,60</cena>
             <lista_utworów>
                 <utwór nr="1">
                     <tytuł>Tamarack's Gold Returns</tytuł>
