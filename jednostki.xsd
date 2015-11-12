@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://jednostki.xml.pl"
+            xmlns="http://jednostki.xml.pl">
+
+    <xsd:element name="dzień">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:int" use="required">
+                <xsd:minInclusive="1"/>
+                <xsd:maxInclusive="31"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="miesiąc">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:int" use="required">
+                <xsd:minInclusive="1"/>
+                <xsd:maxInclusive="12"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="rokAkademicki" fixed="2015"/>
+
+    <xsd:element name="dataWydaniaPłyty" type="xsd:date"/>
+
+    <xsd:element name="ranking">
+        <xsd:simpleType>
+
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="czasTrwaniaPłyty" type="xsd:time"/>
+
+    <xsd:simpleType name="cena">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([0-9]{3})[,]([0-9]{3})(zł|eur)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

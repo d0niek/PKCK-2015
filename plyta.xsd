@@ -2,5 +2,60 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://plyta.xml.pl"
             xmlns="http://plyta.xml.pl">
+
+    <xsd:element name="płyta">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tytuł_płyty"/>
+                <xsd:element ref="wykonawca_płyty"/>
+                <xsd:element name="ranking" ref="jednostki:ranking"/>
+                <xsd:element name="czas_trwania" ref="jednostki:czasTrwaniaPłyty"/>
+                <xsd:element name="cena" ref="jednostki:cena"/>
+                <xsd:element ref="lista_utworów"/> 
+            </xsd:sequence>
+            <xsd:attributeGroup refer="atrybutyPłyty"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="tytuł_płyty" default="Bez tytułu">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:token">
+                <minLength value="1"/>
+                <maxLength value="30"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="wykonawca_płyty" default="Nieznany wykonawca">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:token">
+                <minLength value="1"/>
+                <maxLength value="30"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:attributeGroup name="atrybutyPłyty">
+        <xsd:attribute name="id" type="xsd:IDREF" use="required"/>
+        <xsd:attribute name="wykonawca" type="xsd:IDREF" use="required"/>
+        <xsd:attribute name="data_wydania" type="jednostki:dataWydaniaPłyty"/>
+    </xsd:attributeGroup>
+
+    <xsd:element name="lista_utworów">
+        <xsd:complexType>
+            <xsd:element ref="utwór" maxOccurs="15"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="utwór">
+        <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="tytuł" type="xsd:token" default="Bez tytułu"/>
+            <xsd:element name="długość" type="xsd:time"/>
+        </xsd:sequence>
+        <xsd:attribute name="nr" type="xsd:int"/>
+        </xsd:complexType>
+    </xsd:element>
+
             
 </xsd:schema>
