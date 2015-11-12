@@ -3,41 +3,38 @@
             targetNamespace="http://jednostki.xml.pl"
             xmlns="http://jednostki.xml.pl">
 
-    <xsd:element name="dzień">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:int" use="required">
-                <xsd:minInclusive="1"/>
-                <xsd:maxInclusive="31"/>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:element>
+    <xsd:simpleType name="dzień">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="31"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 
-    <xsd:element name="miesiąc">
-        <xsd:simpleType>
-            <xsd:restriction base="xsd:int" use="required">
-                <xsd:minInclusive="1"/>
-                <xsd:maxInclusive="12"/>
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:element>
-
-    <xsd:element name="rokAkademicki" fixed="2015"/>
-
-    <xsd:element name="dataWydaniaPłyty" type="xsd:date"/>
+    <xsd:simpleType name="miesiąc">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 
     <xsd:element name="ranking">
         <xsd:simpleType>
-
+            <xsd:restriction base="xsd:decimal">
+                <xsd:minInclusive value="1"/>
+                <xsd:maxInclusive value="10"/>
+            </xsd:restriction>
         </xsd:simpleType>
     </xsd:element>
 
-    <xsd:element name="czasTrwaniaPłyty" type="xsd:time"/>
+    <xsd:element name="czas_trwania" type="xsd:time"/>
 
-    <xsd:simpleType name="cena">
-        <xsd:restriction base="xsd:string">
-            <xsd:pattern value="([0-9]{3})[,]([0-9]{3})(zł|eur)"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+    <xsd:element name="cena">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="([0-9]{3})[,]([0-9]{3})(zł|eur)"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
 
 
 </xsd:schema>

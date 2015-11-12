@@ -3,4 +3,7 @@
             targetNamespace="http://zespol.xml.pl"
             xmlns="http://zespol.xml.pl">
 
+    <xsd:element name="wykonawcy">
+    </xsd:element>
+
 </xsd:schema>

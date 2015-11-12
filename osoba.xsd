@@ -12,34 +12,44 @@
     </xsd:element>
 
     <xsd:element name="student">
-        <xsd:sequence>
-            <xsd:element ref="imię"/>
-            <xsd:element name="drugie_imię" type="imię" minOccurs="0" maxOccurs="1"/>
-            <xsd:element ref="nazwisko"/>
-            <xsd:element ref="numer_indeksu"/>
-            <xsd:element ref="kierunek"/>
-        </xsd:sequence>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="imię"/>
+                <xsd:element ref="drugie_imię" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="nazwisko"/>
+                <xsd:element ref="numer_indeksu"/>
+                <xsd:element ref="kierunek"/>
+            </xsd:sequence>
+        </xsd:complexType>
     </xsd:element>
 
-    <xsd:simpleType name="imię">
+    <xsd:element name="imię" type="imięBaza"/>
+    
+    <xsd:simpleType name="imięBaza">
         <xsd:restriction base="xsd:string">
             <xsd:maxLength value="20"/>
         </xsd:restriction>
     </xsd:simpleType>
+    
+    <xsd:element name="drugie_imię" type="imięBaza"/>
 
-    <xsd:simpleType name="nazwisko">
-        <xsd:restriction base="xsd:string">
-            <xsd:maxLength value="30"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+    <xsd:element name="nazwisko">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="30"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
 
-    <xsd:simpleType name="numer_indeksu">
-        <xsd:restriction base="xsd:int">
-            <xsd:totalDigits value="6" />
-        </xsd:restriction>
-    </xsd:simpleType>
+    <xsd:element name="numer_indeksu">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+                <xsd:totalDigits value="6" />
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
 
-    <xsd:simpleType name="kierunek" type="jakieKierunki"/>
+    <xsd:element name="kierunek" type="jakieKierunki"/>
 
     <xsd:simpleType name="jakieKierunki">
         <xsd:restriction base="xsd:token">
