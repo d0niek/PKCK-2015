@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:osoba="http://osoba.xml.pl"
+            xmlns:plyta="http://plyta.xml.pl"
+            xmlns:zespol="http://zespol.xml.pl">
+
+    <xsd:import namespace="http://osoba.xml.pl" schemaLocation="osoba.xsd" />
+    <xsd:import namespace="http://plyta.xml.pl" schemaLocation="plyta.xsd" />
+    <xsd:import namespace="http://zespol.xml.pl" schemalocation="zespol.xsd" />
+
+</xsd:schema>
