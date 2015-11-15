@@ -6,12 +6,12 @@
     <xsd:element name="autorzy">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="student" maxOccurs="2"/>
+                <xsd:element ref="autor" maxOccurs="2"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="student">
+    <xsd:element name="autor">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="imię"/>
