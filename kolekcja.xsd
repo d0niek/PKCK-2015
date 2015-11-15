@@ -20,7 +20,7 @@
         </xsd:complexType>
     </xsd:element>
 
-    <!-- elementy nagłówka -->
+    <!-- nagłówek -->
 
     <xsd:element name="nagłówek">
         <xsd:complexType>
@@ -46,9 +46,9 @@
         <xsd:attribute name="rok" type="xsd:gYear" fixed="2015"/>
     </xsd:attributeGroup>
 
-    <!-- koniec elementów nagłówka -->
+    <!-- END nagłówek -->
 
-    <!-- elementy listy płyt -->
+    <!-- płyt -->
 
     <xsd:element name="płyty">
         <xsd:complexType>
@@ -58,10 +58,9 @@
         </xsd:complexType>
     </xsd:element>
 
-    <!-- koniec elementów listy płyt -->
+    <!-- END płyt -->
 
-    <!-- elementy listy wykonawców -->
-	
-    <!-- koniec elementów listy wykonawców -->
+    <!-- listy wykonawców -->
+    <!-- END listy wykonawców -->
 
 </xsd:schema>
