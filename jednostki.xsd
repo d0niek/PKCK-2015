@@ -19,9 +19,8 @@
 
     <xsd:element name="ranking">
         <xsd:simpleType>
-            <xsd:restriction base="xsd:decimal">
-                <xsd:minInclusive value="1"/>
-                <xsd:maxInclusive value="10"/>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="(([1-9])[\.](0|5)|(10\.0))"/>
             </xsd:restriction>
         </xsd:simpleType>
     </xsd:element>
