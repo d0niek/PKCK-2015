@@ -25,13 +25,13 @@
 
     <xsd:element name="imię" type="imięBaza"/>
     
+    <xsd:element name="drugie_imię" type="imięBaza"/>
+    
     <xsd:simpleType name="imięBaza">
         <xsd:restriction base="xsd:string">
             <xsd:maxLength value="20"/>
         </xsd:restriction>
     </xsd:simpleType>
-    
-    <xsd:element name="drugie_imię" type="imięBaza"/>
 
     <xsd:element name="nazwisko">
         <xsd:simpleType>
