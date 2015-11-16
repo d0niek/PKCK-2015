@@ -21,6 +21,22 @@
                 <xsd:element ref="zespol:wykonawcy" />
             </xsd:sequence>
         </xsd:complexType>
+        <xsd:unique name="kluczPłyta">
+            <xsd:selector xpath="plyty/plyta:płyta" />
+            <xsd:field xpath="@id" />
+        </xsd:unique>
+        <xsd:unique name="kluczWykonawca">
+            <xsd:selector xpath="zespol:wykonawcy/zespol:wykonawca|zespol:wykonawcy/zespol:zespół" />
+            <xsd:field xpath="@id" />
+        </xsd:unique>
+        <xsd:keyref name="odnośnikDoWykonawcy" refer="kluczWykonawca">
+            <xsd:selector xpath="plyty/plyta:płyta" />
+            <xsd:field xpath="@wykonawca" />
+        </xsd:keyref>
+        <xsd:keyref name="odnośnikDoPłyty" refer="kluczPłyta">
+            <xsd:selector xpath="zespol:wykonawcy/zespol:wykonawcaTyp/zespol:wydał" />
+            <xsd:field xpath="@nagranie" />
+        </xsd:keyref>
     </xsd:element>
 
     <!-- nagłówek -->
@@ -59,10 +75,6 @@
                 <xsd:element ref="plyta:płyta" minOccurs="1" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
-        <xsd:unique name="kluczPłyta">
-            <xsd:selector xpath="plyta:płyta" />
-            <xsd:field xpath="@id" />
-        </xsd:unique>
     </xsd:element>
 
     <!-- END płyt -->

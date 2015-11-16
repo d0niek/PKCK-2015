@@ -2,8 +2,7 @@
 <xsd:schema
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://zespol.xml.pl"
-    xmlns="http://zespol.xml.pl"
-    xmlns:kolekcja="http://kolekcja.xml.pl">
+    xmlns="http://zespol.xml.pl">
     
     <xsd:import namespace="http://kolekcja.xml.pl" schemaLocation="kolekcja.xsd" />
 
@@ -18,10 +17,6 @@
                 </xsd:choice>
             </xsd:sequence>
         </xsd:complexType>
-        <xsd:unique name="kluczWykonawca">
-            <xsd:selector xpath="wykonawcy" />
-            <xsd:field xpath="@id" />
-        </xsd:unique>
     </xsd:element>
 
     <xsd:complexType name="wykonawcaTyp">
@@ -35,10 +30,6 @@
         <xsd:complexType>
             <xsd:attribute name="nagranie" type="xsd:token" use="required" />
         </xsd:complexType>
-        <xsd:keyref name="odnośnikDoPłyty" refer="kolekcja:kluczPłyta">
-            <xsd:selector xpath="wydał" />
-            <xsd:field xpath="@nagranie" />
-        </xsd:keyref>
     </xsd:element>
 
     <xsd:attributeGroup name="atrybutyWykonawcow">
