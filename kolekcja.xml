@@ -2,6 +2,7 @@
 <?xml-stylesheet href="style.css"?>
 <kolekcja
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://kolekcja.xml.pl"
     xsi:schemaLocation="http://w3schools.com kolekcja.xsd">
 
     <nagłówek>
@@ -33,56 +34,56 @@
             <j:cena>29,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Miliony rąk tu</tytuł>
-                    <długość>00:04:01</długość>
+                    <p:tytuł>Miliony rąk tu</p:tytuł>
+                    <p:długość>00:04:01</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Rok `97 dobrze pamiętam</tytuł>
-                    <długość>00:03:33</długość>
+                    <p:tytuł>Rok `97 dobrze pamiętam</p:tytuł>
+                    <p:długość>00:03:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Odkupienie</tytuł>
-                    <długość>00:04:08</długość>
+                    <p:tytuł>Odkupienie</p:tytuł>
+                    <p:długość>00:04:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>M.I.A.S.T.O. tronic</tytuł>
-                    <długość>00:04:16</długość>
+                    <p:tytuł>M.I.A.S.T.O. tronic</p:tytuł>
+                    <p:długość>00:04:16</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Żeby powstać</tytuł>
-                    <długość>00:04:18</długość>
+                    <p:tytuł>Żeby powstać</p:tytuł>
+                    <p:długość>00:04:18</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Dwadzieścia lat</tytuł>
-                    <długość>00:04:10</długość>
+                    <p:tytuł>Dwadzieścia lat</p:tytuł>
+                    <p:długość>00:04:10</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Zakazany na osiedlu</tytuł>
-                    <długość>00:03:32</długość>
+                    <p:tytuł>Zakazany na osiedlu</p:tytuł>
+                    <p:długość>00:03:32</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>CD MC LP</tytuł>
-                    <długość>00:03:41</długość>
+                    <p:tytuł>CD MC LP</p:tytuł>
+                    <p:długość>00:03:41</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Jestem hip hopem</tytuł>
-                    <długość>00:03:33</długość>
+                    <p:tytuł>Jestem hip hopem</p:tytuł>
+                    <p:długość>00:03:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Trochę mnie nie było</tytuł>
-                    <długość>00:03:55</długość>
+                    <p:tytuł>Trochę mnie nie było</p:tytuł>
+                    <p:długość>00:03:55</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Ciągnie się to za mną</tytuł>
-                    <długość>00:04:09</długość>
+                    <p:tytuł>Ciągnie się to za mną</p:tytuł>
+                    <p:długość>00:04:09</p:długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Bomby na miasto</tytuł>
-                    <długość>00:03:56</długość>
+                    <p:tytuł>Bomby na miasto</p:tytuł>
+                    <p:długość>00:03:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="13">
-                    <tytuł>Rap to talent</tytuł>
-                    <długość>00:04:44</długość>
+                    <p:tytuł>Rap to talent</p:tytuł>
+                    <p:długość>00:04:44</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -94,52 +95,52 @@
             <j:cena>39,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Somewhere Only We Know</tytuł>
-                    <długość>00:03:57</długość>
+                    <p:tytuł>Somewhere Only We Know</p:tytuł>
+                    <p:długość>00:03:57</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Bend and Break</tytuł>
-                    <długość>00:03:40</długość>
+                    <p:tytuł>Bend and Break</p:tytuł>
+                    <p:długość>00:03:40</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>We Might as Well Be Strangers</tytuł>
-                    <długość>00:03:12</długość>
+                    <p:tytuł>We Might as Well Be Strangers</p:tytuł>
+                    <p:długość>00:03:12</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Everybody's Changing</tytuł>
-                    <długość>00:03:35</długość>
+                    <p:tytuł>Everybody's Changing</p:tytuł>
+                    <p:długość>00:03:35</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Your Eyes Open</tytuł>
-                    <długość>00:03:23</długość>
+                    <p:tytuł>Your Eyes Open</p:tytuł>
+                    <p:długość>00:03:23</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>She Has No Time</tytuł>
-                    <długość>00:05:45</długość>
+                    <p:tytuł>She Has No Time</p:tytuł>
+                    <p:długość>00:05:45</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Can't Stop Now</tytuł>
-                    <długość>00:03:38</długość>
+                    <p:tytuł>Can't Stop Now</p:tytuł>
+                    <p:długość>00:03:38</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Sunshine</tytuł>
-                    <długość>00:04:12</długość>
+                    <p:tytuł>Sunshine</p:tytuł>
+                    <p:długość>00:04:12</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>This Is the Last Time</tytuł>
-                    <długość>00:03:29</długość>
+                    <p:tytuł>This Is the Last Time</p:tytuł>
+                    <p:długość>00:03:29</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>On a Day Like Today</tytuł>
-                    <długość>00:05:27</długość>
+                    <p:tytuł>On a Day Like Today</p:tytuł>
+                    <p:długość>00:05:27</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Untitled 1</tytuł>
-                    <długość>00:05:36</długość>
+                    <p:tytuł>Untitled 1</p:tytuł>
+                    <p:długość>00:05:36</p:długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Bedshaped</tytuł>
-                    <długość>00:04:38</długość>
+                    <p:tytuł>Bedshaped</p:tytuł>
+                    <p:długość>00:04:38</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -151,44 +152,44 @@
             <j:cena>29,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Waterfall</tytuł>
-                    <długość>00:04:46</długość>
+                    <p:tytuł>Waterfall</p:tytuł>
+                    <p:długość>00:04:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Desire</tytuł>
-                    <długość>00:03:16</długość>
+                    <p:tytuł>Desire</p:tytuł>
+                    <p:długość>00:03:16</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>The First Cut</tytuł>
-                    <długość>00:03:25</długość>
+                    <p:tytuł>The First Cut</p:tytuł>
+                    <p:długość>00:03:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Somehow</tytuł>
-                    <długość>00:03:51</długość>
+                    <p:tytuł>Somehow</p:tytuł>
+                    <p:długość>00:03:51</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Lost in Something</tytuł>
-                    <długość>00:03:33</długość>
+                    <p:tytuł>Lost in Something</p:tytuł>
+                    <p:długość>00:03:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>I Want it All</tytuł>
-                    <długość>00:03:13</długość>
+                    <p:tytuł>I Want it All</p:tytuł>
+                    <p:długość>00:03:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Lean On Me</tytuł>
-                    <długość>00:04:26</długość>
+                    <p:tytuł>Lean On Me</p:tytuł>
+                    <p:długość>00:04:26</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Lighting</tytuł>
-                    <długość>00:02:46</długość>
+                    <p:tytuł>Lighting</p:tytuł>
+                    <p:długość>00:02:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Sparks</tytuł>
-                    <długość>00:03:11</długość>
+                    <p:tytuł>Sparks</p:tytuł>
+                    <p:długość>00:03:11</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Muddy Water</tytuł>
-                    <długość>00:04:38</długość>
+                    <p:tytuł>Muddy Water</p:tytuł>
+                    <p:długość>00:04:38</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -200,48 +201,48 @@
             <j:cena>34,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Serpents Unleashed</tytuł>
-                    <długość>00:02:11</długość>
+                    <p:tytuł>Serpents Unleashed</p:tytuł>
+                    <p:długość>00:02:11</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Beneath Dead Leaves</tytuł>
-                    <długość>00:03:07</długość>
+                    <p:tytuł>Beneath Dead Leaves</p:tytuł>
+                    <p:długość>00:03:07</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>I Am of Death (Hell Has Arrived)</tytuł>
-                    <długość>00:02:47</długość>
+                    <p:tytuł>I Am of Death (Hell Has Arrived)</p:tytuł>
+                    <p:długość>00:02:47</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>From a Cloudless Sky</tytuł>
-                    <długość>00:02:48</długość>
+                    <p:tytuł>From a Cloudless Sky</p:tytuł>
+                    <p:długość>00:02:48</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Burned from Bone</tytuł>
-                    <długość>00:02:39</długość>
+                    <p:tytuł>Burned from Bone</p:tytuł>
+                    <p:długość>00:02:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Unending, Everliving</tytuł>
-                    <długość>00:03:03</długość>
+                    <p:tytuł>Unending, Everliving</p:tytuł>
+                    <p:długość>00:03:03</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Blade on the Flesh, Blood on My Hands</tytuł>
-                    <długość>00:02:26</długość>
+                    <p:tytuł>Blade on the Flesh, Blood on My Hands</p:tytuł>
+                    <p:długość>00:02:26</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>This Evil Embrace</tytuł>
-                    <długość>00:03:39</długość>
+                    <p:tytuł>This Evil Embrace</p:tytuł>
+                    <p:długość>00:03:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Unwept</tytuł>
-                    <długość>00:02:25</długość>
+                    <p:tytuł>Unwept</p:tytuł>
+                    <p:długość>00:02:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Born of the Light That Does Not Shine</tytuł>
-                    <długość>00:02:18</długość>
+                    <p:tytuł>Born of the Light That Does Not Shine</p:tytuł>
+                    <p:długość>00:02:18</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>More Cruel Than Weak</tytuł>
-                    <długość>00:04:18</długość>
+                    <p:tytuł>More Cruel Than Weak</p:tytuł>
+                    <p:długość>00:04:18</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -253,24 +254,24 @@
             <j:cena>39,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Children of the Mist</tytuł>
-                    <długość>00:12:14</długość>
+                    <p:tytuł>Children of the Mist</p:tytuł>
+                    <p:długość>00:12:14</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Aura</tytuł>
-                    <długość>00:13:39</długość>
+                    <p:tytuł>Aura</p:tytuł>
+                    <p:długość>00:13:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>The Awakening</tytuł>
-                    <długość>00:10:09</długość>
+                    <p:tytuł>The Awakening</p:tytuł>
+                    <p:długość>00:10:09</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Farewell</tytuł>
-                    <długość>00:08:24</długość>
+                    <p:tytuł>Farewell</p:tytuł>
+                    <p:długość>00:08:24</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Pillars of the Earth</tytuł>
-                    <długość>00:12:11</długość>
+                    <p:tytuł>Pillars of the Earth</p:tytuł>
+                    <p:długość>00:12:11</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -282,48 +283,48 @@
             <j:cena>34,90zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Rattlesnake</tytuł>
-                    <długość>00:03:34</długość>
+                    <p:tytuł>Rattlesnake</p:tytuł>
+                    <p:długość>00:03:34</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Birth in Reverse</tytuł>
-                    <długość>00:03:15</długość>
+                    <p:tytuł>Birth in Reverse</p:tytuł>
+                    <p:długość>00:03:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Prince Johnny</tytuł>
-                    <długość>00:04:36</długość>
+                    <p:tytuł>Prince Johnny</p:tytuł>
+                    <p:długość>00:04:36</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Huey Newton</tytuł>
-                    <długość>00:04:37</długość>
+                    <p:tytuł>Huey Newton</p:tytuł>
+                    <p:długość>00:04:37</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Digital Witness</tytuł>
-                    <długość>00:03:21</długość>
+                    <p:tytuł>Digital Witness</p:tytuł>
+                    <p:długość>00:03:21</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>I Prefer Your Love</tytuł>
-                    <długość>00:03:36</długość>
+                    <p:tytuł>I Prefer Your Love</p:tytuł>
+                    <p:długość>00:03:36</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Regret</tytuł>
-                    <długość>00:03:21</długość>
+                    <p:tytuł>Regret</p:tytuł>
+                    <p:długość>00:03:21</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Bring Me Your Loves</tytuł>
-                    <długość>00:03:15</długość>
+                    <p:tytuł>Bring Me Your Loves</p:tytuł>
+                    <p:długość>00:03:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Psychopath</tytuł>
-                    <długość>00:03:32</długość>
+                    <p:tytuł>Psychopath</p:tytuł>
+                    <p:długość>00:03:32</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Every Tear Disappears</tytuł>
-                    <długość>00:03:15</długość>
+                    <p:tytuł>Every Tear Disappears</p:tytuł>
+                    <p:długość>00:03:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Severed Crossed Fingers</tytuł>
-                    <długość>00:03:42</długość>
+                    <p:tytuł>Severed Crossed Fingers</p:tytuł>
+                    <p:długość>00:03:42</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -335,44 +336,44 @@
             <j:cena>47,50zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Sampo</tytuł>
-                    <długość>00:06:08</długość>
+                    <p:tytuł>Sampo</p:tytuł>
+                    <p:długość>00:06:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Silver Bride</tytuł>
-                    <długość>00:04:13</długość>
+                    <p:tytuł>Silver Bride</p:tytuł>
+                    <p:długość>00:04:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>From the Heaven of My Heart</tytuł>
-                    <długość>00:05:20</długość>
+                    <p:tytuł>From the Heaven of My Heart</p:tytuł>
+                    <p:długość>00:05:20</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Sky Is Mine</tytuł>
-                    <długość>00:04:20</długość>
+                    <p:tytuł>Sky Is Mine</p:tytuł>
+                    <p:długość>00:04:20</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Majestic Beast</tytuł>
-                    <długość>00:04:19</długość>
+                    <p:tytuł>Majestic Beast</p:tytuł>
+                    <p:długość>00:04:19</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>My Sun</tytuł>
-                    <długość>00:04:04</długość>
+                    <p:tytuł>My Sun</p:tytuł>
+                    <p:długość>00:04:04</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Highest Star</tytuł>
-                    <długość>00:04:44</długość>
+                    <p:tytuł>Highest Star</p:tytuł>
+                    <p:długość>00:04:44</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Skyforger</tytuł>
-                    <długość>00:05:15</długość>
+                    <p:tytuł>Skyforger</p:tytuł>
+                    <p:długość>00:05:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Course of Fate</tytuł>
-                    <długość>00:04:15</długość>
+                    <p:tytuł>Course of Fate</p:tytuł>
+                    <p:długość>00:04:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>From Earth I Rose</tytuł>
-                    <długość>00:05:04</długość>
+                    <p:tytuł>From Earth I Rose</p:tytuł>
+                    <p:długość>00:05:04</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -384,52 +385,52 @@
             <j:cena>32,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Battle for Light</tytuł>
-                    <długość>00:05:35</długość>
+                    <p:tytuł>Battle for Light</p:tytuł>
+                    <p:długość>00:05:35</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Mermaid</tytuł>
-                    <długość>00:04:24</długość>
+                    <p:tytuł>Mermaid</p:tytuł>
+                    <p:długość>00:04:24</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>My Enemy</tytuł>
-                    <długość>00:03:25</długość>
+                    <p:tytuł>My Enemy</p:tytuł>
+                    <p:długość>00:03:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>You I Need</tytuł>
-                    <długość>00:04:22</długość>
+                    <p:tytuł>You I Need</p:tytuł>
+                    <p:długość>00:04:22</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Song of the Sage</tytuł>
-                    <długość>00:05:27</długość>
+                    <p:tytuł>Song of the Sage</p:tytuł>
+                    <p:długość>00:05:27</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Three Words</tytuł>
-                    <długość>00:03:55</długość>
+                    <p:tytuł>Three Words</p:tytuł>
+                    <p:długość>00:03:55</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Reformation</tytuł>
-                    <długość>00:04:33</długość>
+                    <p:tytuł>Reformation</p:tytuł>
+                    <p:długość>00:04:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Soothsayer</tytuł>
-                    <długość>00:04:09</długość>
+                    <p:tytuł>Soothsayer</p:tytuł>
+                    <p:długość>00:04:09</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>On a Stranded Shore</tytuł>
-                    <długość>00:04:13</długość>
+                    <p:tytuł>On a Stranded Shore</p:tytuł>
+                    <p:długość>00:04:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Escape</tytuł>
-                    <długość>00:03:52</długość>
+                    <p:tytuł>Escape</p:tytuł>
+                    <p:długość>00:03:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Crack in a Stone</tytuł>
-                    <długość>00:04:56</długość>
+                    <p:tytuł>Crack in a Stone</p:tytuł>
+                    <p:długość>00:04:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Beginning of Time</tytuł>
-                    <długość>00:05:51</długość>
+                    <p:tytuł>Beginning of Time</p:tytuł>
+                    <p:długość>00:05:51</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -441,44 +442,44 @@
             <j:cena>32,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Under the Red Cloud</tytuł>
-                    <długość>00:05:33</długość>
+                    <p:tytuł>Under the Red Cloud</p:tytuł>
+                    <p:długość>00:05:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>The Four Wise Ones</tytuł>
-                    <długość>00:04:40</długość>
+                    <p:tytuł>The Four Wise Ones</p:tytuł>
+                    <p:długość>00:04:40</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Bad Blood</tytuł>
-                    <długość>00:05:23</długość>
+                    <p:tytuł>Bad Blood</p:tytuł>
+                    <p:długość>00:05:23</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>The Skull</tytuł>
-                    <długość>00:05:04</długość>
+                    <p:tytuł>The Skull</p:tytuł>
+                    <p:długość>00:05:04</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Death of a King</tytuł>
-                    <długość>00:05:14</długość>
+                    <p:tytuł>Death of a King</p:tytuł>
+                    <p:długość>00:05:14</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Sacrifice</tytuł>
-                    <długość>00:03:56</długość>
+                    <p:tytuł>Sacrifice</p:tytuł>
+                    <p:długość>00:03:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Dark Path</tytuł>
-                    <długość>00:05:08</długość>
+                    <p:tytuł>Dark Path</p:tytuł>
+                    <p:długość>00:05:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Enemy at the Gates</tytuł>
-                    <długość>00:05:07</długość>
+                    <p:tytuł>Enemy at the Gates</p:tytuł>
+                    <p:długość>00:05:07</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Tree of Ages</tytuł>
-                    <długość>00:04:36</długość>
+                    <p:tytuł>Tree of Ages</p:tytuł>
+                    <p:długość>00:04:36</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>White Night</tytuł>
-                    <długość>00:05:15</długość>
+                    <p:tytuł>White Night</p:tytuł>
+                    <p:długość>00:05:15</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -490,20 +491,20 @@
             <j:cena>38,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Roots</tytuł>
-                    <długość>00:16:35</długość>
+                    <p:tytuł>Roots</p:tytuł>
+                    <p:długość>00:16:35</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Carved in Stone</tytuł>
-                    <długość>00:13:33</długość>
+                    <p:tytuł>Carved in Stone</p:tytuł>
+                    <p:długość>00:13:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Saorsa</tytuł>
-                    <długość>00:02:17</długość>
+                    <p:tytuł>Saorsa</p:tytuł>
+                    <p:długość>00:02:17</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>A Highland Lament</tytuł>
-                    <długość>00:17:32</długość>
+                    <p:tytuł>A Highland Lament</p:tytuł>
+                    <p:długość>00:17:32</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -515,36 +516,36 @@
             <j:cena>46,70zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>The Echoes of a Dissonant Evensong</tytuł>
-                    <długość>00:09:35</długość>
+                    <p:tytuł>The Echoes of a Dissonant Evensong</p:tytuł>
+                    <p:długość>00:09:35</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Where Mountains Pierce the Sky</tytuł>
-                    <długość>00:12:42</długość>
+                    <p:tytuł>Where Mountains Pierce the Sky</p:tytuł>
+                    <p:długość>00:12:42</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>The Long Road Part 1: One Last Fire...</tytuł>
-                    <długość>00:05:56</długość>
+                    <p:tytuł>The Long Road Part 1: One Last Fire...</p:tytuł>
+                    <p:długość>00:05:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>The Long Road Part 2: Capricious Miles</tytuł>
-                    <długość>00:07:53</długość>
+                    <p:tytuł>The Long Road Part 2: Capricious Miles</p:tytuł>
+                    <p:długość>00:07:53</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>The Long Road Part 3: The Sigh of Summer</tytuł>
-                    <długość>00:09:39</długość>
+                    <p:tytuł>The Long Road Part 3: The Sigh of Summer</p:tytuł>
+                    <p:długość>00:09:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Norwegian Nights</tytuł>
-                    <długość>00:03:19</długość>
+                    <p:tytuł>Norwegian Nights</p:tytuł>
+                    <p:długość>00:03:19</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>...in Silence</tytuł>
-                    <długość>00:09:45</długość>
+                    <p:tytuł>...in Silence</p:tytuł>
+                    <p:długość>00:09:45</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Chase the Grain</tytuł>
-                    <długość>00:12:14</długość>
+                    <p:tytuł>Chase the Grain</p:tytuł>
+                    <p:długość>00:12:14</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -556,44 +557,44 @@
             <j:cena>24,50zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Blank File</tytuł>
-                    <długość>00:04:06</długość>
+                    <p:tytuł>Blank File</p:tytuł>
+                    <p:długość>00:04:06</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>My Land</tytuł>
-                    <długość>00:04:38</długość>
+                    <p:tytuł>My Land</p:tytuł>
+                    <p:długość>00:04:38</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>8th Commandment</tytuł>
-                    <długość>00:03:42</długość>
+                    <p:tytuł>8th Commandment</p:tytuł>
+                    <p:długość>00:03:42</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Replica</tytuł>
-                    <długość>00:04:56</długość>
+                    <p:tytuł>Replica</p:tytuł>
+                    <p:długość>00:04:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Kingdom for a Heart</tytuł>
-                    <długość>00:03:52</długość>
+                    <p:tytuł>Kingdom for a Heart</p:tytuł>
+                    <p:długość>00:03:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>FullMoon</tytuł>
-                    <długość>00:05:08</długość>
+                    <p:tytuł>FullMoon</p:tytuł>
+                    <p:długość>00:05:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Letter to Dana</tytuł>
-                    <długość>00:06:01</długość>
+                    <p:tytuł>Letter to Dana</p:tytuł>
+                    <p:długość>00:06:01</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>UnOpened</tytuł>
-                    <długość>00:03:43</długość>
+                    <p:tytuł>UnOpened</p:tytuł>
+                    <p:długość>00:03:43</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Picturing the Past</tytuł>
-                    <długość>00:03:37</długość>
+                    <p:tytuł>Picturing the Past</p:tytuł>
+                    <p:długość>00:03:37</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Destruction Preventer</tytuł>
-                    <długość>00:07:39</długość>
+                    <p:tytuł>Destruction Preventer</p:tytuł>
+                    <p:długość>00:07:39</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -605,40 +606,40 @@
             <j:cena>50,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>A Celebration for the Death of Man...</tytuł>
-                    <długość>00:02:24</długość>
+                    <p:tytuł>A Celebration for the Death of Man...</p:tytuł>
+                    <p:długość>00:02:24</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>In the Shadow of Our Pale Companion</tytuł>
-                    <długość>00:14:44</długość>
+                    <p:tytuł>In the Shadow of Our Pale Companion</p:tytuł>
+                    <p:długość>00:14:44</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Odal</tytuł>
-                    <długość>00:07:38</długość>
+                    <p:tytuł>Odal</p:tytuł>
+                    <p:długość>00:07:38</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>I Am the Wooden Doors</tytuł>
-                    <długość>00:06:10</długość>
+                    <p:tytuł>I Am the Wooden Doors</p:tytuł>
+                    <p:długość>00:06:10</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>The Lodge</tytuł>
-                    <długość>00:04:39</długość>
+                    <p:tytuł>The Lodge</p:tytuł>
+                    <p:długość>00:04:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>You Were but a Ghost in My Arms</tytuł>
-                    <długość>00:09:13</długość>
+                    <p:tytuł>You Were but a Ghost in My Arms</p:tytuł>
+                    <p:długość>00:09:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>The Hawthorne Passage</tytuł>
-                    <długość>00:11:17</długość>
+                    <p:tytuł>The Hawthorne Passage</p:tytuł>
+                    <p:długość>00:11:17</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>...and the Great Cold Death of the Earth</tytuł>
-                    <długość>00:07:13</długość>
+                    <p:tytuł>...and the Great Cold Death of the Earth</p:tytuł>
+                    <p:długość>00:07:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>A Desolation Song</tytuł>
-                    <długość>00:05:07</długość>
+                    <p:tytuł>A Desolation Song</p:tytuł>
+                    <p:długość>00:05:07</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -650,28 +651,28 @@
             <j:cena>24,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>They Escaped the Weight of Darkness</tytuł>
-                    <długość>00:03:41</długość>
+                    <p:tytuł>They Escaped the Weight of Darkness</p:tytuł>
+                    <p:długość>00:03:41</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Into the Painted Grey</tytuł>
-                    <długość>00:12:25</długość>
+                    <p:tytuł>Into the Painted Grey</p:tytuł>
+                    <p:długość>00:12:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>The Watcher's Monolith</tytuł>
-                    <długość>00:11:46</długość>
+                    <p:tytuł>The Watcher's Monolith</p:tytuł>
+                    <p:długość>00:11:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Black Lake Niðstång</tytuł>
-                    <długość>00:17:34</długość>
+                    <p:tytuł>Black Lake Niðstång</p:tytuł>
+                    <p:długość>00:17:34</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Ghosts of the Midwinter Fires</tytuł>
-                    <długość>00:09:39</długość>
+                    <p:tytuł>Ghosts of the Midwinter Fires</p:tytuł>
+                    <p:długość>00:09:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>To Drown</tytuł>
-                    <długość>00:10:27</długość>
+                    <p:tytuł>To Drown</p:tytuł>
+                    <p:długość>00:10:27</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -683,44 +684,44 @@
             <j:cena>24,50zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Misplaced</tytuł>
-                    <długość>00:04:42</długość>
+                    <p:tytuł>Misplaced</p:tytuł>
+                    <p:długość>00:04:42</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Blinded No More</tytuł>
-                    <długość>00:05:33</długość>
+                    <p:tytuł>Blinded No More</p:tytuł>
+                    <p:długość>00:05:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Ain't Your Fairytale</tytuł>
-                    <długość>00:05:26</długość>
+                    <p:tytuł>Ain't Your Fairytale</p:tytuł>
+                    <p:długość>00:05:26</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Reckoning Day, Reckoning Night...</tytuł>
-                    <długość>00:03:21</długość>
+                    <p:tytuł>Reckoning Day, Reckoning Night...</p:tytuł>
+                    <p:długość>00:03:21</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Don't Say a Word</tytuł>
-                    <długość>00:05:49</długość>
+                    <p:tytuł>Don't Say a Word</p:tytuł>
+                    <p:długość>00:05:49</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>The Boy Who Wanted to Be a Real Puppet</tytuł>
-                    <długość>00:04:44</długość>
+                    <p:tytuł>The Boy Who Wanted to Be a Real Puppet</p:tytuł>
+                    <p:długość>00:04:44</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>My Selene</tytuł>
-                    <długość>00:05:28</długość>
+                    <p:tytuł>My Selene</p:tytuł>
+                    <p:długość>00:05:28</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Wildfire</tytuł>
-                    <długość>00:04:36</długość>
+                    <p:tytuł>Wildfire</p:tytuł>
+                    <p:długość>00:04:36</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>White Pearl, Black Oceans...</tytuł>
-                    <długość>00:08:47</długość>
+                    <p:tytuł>White Pearl, Black Oceans...</p:tytuł>
+                    <p:długość>00:08:47</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Shamandalie</tytuł>
-                    <długość>00:04:04</długość>
+                    <p:tytuł>Shamandalie</p:tytuł>
+                    <p:długość>00:04:04</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -732,56 +733,56 @@
             <j:cena>70,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Dark Fantasy</tytuł>
-                    <długość>00:04:40</długość>
+                    <p:tytuł>Dark Fantasy</p:tytuł>
+                    <p:długość>00:04:40</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Gorgeous</tytuł>
-                    <długość>00:05:57</długość>
+                    <p:tytuł>Gorgeous</p:tytuł>
+                    <p:długość>00:05:57</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Power</tytuł>
-                    <długość>00:04:52</długość>
+                    <p:tytuł>Power</p:tytuł>
+                    <p:długość>00:04:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>All of the Lights (Interlude)</tytuł>
-                    <długość>00:01:02</długość>
+                    <p:tytuł>All of the Lights (Interlude)</p:tytuł>
+                    <p:długość>00:01:02</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>All of the Lights</tytuł>
-                    <długość>00:04:59</długość>
+                    <p:tytuł>All of the Lights</p:tytuł>
+                    <p:długość>00:04:59</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Monster</tytuł>
-                    <długość>00:06:18</długość>
+                    <p:tytuł>Monster</p:tytuł>
+                    <p:długość>00:06:18</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>So Appalled</tytuł>
-                    <długość>00:06:38</długość>
+                    <p:tytuł>So Appalled</p:tytuł>
+                    <p:długość>00:06:38</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Devil in a New Dress</tytuł>
-                    <długość>00:05:52</długość>
+                    <p:tytuł>Devil in a New Dress</p:tytuł>
+                    <p:długość>00:05:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Runaway</tytuł>
-                    <długość>00:09:08</długość>
+                    <p:tytuł>Runaway</p:tytuł>
+                    <p:długość>00:09:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Hell of a Life</tytuł>
-                    <długość>00:05:27</długość>
+                    <p:tytuł>Hell of a Life</p:tytuł>
+                    <p:długość>00:05:27</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Blame Game</tytuł>
-                    <długość>00:07:49</długość>
+                    <p:tytuł>Blame Game</p:tytuł>
+                    <p:długość>00:07:49</p:długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Lost in the World</tytuł>
-                    <długość>00:04:16</długość>
+                    <p:tytuł>Lost in the World</p:tytuł>
+                    <p:długość>00:04:16</p:długość>
                 </p:utwór>
                 <p:utwór nr="13">
-                    <tytuł>Who Will Survive in America</tytuł>
-                    <długość>00:01:38</długość>
+                    <p:tytuł>Who Will Survive in America</p:tytuł>
+                    <p:długość>00:01:38</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -793,44 +794,44 @@
             <j:cena>35,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Blood and Thunder</tytuł>
-                    <długość>00:03:48</długość>
+                    <p:tytuł>Blood and Thunder</p:tytuł>
+                    <p:długość>00:03:48</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>I Am Ahab</tytuł>
-                    <długość>00:02:45</długość>
+                    <p:tytuł>I Am Ahab</p:tytuł>
+                    <p:długość>00:02:45</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Seabeast</tytuł>
-                    <długość>00:04:15</długość>
+                    <p:tytuł>Seabeast</p:tytuł>
+                    <p:długość>00:04:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Ísland</tytuł>
-                    <długość>00:03:26</długość>
+                    <p:tytuł>Ísland</p:tytuł>
+                    <p:długość>00:03:26</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Iron Tusk</tytuł>
-                    <długość>00:03:03</długość>
+                    <p:tytuł>Iron Tusk</p:tytuł>
+                    <p:długość>00:03:03</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Megalodon</tytuł>
-                    <długość>00:04:22</długość>
+                    <p:tytuł>Megalodon</p:tytuł>
+                    <p:długość>00:04:22</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Naked Burn</tytuł>
-                    <długość>00:03:42</długość>
+                    <p:tytuł>Naked Burn</p:tytuł>
+                    <p:długość>00:03:42</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Aqua Dementia</tytuł>
-                    <długość>00:04:10</długość>
+                    <p:tytuł>Aqua Dementia</p:tytuł>
+                    <p:długość>00:04:10</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Hearts Alive</tytuł>
-                    <długość>00:13:39</długość>
+                    <p:tytuł>Hearts Alive</p:tytuł>
+                    <p:długość>00:13:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Joseph Merrick</tytuł>
-                    <długość>00:03:33</długość>
+                    <p:tytuł>Joseph Merrick</p:tytuł>
+                    <p:długość>00:03:33</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -842,52 +843,52 @@
             <j:cena>40,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>The Wolf Is Loose</tytuł>
-                    <długość>00:03:33</długość>
+                    <p:tytuł>The Wolf Is Loose</p:tytuł>
+                    <p:długość>00:03:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Crystal Skull</tytuł>
-                    <długość>00:03:23</długość>
+                    <p:tytuł>Crystal Skull</p:tytuł>
+                    <p:długość>00:03:23</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Sleeping Giant</tytuł>
-                    <długość>00:05:35</długość>
+                    <p:tytuł>Sleeping Giant</p:tytuł>
+                    <p:długość>00:05:35</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Capillarian Crest</tytuł>
-                    <długość>00:04:24</długość>
+                    <p:tytuł>Capillarian Crest</p:tytuł>
+                    <p:długość>00:04:24</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Circle of Cysquatch</tytuł>
-                    <długość>00:03:18</długość>
+                    <p:tytuł>Circle of Cysquatch</p:tytuł>
+                    <p:długość>00:03:18</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Bladecatcher</tytuł>
-                    <długość>00:03:19</długość>
+                    <p:tytuł>Bladecatcher</p:tytuł>
+                    <p:długość>00:03:19</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Colony of Birchmen</tytuł>
-                    <długość>00:04:18</długość>
+                    <p:tytuł>Colony of Birchmen</p:tytuł>
+                    <p:długość>00:04:18</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Hunters of the Sky</tytuł>
-                    <długość>00:03:50</długość>
+                    <p:tytuł>Hunters of the Sky</p:tytuł>
+                    <p:długość>00:03:50</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Hand of Stone</tytuł>
-                    <długość>00:03:30</długość>
+                    <p:tytuł>Hand of Stone</p:tytuł>
+                    <p:długość>00:03:30</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>This Mortal Soil</tytuł>
-                    <długość>00:04:54</długość>
+                    <p:tytuł>This Mortal Soil</p:tytuł>
+                    <p:długość>00:04:54</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Siberian Divide</tytuł>
-                    <długość>00:05:30</długość>
+                    <p:tytuł>Siberian Divide</p:tytuł>
+                    <p:długość>00:05:30</p:długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Pendulous Skin</tytuł>
-                    <długość>00:22:15</długość>
+                    <p:tytuł>Pendulous Skin</p:tytuł>
+                    <p:długość>00:22:15</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -899,32 +900,32 @@
             <j:cena>38,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Oblivion</tytuł>
-                    <długość>00:05:46</długość>
+                    <p:tytuł>Oblivion</p:tytuł>
+                    <p:długość>00:05:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Divinations</tytuł>
-                    <długość>00:03:40</długość>
+                    <p:tytuł>Divinations</p:tytuł>
+                    <p:długość>00:03:40</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Quintessence</tytuł>
-                    <długość>00:05:27</długość>
+                    <p:tytuł>Quintessence</p:tytuł>
+                    <p:długość>00:05:27</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>The Czar</tytuł>
-                    <długość>00:10:54</długość>
+                    <p:tytuł>The Czar</p:tytuł>
+                    <p:długość>00:10:54</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Ghost of Karelia</tytuł>
-                    <długość>00:05:25</długość>
+                    <p:tytuł>Ghost of Karelia</p:tytuł>
+                    <p:długość>00:05:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Crack the Skye</tytuł>
-                    <długość>00:05:54</długość>
+                    <p:tytuł>Crack the Skye</p:tytuł>
+                    <p:długość>00:05:54</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>The Last Baron</tytuł>
-                    <długość>00:13:00</długość>
+                    <p:tytuł>The Last Baron</p:tytuł>
+                    <p:długość>00:13:00</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -936,44 +937,44 @@
             <j:cena>29,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Darkness and Hope</tytuł>
-                    <długość>00:04:46</długość>
+                    <p:tytuł>Darkness and Hope</p:tytuł>
+                    <p:długość>00:04:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Firewalking</tytuł>
-                    <długość>00:03:05</długość>
+                    <p:tytuł>Firewalking</p:tytuł>
+                    <p:długość>00:03:05</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Nocturna</tytuł>
-                    <długość>00:03:52</długość>
+                    <p:tytuł>Nocturna</p:tytuł>
+                    <p:długość>00:03:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Heartshaped Abyss</tytuł>
-                    <długość>00:04:08</długość>
+                    <p:tytuł>Heartshaped Abyss</p:tytuł>
+                    <p:długość>00:04:08</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Devilred</tytuł>
-                    <długość>00:03:25</długość>
+                    <p:tytuł>Devilred</p:tytuł>
+                    <p:długość>00:03:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Ghostsong</tytuł>
-                    <długość>00:04:21</długość>
+                    <p:tytuł>Ghostsong</p:tytuł>
+                    <p:długość>00:04:21</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Rapaces</tytuł>
-                    <długość>00:05:31</długość>
+                    <p:tytuł>Rapaces</p:tytuł>
+                    <p:długość>00:05:31</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Made of Storm</tytuł>
-                    <długość>00:04:09</długość>
+                    <p:tytuł>Made of Storm</p:tytuł>
+                    <p:długość>00:04:09</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>How We Became Fire</tytuł>
-                    <długość>00:05:47</długość>
+                    <p:tytuł>How We Became Fire</p:tytuł>
+                    <p:długość>00:05:47</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Than the Serpents in My Hands</tytuł>
-                    <długość>00:05:58</długość>
+                    <p:tytuł>Than the Serpents in My Hands</p:tytuł>
+                    <p:długość>00:05:58</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -985,44 +986,44 @@
             <j:cena>29,90zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>In and Above Men</tytuł>
-                    <długość>00:04:11</długość>
+                    <p:tytuł>In and Above Men</p:tytuł>
+                    <p:długość>00:04:11</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>From Lowering Skies</tytuł>
-                    <długość>00:05:25</długość>
+                    <p:tytuł>From Lowering Skies</p:tytuł>
+                    <p:długość>00:05:25</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Everything Invaded</tytuł>
-                    <długość>00:06:16</długość>
+                    <p:tytuł>Everything Invaded</p:tytuł>
+                    <p:długość>00:06:16</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>The Southern Deathstyle</tytuł>
-                    <długość>00:04:07</długość>
+                    <p:tytuł>The Southern Deathstyle</p:tytuł>
+                    <p:długość>00:04:07</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Antidote</tytuł>
-                    <długość>00:04:45</długość>
+                    <p:tytuł>Antidote</p:tytuł>
+                    <p:długość>00:04:45</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Capricorn at Her Feet</tytuł>
-                    <długość>00:06:04</długość>
+                    <p:tytuł>Capricorn at Her Feet</p:tytuł>
+                    <p:długość>00:06:04</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Lunar Still</tytuł>
-                    <długość>00:06:55</długość>
+                    <p:tytuł>Lunar Still</p:tytuł>
+                    <p:długość>00:06:55</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>A Walk on the Darkside</tytuł>
-                    <długość>00:04:44</długość>
+                    <p:tytuł>A Walk on the Darkside</p:tytuł>
+                    <p:długość>00:04:44</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Crystal Gazing</tytuł>
-                    <długość>00:04:52</długość>
+                    <p:tytuł>Crystal Gazing</p:tytuł>
+                    <p:długość>00:04:52</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>As We Eternally Sleep on It</tytuł>
-                    <długość>00:07:09</długość>
+                    <p:tytuł>As We Eternally Sleep on It</p:tytuł>
+                    <p:długość>00:07:09</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -1034,48 +1035,48 @@
             <j:cena>19,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Perverse... Almost Religious</tytuł>
-                    <długość>00:01:07</długość>
+                    <p:tytuł>Perverse... Almost Religious</p:tytuł>
+                    <p:długość>00:01:07</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Opium</tytuł>
-                    <długość>00:02:46</długość>
+                    <p:tytuł>Opium</p:tytuł>
+                    <p:długość>00:02:46</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Awake!</tytuł>
-                    <długość>00:03:05</długość>
+                    <p:tytuł>Awake!</p:tytuł>
+                    <p:długość>00:03:05</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>For a Taste of Eternity</tytuł>
-                    <długość>00:03:51</długość>
+                    <p:tytuł>For a Taste of Eternity</p:tytuł>
+                    <p:długość>00:03:51</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Ruin &amp; Misery</tytuł>
-                    <długość>00:03:47</długość>
+                    <p:tytuł>Ruin &amp; Misery</p:tytuł>
+                    <p:długość>00:03:47</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>A Poisoned Gift</tytuł>
-                    <długość>00:05:33</długość>
+                    <p:tytuł>A Poisoned Gift</p:tytuł>
+                    <p:długość>00:05:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Subversion</tytuł>
-                    <długość>00:02:42</długość>
+                    <p:tytuł>Subversion</p:tytuł>
+                    <p:długość>00:02:42</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Raven Claws</tytuł>
-                    <długość>00:03:13</długość>
+                    <p:tytuł>Raven Claws</p:tytuł>
+                    <p:długość>00:03:13</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Mephisto</tytuł>
-                    <długość>00:04:56</długość>
+                    <p:tytuł>Mephisto</p:tytuł>
+                    <p:długość>00:04:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>Herr Spiegelmann</tytuł>
-                    <długość>00:04:33</długość>
+                    <p:tytuł>Herr Spiegelmann</p:tytuł>
+                    <p:długość>00:04:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="11">
-                    <tytuł>Full Moon Madness</tytuł>
-                    <długość>00:06:47</długość>
+                    <p:tytuł>Full Moon Madness</p:tytuł>
+                    <p:długość>00:06:47</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -1087,40 +1088,40 @@
             <j:cena>29,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>At Tragic Heights</tytuł>
-                    <długość>00:06:51</długość>
+                    <p:tytuł>At Tragic Heights</p:tytuł>
+                    <p:długość>00:06:51</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Night Eternal</tytuł>
-                    <długość>00:04:09</długość>
+                    <p:tytuł>Night Eternal</p:tytuł>
+                    <p:długość>00:04:09</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Shadow Sun</tytuł>
-                    <długość>00:04:24</długość>
+                    <p:tytuł>Shadow Sun</p:tytuł>
+                    <p:długość>00:04:24</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Scorpion Flower</tytuł>
-                    <długość>00:04:33</długość>
+                    <p:tytuł>Scorpion Flower</p:tytuł>
+                    <p:długość>00:04:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Moon in Mercury</tytuł>
-                    <długość>00:04:22</długość>
+                    <p:tytuł>Moon in Mercury</p:tytuł>
+                    <p:długość>00:04:22</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Hers Is the Twilight</tytuł>
-                    <długość>00:04:53</długość>
+                    <p:tytuł>Hers Is the Twilight</p:tytuł>
+                    <p:długość>00:04:53</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Dreamless (Lucifer and Lilith)</tytuł>
-                    <długość>00:05:16</długość>
+                    <p:tytuł>Dreamless (Lucifer and Lilith)</p:tytuł>
+                    <p:długość>00:05:16</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Spring of Rage</tytuł>
-                    <długość>00:04:04</długość>
+                    <p:tytuł>Spring of Rage</p:tytuł>
+                    <p:długość>00:04:04</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>First Light</tytuł>
-                    <długość>00:05:43</długość>
+                    <p:tytuł>First Light</p:tytuł>
+                    <p:długość>00:05:43</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -1132,40 +1133,40 @@
             <j:cena>29,90zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Axis Mundi</tytuł>
-                    <długość>00:04:56</długość>
+                    <p:tytuł>Axis Mundi</p:tytuł>
+                    <p:długość>00:04:56</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Lickanthrope</tytuł>
-                    <długość>00:03:49</długość>
+                    <p:tytuł>Lickanthrope</p:tytuł>
+                    <p:długość>00:03:49</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Versus</tytuł>
-                    <długość>00:04:39</długość>
+                    <p:tytuł>Versus</p:tytuł>
+                    <p:długość>00:04:39</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Alpha Noir</tytuł>
-                    <długość>00:04:30</długość>
+                    <p:tytuł>Alpha Noir</p:tytuł>
+                    <p:długość>00:04:30</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Em Nome do Medo</tytuł>
-                    <długość>00:04:27</długość>
+                    <p:tytuł>Em Nome do Medo</p:tytuł>
+                    <p:długość>00:04:27</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Opera Carne</tytuł>
-                    <długość>00:04:15</długość>
+                    <p:tytuł>Opera Carne</p:tytuł>
+                    <p:długość>00:04:15</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>Love Is Blasphemy</tytuł>
-                    <długość>00:04:31</długość>
+                    <p:tytuł>Love Is Blasphemy</p:tytuł>
+                    <p:długość>00:04:31</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>Grandstand</tytuł>
-                    <długość>00:04:53</długość>
+                    <p:tytuł>Grandstand</p:tytuł>
+                    <p:długość>00:04:53</p:długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>Sine Missione</tytuł>
-                    <długość>00:04:57</długość>
+                    <p:tytuł>Sine Missione</p:tytuł>
+                    <p:długość>00:04:57</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>
@@ -1177,36 +1178,36 @@
             <j:cena>47,60zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Tamarack's Gold Returns</tytuł>
-                    <długość>00:04:33</długość>
+                    <p:tytuł>Tamarack's Gold Returns</p:tytuł>
+                    <p:długość>00:04:33</p:długość>
                 </p:utwór>
                 <p:utwór nr="2">
-                    <tytuł>Into the North Woods</tytuł>
-                    <długość>00:06:21</długość>
+                    <p:tytuł>Into the North Woods</p:tytuł>
+                    <p:długość>00:06:21</p:długość>
                 </p:utwór>
                 <p:utwór nr="3">
-                    <tytuł>Autumn Eternal</tytuł>
-                    <długość>00:07:05</długość>
+                    <p:tytuł>Autumn Eternal</p:tytuł>
+                    <p:długość>00:07:05</p:długość>
                 </p:utwór>
                 <p:utwór nr="4">
-                    <tytuł>Oaks Ablaze</tytuł>
-                    <długość>00:08:38</długość>
+                    <p:tytuł>Oaks Ablaze</p:tytuł>
+                    <p:długość>00:08:38</p:długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>Sleep to the Sound of the Waves Crashing</tytuł>
-                    <długość>00:08:41</długość>
+                    <p:tytuł>Sleep to the Sound of the Waves Crashing</p:tytuł>
+                    <p:długość>00:08:41</p:długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>Pale Ghosts</tytuł>
-                    <długość>00:08:14</długość>
+                    <p:tytuł>Pale Ghosts</p:tytuł>
+                    <p:długość>00:08:14</p:długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>A Superior Lament</tytuł>
-                    <długość>00:11:01</długość>
+                    <p:tytuł>A Superior Lament</p:tytuł>
+                    <p:długość>00:11:01</p:długość>
                 </p:utwór>
                 <p:utwór nr="8">
-                    <tytuł>The Winds Farewell</tytuł>
-                    <długość>00:07:08</długość>
+                    <p:tytuł>The Winds Farewell</p:tytuł>
+                    <p:długość>00:07:08</p:długość>
                 </p:utwór>
             </p:lista_utworów>
         </p:płyta>

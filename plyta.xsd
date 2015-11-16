@@ -56,7 +56,7 @@
     <xsd:element name="utwór">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="tytuł" type="xsd:token" default="Bez tytułu" />
+                <xsd:element name="tytuł" type="xsd:string" />
                 <xsd:element name="długość" type="xsd:time" />
             </xsd:sequence>
             <xsd:attribute name="nr" type="xsd:int" />
