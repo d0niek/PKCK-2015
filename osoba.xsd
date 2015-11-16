@@ -55,10 +55,9 @@
     <xsd:simpleType name="jakieKierunki">
         <xsd:restriction base="xsd:token">
             <xsd:enumeration value="Informatyka, Technologie Gier i Symulacji Komputerowych" />
-            <xsd:enumeration value="" />
-            <xsd:enumeration value="" />
-            <xsd:enumeration value="" />
-            <xsd:enumeration value="" />
+            <xsd:enumeration value="Informatyka, Bazy Danych" />
+            <xsd:enumeration value="Informatyka, Systemy i Sieci Komputerowe" />
+            <xsd:enumeration value="Informatyka, Inżynieria Oprogramowania" />
         </xsd:restriction>
     </xsd:simpleType>
 
