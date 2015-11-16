@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="style.css"?>
-<kolekcja xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://w3schools.com kolekcja.xsd">
+<kolekcja
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://w3schools.com kolekcja.xsd">
 
     <nagłówek>
         <opis>Katalog płyt</opis>
-        <data dzień="26" miesiąc="10"/>
+        <data dzień="26" miesiąc="10" />
         <a:autorzy xmlns:a="http://osoba.xml.pl" xsi:schemaLocation="http://osoba.xml.pl osoba.xsd">
             <a:autor>
                 <a:imię>Bogna</a:imię>
@@ -21,7 +23,8 @@
         </a:autorzy>
     </nagłówek>
 
-    <płyty xmlns:p="http://plyta.xml.pl" xsi:schemaLocation="http://plyta.xml.pl plyta.xsd" xmlns:j="http://jednostki.xml.pl">
+    <płyty xmlns:p="http://plyta.xml.pl" xsi:schemaLocation="http://plyta.xml.pl plyta.xsd"
+           xmlns:j="http://jednostki.xml.pl">
         <p:płyta id="CD1" wykonawca="WYK1" data_wydania="2012-05-10">
             <p:tytuł_płyty>Odkupienie</p:tytuł_płyty>
             <p:wykonawca_płyty>Tede</p:wykonawca_płyty>
@@ -45,39 +48,39 @@
                     <tytuł>M.I.A.S.T.O. tronic</tytuł>
                     <długość>00:04:16</długość>
                 </p:utwór>
-                 <p:utwór nr="5">
+                <p:utwór nr="5">
                     <tytuł>Żeby powstać</tytuł>
                     <długość>00:04:18</długość>
                 </p:utwór>
-                 <p:utwór nr="6">
+                <p:utwór nr="6">
                     <tytuł>Dwadzieścia lat</tytuł>
                     <długość>00:04:10</długość>
                 </p:utwór>
-                 <p:utwór nr="7">
+                <p:utwór nr="7">
                     <tytuł>Zakazany na osiedlu</tytuł>
                     <długość>00:03:32</długość>
                 </p:utwór>
-                 <p:utwór nr="8">
+                <p:utwór nr="8">
                     <tytuł>CD MC LP</tytuł>
                     <długość>00:03:41</długość>
                 </p:utwór>
-                 <p:utwór nr="9">
+                <p:utwór nr="9">
                     <tytuł>Jestem hip hopem</tytuł>
                     <długość>00:03:33</długość>
                 </p:utwór>
-                 <p:utwór nr="10">
+                <p:utwór nr="10">
                     <tytuł>Trochę mnie nie było</tytuł>
                     <długość>00:03:55</długość>
                 </p:utwór>
-                 <p:utwór nr="11">
+                <p:utwór nr="11">
                     <tytuł>Ciągnie się to za mną</tytuł>
                     <długość>00:04:09</długość>
                 </p:utwór>
-                 <p:utwór nr="12">
+                <p:utwór nr="12">
                     <tytuł>Bomby na miasto</tytuł>
                     <długość>00:03:56</długość>
                 </p:utwór>
-                 <p:utwór nr="13">
+                <p:utwór nr="13">
                     <tytuł>Rap to talent</tytuł>
                     <długość>00:04:44</długość>
                 </p:utwór>
@@ -381,7 +384,7 @@
             <j:cena>32,00zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>Battle for Light </tytuł>
+                    <tytuł>Battle for Light</tytuł>
                     <długość>00:05:35</długość>
                 </p:utwór>
                 <p:utwór nr="2">
@@ -528,7 +531,7 @@
                     <długość>00:07:53</długość>
                 </p:utwór>
                 <p:utwór nr="5">
-                    <tytuł>The Long Road Part 3: The Sigh of Summer </tytuł>
+                    <tytuł>The Long Road Part 3: The Sigh of Summer</tytuł>
                     <długość>00:09:39</długość>
                 </p:utwór>
                 <p:utwór nr="6">
@@ -539,8 +542,8 @@
                     <tytuł>...in Silence</tytuł>
                     <długość>00:09:45</długość>
                 </p:utwór>
-                 <p:utwór nr="8">
-                    <tytuł>Chase the Grain </tytuł>
+                <p:utwór nr="8">
+                    <tytuł>Chase the Grain</tytuł>
                     <długość>00:12:14</długość>
                 </p:utwór>
             </p:lista_utworów>
@@ -667,7 +670,7 @@
                     <długość>00:09:39</długość>
                 </p:utwór>
                 <p:utwór nr="6">
-                    <tytuł>To Drown </tytuł>
+                    <tytuł>To Drown</tytuł>
                     <długość>00:10:27</długość>
                 </p:utwór>
             </p:lista_utworów>
@@ -712,7 +715,7 @@
                     <długość>00:04:36</długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>White Pearl, Black Oceans... </tytuł>
+                    <tytuł>White Pearl, Black Oceans...</tytuł>
                     <długość>00:08:47</długość>
                 </p:utwór>
                 <p:utwór nr="10">
@@ -875,7 +878,7 @@
                     <długość>00:03:30</długość>
                 </p:utwór>
                 <p:utwór nr="10">
-                    <tytuł>This Mortal Soil </tytuł>
+                    <tytuł>This Mortal Soil</tytuł>
                     <długość>00:04:54</długość>
                 </p:utwór>
                 <p:utwór nr="11">
@@ -883,7 +886,7 @@
                     <długość>00:05:30</długość>
                 </p:utwór>
                 <p:utwór nr="12">
-                    <tytuł>Pendulous Skin </tytuł>
+                    <tytuł>Pendulous Skin</tytuł>
                     <długość>00:22:15</długość>
                 </p:utwór>
             </p:lista_utworów>
@@ -920,7 +923,7 @@
                     <długość>00:05:54</długość>
                 </p:utwór>
                 <p:utwór nr="7">
-                    <tytuł>The Last Baron </tytuł>
+                    <tytuł>The Last Baron</tytuł>
                     <długość>00:13:00</długość>
                 </p:utwór>
             </p:lista_utworów>
@@ -965,7 +968,7 @@
                     <długość>00:04:09</długość>
                 </p:utwór>
                 <p:utwór nr="9">
-                    <tytuł>How We Became Fire </tytuł>
+                    <tytuł>How We Became Fire</tytuł>
                     <długość>00:05:47</długość>
                 </p:utwór>
                 <p:utwór nr="10">
@@ -1084,7 +1087,7 @@
             <j:cena>29,99zł</j:cena>
             <p:lista_utworów>
                 <p:utwór nr="1">
-                    <tytuł>At Tragic Heights </tytuł>
+                    <tytuł>At Tragic Heights</tytuł>
                     <długość>00:06:51</długość>
                 </p:utwór>
                 <p:utwór nr="2">
@@ -1211,55 +1214,55 @@
 
     <w:wykonawcy xmlns:w="http://zespol.xml.pl" xsi:schemaLocation="http://zespol.xml.pl zespol.xsd">
         <w:wykonawca id="WYK1" nazwa="Tede" gatunek="hip-hop">
-            <w:wydał nagranie="CD1"/>
+            <w:wydał nagranie="CD1" />
         </w:wykonawca>
         <w:zespół id="WYK2" nazwa="Keane" gatunek="rock" członków="4">
-            <w:wydał nagranie="CD2"/>
+            <w:wydał nagranie="CD2" />
         </w:zespół>
         <w:zespół id="WYK3" nazwa="Ocean" gatunek="rock" członków="3">
-            <w:wydał nagranie="CD3"/>
+            <w:wydał nagranie="CD3" />
         </w:zespół>
         <w:zespół id="WYK4" nazwa="Skeletonwitch" gatunek="metal" członków="4">
-            <w:wydał nagranie="CD4"/>
+            <w:wydał nagranie="CD4" />
         </w:zespół>
         <w:wykonawca id="WYK5" nazwa="Saor" gatunek="metal">
-            <w:wydał nagranie="CD5"/>
-            <w:wydał nagranie="CD10"/>
+            <w:wydał nagranie="CD5" />
+            <w:wydał nagranie="CD10" />
         </w:wykonawca>
         <w:wykonawca id="WYK6" nazwa="Anne Clark" gatunek="art-pop">
-            <w:wydał nagranie="CD6"/>
+            <w:wydał nagranie="CD6" />
         </w:wykonawca>
         <w:zespół id="WYK7" nazwa="Amorphis" gatunek="metal" członków="6">
-            <w:wydał nagranie="CD7"/>
-            <w:wydał nagranie="CD8"/>
-            <w:wydał nagranie="CD9"/>
+            <w:wydał nagranie="CD7" />
+            <w:wydał nagranie="CD8" />
+            <w:wydał nagranie="CD9" />
         </w:zespół>
         <w:zespół id="WYK8" nazwa="Agalloch" gatunek="metal" członków="3">
-            <w:wydał nagranie="CD13"/>
-            <w:wydał nagranie="CD14"/>
+            <w:wydał nagranie="CD13" />
+            <w:wydał nagranie="CD14" />
         </w:zespół>
         <w:wykonawca id="WYK9" nazwa="Kanye West" gatunek="hip-hop">
-            <w:wydał nagranie="CD16"/>
+            <w:wydał nagranie="CD16" />
         </w:wykonawca>
         <w:wykonawca id="WYK10" nazwa="Panopticon" gatunek="metal">
-            <w:wydał nagranie="CD11"/>
-            <w:wydał nagranie="CD25"/>
+            <w:wydał nagranie="CD11" />
+            <w:wydał nagranie="CD25" />
         </w:wykonawca>
         <w:zespół id="WYK11" nazwa="Mastodon" gatunek="sludge" członków="4">
-            <w:wydał nagranie="CD17"/>
-            <w:wydał nagranie="CD18"/>
-            <w:wydał nagranie="CD19"/>
+            <w:wydał nagranie="CD17" />
+            <w:wydał nagranie="CD18" />
+            <w:wydał nagranie="CD19" />
         </w:zespół>
         <w:zespół id="WYK12" nazwa="Moonspell" gatunek="metal" członków="5">
-            <w:wydał nagranie="CD20"/>
-            <w:wydał nagranie="CD21"/>
-            <w:wydał nagranie="CD22"/>
-            <w:wydał nagranie="CD23"/>
-            <w:wydał nagranie="CD24"/>
+            <w:wydał nagranie="CD20" />
+            <w:wydał nagranie="CD21" />
+            <w:wydał nagranie="CD22" />
+            <w:wydał nagranie="CD23" />
+            <w:wydał nagranie="CD24" />
         </w:zespół>
         <w:zespół id="WYK13" nazwa="Sonata Arctica" gatunek="metal" członków="5">
-            <w:wydał nagranie="CD12"/>
-            <w:wydał nagranie="CD15"/>
+            <w:wydał nagranie="CD12" />
+            <w:wydał nagranie="CD15" />
         </w:zespół>
     </w:wykonawcy>
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:osoba="http://osoba.xml.pl"
-            xmlns:plyta="http://plyta.xml.pl"
-            xmlns:zespol="http://zespol.xml.pl"
-            xmlns:jednostki="http://jednostki.xml.pl">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:osoba="http://osoba.xml.pl"
+    xmlns:plyta="http://plyta.xml.pl"
+    xmlns:zespol="http://zespol.xml.pl"
+    xmlns:jednostki="http://jednostki.xml.pl">
 
     <xsd:import namespace="http://osoba.xml.pl" schemaLocation="osoba.xsd" />
     <xsd:import namespace="http://plyta.xml.pl" schemaLocation="plyta.xsd" />
@@ -13,9 +14,9 @@
     <xsd:element name="kolekcja">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="nagłówek"/>
+                <xsd:element ref="nagłówek" />
                 <xsd:element ref="płyty" minOccurs="1" maxOccurs="unbounded" />
-                <xsd:element ref="zespol:wykonawcy"/>
+                <xsd:element ref="zespol:wykonawcy" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -25,25 +26,25 @@
     <xsd:element name="nagłówek">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="opis"/>
-                <xsd:element ref="data"/>
-                <xsd:element ref="osoba:autorzy"/>
+                <xsd:element ref="opis" />
+                <xsd:element ref="data" />
+                <xsd:element ref="osoba:autorzy" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="opis" type="xsd:string"/>
+    <xsd:element name="opis" type="xsd:string" />
 
     <xsd:element name="data">
         <xsd:complexType>
-            <xsd:attributeGroup ref="dataZadania"/>
+            <xsd:attributeGroup ref="dataZadania" />
         </xsd:complexType>
     </xsd:element>
 
     <xsd:attributeGroup name="dataZadania">
-        <xsd:attribute name="dzień" type="jednostki:dzień" use="required"/>
-        <xsd:attribute name="miesiąc" type="jednostki:miesiąc" use="required"/>
-        <xsd:attribute name="rok" type="xsd:gYear" fixed="2015"/>
+        <xsd:attribute name="dzień" type="jednostki:dzień" use="required" />
+        <xsd:attribute name="miesiąc" type="jednostki:miesiąc" use="required" />
+        <xsd:attribute name="rok" type="xsd:gYear" fixed="2015" />
     </xsd:attributeGroup>
 
     <!-- END nagłówek -->
@@ -53,7 +54,7 @@
     <xsd:element name="płyty">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="plyta:płyta" minOccurs="1" maxOccurs="unbounded"/>
+                <xsd:element ref="plyta:płyta" minOccurs="1" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

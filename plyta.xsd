@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://plyta.xml.pl"
-            xmlns="http://plyta.xml.pl"
-            xmlns:jednostki="http://jednostki.xml.pl">
-            
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://plyta.xml.pl"
+    xmlns="http://plyta.xml.pl"
+    xmlns:jednostki="http://jednostki.xml.pl">
+
     <xsd:import namespace="http://jednostki.xml.pl" schemaLocation="jednostki.xsd" />
 
     <xsd:element name="płyta">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="tytuł_płyty"/>
-                <xsd:element ref="wykonawca_płyty"/>
-                <xsd:element ref="jednostki:ranking"/>
-                <xsd:element ref="jednostki:czas_trwania"/>
-                <xsd:element ref="jednostki:cena"/>
-                <xsd:element ref="lista_utworów"/> 
+                <xsd:element ref="tytuł_płyty" />
+                <xsd:element ref="wykonawca_płyty" />
+                <xsd:element ref="jednostki:ranking" />
+                <xsd:element ref="jednostki:czas_trwania" />
+                <xsd:element ref="jednostki:cena" />
+                <xsd:element ref="lista_utworów" />
             </xsd:sequence>
-            <xsd:attributeGroup ref="atrybutyPłyty"/>
+            <xsd:attributeGroup ref="atrybutyPłyty" />
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="tytuł_płyty" default="Bez tytułu">
         <xsd:simpleType>
             <xsd:restriction base="xsd:token">
-                <xsd:minLength value="1"/>
-                <xsd:maxLength value="35"/>
+                <xsd:minLength value="1" />
+                <xsd:maxLength value="35" />
             </xsd:restriction>
         </xsd:simpleType>
     </xsd:element>
@@ -32,33 +33,33 @@
     <xsd:element name="wykonawca_płyty" default="Nieznany wykonawca">
         <xsd:simpleType>
             <xsd:restriction base="xsd:token">
-                <xsd:minLength value="1"/>
-                <xsd:maxLength value="30"/>
+                <xsd:minLength value="1" />
+                <xsd:maxLength value="30" />
             </xsd:restriction>
         </xsd:simpleType>
     </xsd:element>
 
     <xsd:attributeGroup name="atrybutyPłyty">
-        <xsd:attribute name="id" type="xsd:IDREF" use="required"/>
-        <xsd:attribute name="wykonawca" type="xsd:IDREF" use="required"/>
-        <xsd:attribute name="data_wydania" type="xsd:date"/>
+        <xsd:attribute name="id" type="xsd:IDREF" use="required" />
+        <xsd:attribute name="wykonawca" type="xsd:IDREF" use="required" />
+        <xsd:attribute name="data_wydania" type="xsd:date" />
     </xsd:attributeGroup>
 
     <xsd:element name="lista_utworów">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="utwór" maxOccurs="15"/>
+                <xsd:element ref="utwór" maxOccurs="15" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="utwór">
         <xsd:complexType>
-        <xsd:sequence>
-            <xsd:element name="tytuł" type="xsd:token" default="Bez tytułu"/>
-            <xsd:element name="długość" type="xsd:time"/>
-        </xsd:sequence>
-        <xsd:attribute name="nr" type="xsd:int"/>
+            <xsd:sequence>
+                <xsd:element name="tytuł" type="xsd:token" default="Bez tytułu" />
+                <xsd:element name="długość" type="xsd:time" />
+            </xsd:sequence>
+            <xsd:attribute name="nr" type="xsd:int" />
         </xsd:complexType>
     </xsd:element>
 

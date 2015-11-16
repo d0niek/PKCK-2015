@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://osoba.xml.pl"
-            xmlns="http://osoba.xml.pl">
-            
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://osoba.xml.pl"
+    xmlns="http://osoba.xml.pl">
+
     <xsd:element name="autorzy">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="autor" maxOccurs="2"/>
+                <xsd:element ref="autor" maxOccurs="2" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -14,29 +15,29 @@
     <xsd:element name="autor">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="imię"/>
-                <xsd:element ref="drugie_imię" minOccurs="0" maxOccurs="1"/>
-                <xsd:element ref="nazwisko"/>
-                <xsd:element ref="numer_indeksu"/>
-                <xsd:element ref="kierunek"/>
+                <xsd:element ref="imię" />
+                <xsd:element ref="drugie_imię" minOccurs="0" maxOccurs="1" />
+                <xsd:element ref="nazwisko" />
+                <xsd:element ref="numer_indeksu" />
+                <xsd:element ref="kierunek" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="imię" type="imięBaza"/>
-    
-    <xsd:element name="drugie_imię" type="imięBaza"/>
-    
+    <xsd:element name="imię" type="imięBaza" />
+
+    <xsd:element name="drugie_imię" type="imięBaza" />
+
     <xsd:simpleType name="imięBaza">
         <xsd:restriction base="xsd:string">
-            <xsd:maxLength value="20"/>
+            <xsd:maxLength value="20" />
         </xsd:restriction>
     </xsd:simpleType>
 
     <xsd:element name="nazwisko">
         <xsd:simpleType>
             <xsd:restriction base="xsd:string">
-                <xsd:maxLength value="30"/>
+                <xsd:maxLength value="30" />
             </xsd:restriction>
         </xsd:simpleType>
     </xsd:element>
@@ -49,15 +50,15 @@
         </xsd:simpleType>
     </xsd:element>
 
-    <xsd:element name="kierunek" type="jakieKierunki"/>
+    <xsd:element name="kierunek" type="jakieKierunki" />
 
     <xsd:simpleType name="jakieKierunki">
         <xsd:restriction base="xsd:token">
-            <xsd:enumeration value="Informatyka, Technologie Gier i Symulacji Komputerowych"/>
-            <xsd:enumeration value=""/>
-            <xsd:enumeration value=""/>
-            <xsd:enumeration value=""/>
-            <xsd:enumeration value=""/>
+            <xsd:enumeration value="Informatyka, Technologie Gier i Symulacji Komputerowych" />
+            <xsd:enumeration value="" />
+            <xsd:enumeration value="" />
+            <xsd:enumeration value="" />
+            <xsd:enumeration value="" />
         </xsd:restriction>
     </xsd:simpleType>
 

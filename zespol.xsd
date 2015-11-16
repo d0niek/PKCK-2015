@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://zespol.xml.pl"
-            xmlns="http://zespol.xml.pl">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://zespol.xml.pl"
+    xmlns="http://zespol.xml.pl">
 
     <xsd:element name="wykonawcy">
-    	<xsd:complexType>
-    	<xsd:sequence>
-	       		<xsd:choice maxOccurs="unbounded">
-	          		<xsd:element ref="wykonawca"/>
-	          	</xsd:choice>
-	          	<xsd:choice maxOccurs="unbounded">
-	          		<xsd:element ref="zespół"/>
-	          	</xsd:choice>
-          	</xsd:sequence>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element ref="wykonawca" />
+                </xsd:choice>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element ref="zespół" />
+                </xsd:choice>
+            </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-	
-	<xsd:complexType name="wykonawcaTyp">
-		<xsd:sequence>
-                <xsd:element ref="wydał" maxOccurs="unbounded"/>
+
+    <xsd:complexType name="wykonawcaTyp">
+        <xsd:sequence>
+            <xsd:element ref="wydał" maxOccurs="unbounded" />
         </xsd:sequence>
-        <xsd:attributeGroup ref="atrybutyWykonawcow"/>
-	</xsd:complexType>
-	
+        <xsd:attributeGroup ref="atrybutyWykonawcow" />
+    </xsd:complexType>
+
     <xsd:element name="wykonawca" type="wykonawcaTyp" />
 
     <xsd:attributeGroup name="atrybutyWykonawcow">
-        <xsd:attribute name="id" type="xsd:IDREF" use="required"/>
-        <xsd:attribute name="nazwa" default="Nieznany wykonawca"/>
+        <xsd:attribute name="id" type="xsd:IDREF" use="required" />
+        <xsd:attribute name="nazwa" default="Nieznany wykonawca" />
         <xsd:attribute name="gatunek" default="indie">
             <xsd:simpleType>
                 <xsd:restriction base="xsd:NMTOKEN">
-                    <xsd:enumeration value="metal"/>
-                    <xsd:enumeration value="rock"/>
-                    <xsd:enumeration value="rap"/>
-                    <xsd:enumeration value="hip-hop"/>
-                    <xsd:enumeration value="drum-and-bass"/>
-                    <xsd:enumeration value="disco-polo"/>
-                    <xsd:enumeration value="art-pop"/>
-                    <xsd:enumeration value="sludge"/>
-                    <xsd:enumeration value="indie"/>
+                    <xsd:enumeration value="metal" />
+                    <xsd:enumeration value="rock" />
+                    <xsd:enumeration value="rap" />
+                    <xsd:enumeration value="hip-hop" />
+                    <xsd:enumeration value="drum-and-bass" />
+                    <xsd:enumeration value="disco-polo" />
+                    <xsd:enumeration value="art-pop" />
+                    <xsd:enumeration value="sludge" />
+                    <xsd:enumeration value="indie" />
                 </xsd:restriction>
             </xsd:simpleType>
         </xsd:attribute>
@@ -47,23 +48,23 @@
 
     <xsd:element name="zespół">
         <xsd:complexType>
-	        <xsd:complexContent>
-	            <xsd:extension base="wykonawcaTyp">
-	                <xsd:attribute name="członków">
-	                    <xsd:simpleType>
-	                        <xsd:restriction base="xsd:int">
-	                            <xsd:minInclusive value="2"/>
-	                        </xsd:restriction>
-	                    </xsd:simpleType>
-	                </xsd:attribute>
-	            </xsd:extension>
+            <xsd:complexContent>
+                <xsd:extension base="wykonawcaTyp">
+                    <xsd:attribute name="członków">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:int">
+                                <xsd:minInclusive value="2" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="wydał">
         <xsd:complexType>
-            <xsd:attribute name="nagranie" type="xsd:IDREF" use="required"/>
+            <xsd:attribute name="nagranie" type="xsd:IDREF" use="required" />
         </xsd:complexType>
     </xsd:element>
 
