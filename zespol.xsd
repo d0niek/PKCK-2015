@@ -2,7 +2,10 @@
 <xsd:schema
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://zespol.xml.pl"
-    xmlns="http://zespol.xml.pl">
+    xmlns="http://zespol.xml.pl"
+    xmlns:kolekcja="http://kolekcja.xml.pl">
+    
+    <xsd:import namespace="http://kolekcja.xml.pl" schemaLocation="kolekcja.xsd" />
 
     <xsd:element name="wykonawcy">
         <xsd:complexType>
@@ -15,6 +18,10 @@
                 </xsd:choice>
             </xsd:sequence>
         </xsd:complexType>
+        <xsd:unique name="kluczWykonawca">
+            <xsd:selector xpath="wykonawcy" />
+            <xsd:field xpath="@id" />
+        </xsd:unique>
     </xsd:element>
 
     <xsd:complexType name="wykonawcaTyp">
@@ -26,16 +33,20 @@
 
     <xsd:element name="wydał">
         <xsd:complexType>
-            <xsd:attribute name="nagranie" type="xsd:IDREF" use="required" />
+            <xsd:attribute name="nagranie" type="xsd:token" use="required" />
         </xsd:complexType>
+        <xsd:keyref name="odnośnikDoPłyty" refer="kolekcja:kluczPłyta">
+            <xsd:selector xpath="wydał" />
+            <xsd:field xpath="@nagranie" />
+        </xsd:keyref>
     </xsd:element>
 
     <xsd:attributeGroup name="atrybutyWykonawcow">
-        <xsd:attribute name="id" type="xsd:ID" use="required" />
+        <xsd:attribute name="id" type="xsd:token" use="required" />
         <xsd:attribute name="nazwa" default="Nieznany wykonawca" />
         <xsd:attribute name="gatunek" default="indie">
             <xsd:simpleType>
-                <xsd:restriction base="xsd:NMTOKEN">
+                <xsd:restriction base="xsd:token">
                     <xsd:enumeration value="metal" />
                     <xsd:enumeration value="rock" />
                     <xsd:enumeration value="rap" />

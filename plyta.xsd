@@ -3,9 +3,11 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://plyta.xml.pl"
     xmlns="http://plyta.xml.pl"
-    xmlns:jednostki="http://jednostki.xml.pl">
+    xmlns:jednostki="http://jednostki.xml.pl"
+    xmlns:zespol="http://zespol.xml.pl">
 
     <xsd:import namespace="http://jednostki.xml.pl" schemaLocation="jednostki.xsd" />
+    <xsd:import namespace="http://zespol.xml.pl" schemaLocation="zespol.xsd" />
 
     <xsd:element name="płyta">
         <xsd:complexType>
@@ -19,6 +21,10 @@
             </xsd:sequence>
             <xsd:attributeGroup ref="atrybutyPłyty" />
         </xsd:complexType>
+        <xsd:keyref name="odnośnikDoWykonawcy" refer="zespol:kluczWykonawca">
+            <xsd:selector xpath="atrybutyPłyty" />
+            <xsd:field xpath="@wykonawca" />
+        </xsd:keyref>
     </xsd:element>
 
     <xsd:element name="tytuł_płyty" default="Bez tytułu">
@@ -40,8 +46,8 @@
     </xsd:element>
 
     <xsd:attributeGroup name="atrybutyPłyty">
-        <xsd:attribute name="id" type="xsd:ID" use="required" />
-        <xsd:attribute name="wykonawca" type="xsd:IDREF" use="required" />
+        <xsd:attribute name="id" type="xsd:token" use="required" />
+        <xsd:attribute name="wykonawca" type="xsd:token" use="required" />
         <xsd:attribute name="data_wydania" type="xsd:date" />
     </xsd:attributeGroup>
 
@@ -62,9 +68,9 @@
             <xsd:attribute name="nr" type="xsd:int" />
         </xsd:complexType>
     </xsd:element>
-	
-	<xsd:element name="tytuł" type="xsd:string" />
-	
-	<xsd:element name="długość" type="xsd:time" />
+    
+    <xsd:element name="tytuł" type="xsd:string" />
+    
+    <xsd:element name="długość" type="xsd:time" />
 
 </xsd:schema>

@@ -59,6 +59,10 @@
                 <xsd:element ref="plyta:płyta" minOccurs="1" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
+        <xsd:unique name="kluczPłyta">
+            <xsd:selector xpath="plyta:płyta" />
+            <xsd:field xpath="@id" />
+        </xsd:unique>
     </xsd:element>
 
     <!-- END płyt -->
