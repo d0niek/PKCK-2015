@@ -40,7 +40,7 @@
     </xsd:element>
 
     <xsd:attributeGroup name="atrybutyPłyty">
-        <xsd:attribute name="id" type="xsd:IDREF" use="required" />
+        <xsd:attribute name="id" type="xsd:ID" use="required" />
         <xsd:attribute name="wykonawca" type="xsd:IDREF" use="required" />
         <xsd:attribute name="data_wydania" type="xsd:date" />
     </xsd:attributeGroup>
