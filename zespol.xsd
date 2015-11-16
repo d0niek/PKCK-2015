@@ -24,7 +24,11 @@
         <xsd:attributeGroup ref="atrybutyWykonawcow" />
     </xsd:complexType>
 
-    <xsd:element name="wykonawca" type="wykonawcaTyp" />
+    <xsd:element name="wydał">
+        <xsd:complexType>
+            <xsd:attribute name="nagranie" type="xsd:IDREF" use="required" />
+        </xsd:complexType>
+    </xsd:element>
 
     <xsd:attributeGroup name="atrybutyWykonawcow">
         <xsd:attribute name="id" type="xsd:IDREF" use="required" />
@@ -46,6 +50,8 @@
         </xsd:attribute>
     </xsd:attributeGroup>
 
+    <xsd:element name="wykonawca" type="wykonawcaTyp" />
+
     <xsd:element name="zespół">
         <xsd:complexType>
             <xsd:complexContent>
@@ -59,12 +65,6 @@
                     </xsd:attribute>
                 </xsd:extension>
             </xsd:complexContent>
-        </xsd:complexType>
-    </xsd:element>
-
-    <xsd:element name="wydał">
-        <xsd:complexType>
-            <xsd:attribute name="nagranie" type="xsd:IDREF" use="required" />
         </xsd:complexType>
     </xsd:element>
 
