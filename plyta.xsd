@@ -68,9 +68,15 @@
             <xsd:attribute name="nr" type="xsd:int" />
         </xsd:complexType>
     </xsd:element>
+<<<<<<< HEAD
     
     <xsd:element name="tytuł" type="xsd:string" />
     
+=======
+
+    <xsd:element name="tytuł" type="xsd:string" />
+
+>>>>>>> origin/schema
     <xsd:element name="długość" type="xsd:time" />
 
 </xsd:schema>
