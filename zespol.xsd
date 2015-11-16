@@ -6,7 +6,7 @@
 
     <xsd:element name="wykonawcy">
         <xsd:complexType>
-            <xsd:sequence>
+            <xsd:sequence maxOccurs="unbounded">
                 <xsd:choice maxOccurs="unbounded">
                     <xsd:element ref="wykonawca" />
                 </xsd:choice>
