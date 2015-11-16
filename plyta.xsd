@@ -62,9 +62,9 @@
             <xsd:attribute name="nr" type="xsd:int" />
         </xsd:complexType>
     </xsd:element>
-	
-	<xsd:element name="tytuł" type="xsd:string" />
-	
-	<xsd:element name="długość" type="xsd:time" />
+
+    <xsd:element name="tytuł" type="xsd:string" />
+
+    <xsd:element name="długość" type="xsd:time" />
 
 </xsd:schema>
