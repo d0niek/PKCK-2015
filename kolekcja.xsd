@@ -30,11 +30,11 @@
             <xsd:field xpath="@id" />
         </xsd:unique>
         <xsd:keyref name="odnośnikDoWykonawcy" refer="kluczWykonawca">
-            <xsd:selector xpath=".//płyty/plyta:płyta" />
+            <xsd:selector xpath=".//plyta:płyta" />
             <xsd:field xpath="@wykonawca" />
         </xsd:keyref>
         <xsd:keyref name="odnośnikDoPłyty" refer="kluczPłyta">
-            <xsd:selector xpath=".//wykonawcy/wykonawcaTyp/wydał" />
+            <xsd:selector xpath=".//zespol:wykonawcy/zespol:wykonawca/zespol:wydał|zespol:wykonawcy/zespol:zespół/zespol:wydał" />
             <xsd:field xpath="@nagranie" />
         </xsd:keyref>
     </xsd:element>
