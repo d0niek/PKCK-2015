@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dupa>
+
+    <nagłówek>
+        <opis>Katalog płyt</opis>
+        <data>26-10-2015</data>
+    </nagłówek>
+
+    <wykonawcy>
+        <wykonawca id="WYK1">
+            <nazwa>Tede</nazwa>
+            <gatunek>hip-hop</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Odkupienie</tytuł>
+                    <ranking>7.0</ranking>
+                    <liczba_utworów>13</liczba_utworów>
+                    <czas_trwania>51:56</czas_trwania>
+                    <cena>
+                        <brutto>29,99zł</brutto>
+                        <VAT>6,89zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK2">
+            <nazwa>Keane</nazwa>
+            <gatunek>rock</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Hopes and Fears</tytuł>
+                    <ranking>5.0</ranking>
+                    <liczba_utworów>12</liczba_utworów>
+                    <czas_trwania>50:32</czas_trwania>
+                    <cena>
+                        <brutto>39,99zł</brutto>
+                        <VAT>9,19zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK3">
+            <nazwa>Ocean</nazwa>
+            <gatunek>rock</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Waterfall</tytuł>
+                    <ranking>7.5</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>37:5</czas_trwania>
+                    <cena>
+                        <brutto>29,99zł</brutto>
+                        <VAT>6,89zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK4">
+            <nazwa>Skeletonwitch</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Serpents Unleashed</tytuł>
+                    <ranking>3.0</ranking>
+                    <liczba_utworów>11</liczba_utworów>
+                    <czas_trwania>31:41</czas_trwania>
+                    <cena>
+                        <brutto>34,99zł</brutto>
+                        <VAT>8,04zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK5">
+            <nazwa>Saor</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>2</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Aura</tytuł>
+                    <ranking>7.0</ranking>
+                    <liczba_utworów>5</liczba_utworów>
+                    <czas_trwania>56:37</czas_trwania>
+                    <cena>
+                        <brutto>39,99zł</brutto>
+                        <VAT>9,19zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Roots</tytuł>
+                    <ranking>7.5</ranking>
+                    <liczba_utworów>4</liczba_utworów>
+                    <czas_trwania>49:57</czas_trwania>
+                    <cena>
+                        <brutto>38,00zł</brutto>
+                        <VAT>8,74zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK6">
+            <nazwa>Anne Clark</nazwa>
+            <gatunek>art-pop</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>St. Vincent</tytuł>
+                    <ranking>6.5</ranking>
+                    <liczba_utworów>11</liczba_utworów>
+                    <czas_trwania>40:4</czas_trwania>
+                    <cena>
+                        <brutto>34,90zł</brutto>
+                        <VAT>8,02zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK7">
+            <nazwa>Amorphis</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>3</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Skyforger</tytuł>
+                    <ranking>5.0</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>47:42</czas_trwania>
+                    <cena>
+                        <brutto>47,50zł</brutto>
+                        <VAT>10,92zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>The Beginning of Times</tytuł>
+                    <ranking>1.5</ranking>
+                    <liczba_utworów>12</liczba_utworów>
+                    <czas_trwania>54:42</czas_trwania>
+                    <cena>
+                        <brutto>32,00zł</brutto>
+                        <VAT>7,36zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Under the Red Cloud</tytuł>
+                    <ranking>5.5</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>49:56</czas_trwania>
+                    <cena>
+                        <brutto>32,00zł</brutto>
+                        <VAT>7,36zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK8">
+            <nazwa>Agalloch</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>2</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>The Mantle</tytuł>
+                    <ranking>3.5</ranking>
+                    <liczba_utworów>9</liczba_utworów>
+                    <czas_trwania>68:25</czas_trwania>
+                    <cena>
+                        <brutto>50,00zł</brutto>
+                        <VAT>11,5zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Marrow of the Spirit</tytuł>
+                    <ranking>4.5</ranking>
+                    <liczba_utworów>6</liczba_utworów>
+                    <czas_trwania>65:32</czas_trwania>
+                    <cena>
+                        <brutto>24,99zł</brutto>
+                        <VAT>5,74zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK9">
+            <nazwa>Kanye West</nazwa>
+            <gatunek>hip-hop</gatunek>
+            <ilość_płyt>1</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>My Beautiful Dark Twisted Fantasy</tytuł>
+                    <ranking>9.0</ranking>
+                    <liczba_utworów>13</liczba_utworów>
+                    <czas_trwania>68:36</czas_trwania>
+                    <cena>
+                        <brutto>70,00zł</brutto>
+                        <VAT>16,1zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK10">
+            <nazwa>Panopticon</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>2</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Roads to the North</tytuł>
+                    <ranking>6.5</ranking>
+                    <liczba_utworów>8</liczba_utworów>
+                    <czas_trwania>71:3</czas_trwania>
+                    <cena>
+                        <brutto>46,70zł</brutto>
+                        <VAT>10,74zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Autumn Eternal</tytuł>
+                    <ranking>7.5</ranking>
+                    <liczba_utworów>8</liczba_utworów>
+                    <czas_trwania>61:41</czas_trwania>
+                    <cena>
+                        <brutto>47,60zł</brutto>
+                        <VAT>10,94zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK11">
+            <nazwa>Mastodon</nazwa>
+            <gatunek>sludge</gatunek>
+            <ilość_płyt>3</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Leviathan</tytuł>
+                    <ranking>7.0</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>46:43</czas_trwania>
+                    <cena>
+                        <brutto>35,99zł</brutto>
+                        <VAT>8,27zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Blood Mountain</tytuł>
+                    <ranking>6.5</ranking>
+                    <liczba_utworów>12</liczba_utworów>
+                    <czas_trwania>67:49</czas_trwania>
+                    <cena>
+                        <brutto>40,00zł</brutto>
+                        <VAT>9,2zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Crack the Skye</tytuł>
+                    <ranking>4.5</ranking>
+                    <liczba_utworów>7</liczba_utworów>
+                    <czas_trwania>50:6</czas_trwania>
+                    <cena>
+                        <brutto>38,99zł</brutto>
+                        <VAT>8,96zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK12">
+            <nazwa>Moonspell</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>5</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Darkness and Hope</tytuł>
+                    <ranking>8.5</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>45:2</czas_trwania>
+                    <cena>
+                        <brutto>29,99zł</brutto>
+                        <VAT>6,89zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>The Antidote</tytuł>
+                    <ranking>7.5</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>54:28</czas_trwania>
+                    <cena>
+                        <brutto>29,90zł</brutto>
+                        <VAT>6,87zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Irreligious</tytuł>
+                    <ranking>8.0</ranking>
+                    <liczba_utworów>11</liczba_utworów>
+                    <czas_trwania>42:20</czas_trwania>
+                    <cena>
+                        <brutto>19,99zł</brutto>
+                        <VAT>4,59zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Night Eternal</tytuł>
+                    <ranking>4.5</ranking>
+                    <liczba_utworów>9</liczba_utworów>
+                    <czas_trwania>44:15</czas_trwania>
+                    <cena>
+                        <brutto>29,99zł</brutto>
+                        <VAT>6,89zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Alpha Noir</tytuł>
+                    <ranking>4.0</ranking>
+                    <liczba_utworów>9</liczba_utworów>
+                    <czas_trwania>40:57</czas_trwania>
+                    <cena>
+                        <brutto>29,90zł</brutto>
+                        <VAT>6,87zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+        <wykonawca id="WYK13">
+            <nazwa>Sonata Arctica</nazwa>
+            <gatunek>metal</gatunek>
+            <ilość_płyt>2</ilość_płyt>
+            <płyty>
+                <płyta>
+                    <tytuł>Ecliptica</tytuł>
+                    <ranking>7.5</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>47:22</czas_trwania>
+                    <cena>
+                        <brutto>24,50zł</brutto>
+                        <VAT>5,63zł</VAT>
+                    </cena>
+                </płyta>
+                <płyta>
+                    <tytuł>Reckoning Night</tytuł>
+                    <ranking>8.0</ranking>
+                    <liczba_utworów>10</liczba_utworów>
+                    <czas_trwania>52:30</czas_trwania>
+                    <cena>
+                        <brutto>24,50zł</brutto>
+                        <VAT>5,63zł</VAT>
+                    </cena>
+                </płyta>
+            </płyty>
+        </wykonawca>
+    </wykonawcy>
+
+</dupa>
