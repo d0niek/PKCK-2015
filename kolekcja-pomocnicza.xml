@@ -350,4 +350,25 @@
         </wykonawca>
     </wykonawcy>
 
+    <podsumowanie>
+        <wykonawców>13</wykonawców>
+        <płyt>25</płyt>
+        <utworów>240</utworów>
+        <gatunki>
+            <gatunek>hip-hop</gatunek>
+            <gatunek>rock</gatunek>
+            <gatunek>rock</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>art-pop</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>hip-hop</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>sludge</gatunek>
+            <gatunek>metal</gatunek>
+            <gatunek>metal</gatunek>
+        </gatunki>
+        <średni_randking>6.1</średni_randking>
+    </podsumowanie>
 </dupa>

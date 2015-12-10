@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet
-    version="1.0"
+    version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:ext="http://exslt.org/common"
     exclude-result-prefixes="ext">
@@ -10,6 +10,35 @@
     <xsl:template match="/">
         <dupa>
             <xsl:apply-templates />
+            <podsumowanie>
+                <xsl:variable name="płyt" select="count(/kolekcja/płyty/płyta)" />
+                <wykonawców>
+                    <xsl:value-of select="count(/kolekcja/wykonawcy/wykonawca)" />
+                </wykonawców>
+                <płyt>
+                    <xsl:value-of select="$płyt" />
+                </płyt>
+                <utworów>
+                    <xsl:value-of select="count(/kolekcja/płyty/płyta/lista_utworów/utwór)" />
+                </utworów>
+                <gatunki>
+                    <xsl:for-each select="/kolekcja/wykonawcy/wykonawca">
+                        <gatunek>
+                            <xsl:value-of select="@gatunek" />
+                        </gatunek>
+                    </xsl:for-each>
+                </gatunki>
+                <średni_randking>
+                    <xsl:variable name="ranking">
+                        <xsl:for-each select="/kolekcja/płyty/płyta">
+                            <temp_ranking>
+                                <xsl:value-of select="ranking" />
+                            </temp_ranking>
+                        </xsl:for-each>
+                    </xsl:variable>
+                    <xsl:value-of select="sum(ext:node-set($ranking)/*) div $płyt" />
+                </średni_randking>
+            </podsumowanie>
         </dupa>
     </xsl:template>
 
