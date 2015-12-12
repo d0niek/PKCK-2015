@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dupa>
+<?xml-stylesheet type="text/xsl" href="xhtml.xsl"?>
+<kolekcja>
 
     <nagłówek>
         <opis>Katalog płyt</opis>
@@ -12,7 +13,7 @@
             <gatunek>hip-hop</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="1">
                     <tytuł>Odkupienie</tytuł>
                     <ranking>7.0</ranking>
                     <liczba_utworów>13</liczba_utworów>
@@ -29,7 +30,7 @@
             <gatunek>rock</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="2">
                     <tytuł>Hopes and Fears</tytuł>
                     <ranking>5.0</ranking>
                     <liczba_utworów>12</liczba_utworów>
@@ -46,7 +47,7 @@
             <gatunek>rock</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="3">
                     <tytuł>Waterfall</tytuł>
                     <ranking>7.5</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -63,7 +64,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="4">
                     <tytuł>Serpents Unleashed</tytuł>
                     <ranking>3.0</ranking>
                     <liczba_utworów>11</liczba_utworów>
@@ -80,7 +81,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>2</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="5">
                     <tytuł>Aura</tytuł>
                     <ranking>7.0</ranking>
                     <liczba_utworów>5</liczba_utworów>
@@ -90,7 +91,7 @@
                         <VAT>9,19zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="10">
                     <tytuł>Roots</tytuł>
                     <ranking>7.5</ranking>
                     <liczba_utworów>4</liczba_utworów>
@@ -107,7 +108,7 @@
             <gatunek>art-pop</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="6">
                     <tytuł>St. Vincent</tytuł>
                     <ranking>6.5</ranking>
                     <liczba_utworów>11</liczba_utworów>
@@ -124,7 +125,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>3</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="7">
                     <tytuł>Skyforger</tytuł>
                     <ranking>5.0</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -134,7 +135,7 @@
                         <VAT>10,92zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="8">
                     <tytuł>The Beginning of Times</tytuł>
                     <ranking>1.5</ranking>
                     <liczba_utworów>12</liczba_utworów>
@@ -144,7 +145,7 @@
                         <VAT>7,36zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="9">
                     <tytuł>Under the Red Cloud</tytuł>
                     <ranking>5.5</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -161,7 +162,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>2</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="13">
                     <tytuł>The Mantle</tytuł>
                     <ranking>3.5</ranking>
                     <liczba_utworów>9</liczba_utworów>
@@ -171,7 +172,7 @@
                         <VAT>11,5zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="14">
                     <tytuł>Marrow of the Spirit</tytuł>
                     <ranking>4.5</ranking>
                     <liczba_utworów>6</liczba_utworów>
@@ -188,7 +189,7 @@
             <gatunek>hip-hop</gatunek>
             <ilość_płyt>1</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="16">
                     <tytuł>My Beautiful Dark Twisted Fantasy</tytuł>
                     <ranking>9.0</ranking>
                     <liczba_utworów>13</liczba_utworów>
@@ -205,7 +206,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>2</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="11">
                     <tytuł>Roads to the North</tytuł>
                     <ranking>6.5</ranking>
                     <liczba_utworów>8</liczba_utworów>
@@ -215,7 +216,7 @@
                         <VAT>10,74zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="25">
                     <tytuł>Autumn Eternal</tytuł>
                     <ranking>7.5</ranking>
                     <liczba_utworów>8</liczba_utworów>
@@ -232,7 +233,7 @@
             <gatunek>sludge</gatunek>
             <ilość_płyt>3</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="17">
                     <tytuł>Leviathan</tytuł>
                     <ranking>7.0</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -242,7 +243,7 @@
                         <VAT>8,27zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="18">
                     <tytuł>Blood Mountain</tytuł>
                     <ranking>6.5</ranking>
                     <liczba_utworów>12</liczba_utworów>
@@ -252,7 +253,7 @@
                         <VAT>9,2zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="19">
                     <tytuł>Crack the Skye</tytuł>
                     <ranking>4.5</ranking>
                     <liczba_utworów>7</liczba_utworów>
@@ -269,7 +270,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>5</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="20">
                     <tytuł>Darkness and Hope</tytuł>
                     <ranking>8.5</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -279,7 +280,7 @@
                         <VAT>6,89zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="21">
                     <tytuł>The Antidote</tytuł>
                     <ranking>7.5</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -289,7 +290,7 @@
                         <VAT>6,87zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="22">
                     <tytuł>Irreligious</tytuł>
                     <ranking>8.0</ranking>
                     <liczba_utworów>11</liczba_utworów>
@@ -299,7 +300,7 @@
                         <VAT>4,59zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="23">
                     <tytuł>Night Eternal</tytuł>
                     <ranking>4.5</ranking>
                     <liczba_utworów>9</liczba_utworów>
@@ -309,7 +310,7 @@
                         <VAT>6,89zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="24">
                     <tytuł>Alpha Noir</tytuł>
                     <ranking>4.0</ranking>
                     <liczba_utworów>9</liczba_utworów>
@@ -326,7 +327,7 @@
             <gatunek>metal</gatunek>
             <ilość_płyt>2</ilość_płyt>
             <płyty>
-                <płyta>
+                <płyta id="12">
                     <tytuł>Ecliptica</tytuł>
                     <ranking>7.5</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -336,7 +337,7 @@
                         <VAT>5,63zł</VAT>
                     </cena>
                 </płyta>
-                <płyta>
+                <płyta id="15">
                     <tytuł>Reckoning Night</tytuł>
                     <ranking>8.0</ranking>
                     <liczba_utworów>10</liczba_utworów>
@@ -349,7 +350,7 @@
             </płyty>
         </wykonawca>
     </wykonawcy>
-
+    
     <podsumowanie>
         <wykonawców>13</wykonawców>
         <płyt>25</płyt>
@@ -369,6 +370,6 @@
             <gatunek>metal</gatunek>
             <gatunek>metal</gatunek>
         </gatunki>
-        <średni_randking>6.1</średni_randking>
+        <średni_ranking>6.1</średni_ranking>
     </podsumowanie>
-</dupa>
+</kolekcja>

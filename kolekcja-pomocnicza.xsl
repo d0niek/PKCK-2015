@@ -8,7 +8,7 @@
     <xsl:output method="xml" encoding="utf-8" indent="yes" />
 
     <xsl:template match="/">
-        <dupa>
+        <kolekcja>
             <xsl:apply-templates />
             <podsumowanie>
                 <xsl:variable name="płyt" select="count(/kolekcja/płyty/płyta)" />
@@ -28,7 +28,7 @@
                         </gatunek>
                     </xsl:for-each>
                 </gatunki>
-                <średni_randking>
+                <średni_ranking>
                     <xsl:variable name="ranking">
                         <xsl:for-each select="/kolekcja/płyty/płyta">
                             <temp_ranking>
@@ -37,9 +37,9 @@
                         </xsl:for-each>
                     </xsl:variable>
                     <xsl:value-of select="sum(ext:node-set($ranking)/*) div $płyt" />
-                </średni_randking>
+                </średni_ranking>
             </podsumowanie>
-        </dupa>
+        </kolekcja>
     </xsl:template>
 
     <xsl:template match="/kolekcja">
@@ -91,6 +91,9 @@
         <xsl:variable name="nagranieId" select="@nagranie" />
 
         <płyta>
+            <xsl:attribute name="id">
+                <xsl:value-of select="substring-after($nagranieId, 'CD')" />
+            </xsl:attribute>
             <xsl:call-template name="płyta">
                 <xsl:with-param name="p" select="/kolekcja/płyty/płyta[@id = $nagranieId]" />
             </xsl:call-template>
@@ -116,7 +119,7 @@
             <xsl:call-template name="czas_trwania">
                 <xsl:with-param name="utwory" select="$p/lista_utworów/utwór" />
             </xsl:call-template>
-        </czas_trwania>
+        </czas_trwania> 
 
         <cena>
             <brutto>
