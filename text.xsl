@@ -123,9 +123,66 @@
     </xsl:template>
 
     <xsl:template match="/kolekcja/podsumowanie">
+        <xsl:variable name="newLine">
+            <xsl:call-template name="textInFrame">
+                <xsl:with-param name="text" select="' '" />
+                <xsl:with-param name="length" select="$width" />
+                <xsl:with-param name="nesting" select="0" />
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:call-template name="repeat">
+            <xsl:with-param name="char" select="$newLine" />
+            <xsl:with-param name="length" select="3" />
+        </xsl:call-template>
+
+        <xsl:call-template name="topFrame">
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="title" select="' Podsumowanie '" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
+        <xsl:call-template name="textInFrame">
+            <xsl:with-param name="text" select="concat(' → Wykonawców: ', wykonawców)" />
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
+        <xsl:call-template name="textInFrame">
+            <xsl:with-param name="text" select="concat(' → Płyt: ', płyt)" />
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
+        <xsl:call-template name="textInFrame">
+            <xsl:with-param name="text" select="concat(' → Utworów: ', utworów)" />
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
+        <xsl:call-template name="textInFrame">
+            <xsl:with-param name="text" select="' → Gatunki: '" />
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
+        <xsl:apply-templates select="gatunki/gatunek" />
+
+        <xsl:call-template name="bottomFrame">
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
+        </xsl:call-template>
+
         <xsl:call-template name="bottomFrame">
             <xsl:with-param name="length" select="$width" />
             <xsl:with-param name="nesting" select="0" />
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template match="/kolekcja/podsumowanie/gatunki/gatunek">
+        <xsl:call-template name="textInFrame">
+            <xsl:with-param name="text" select="concat('   · ', .)" />
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="1" />
         </xsl:call-template>
     </xsl:template>
 
