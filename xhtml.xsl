@@ -24,15 +24,36 @@
 
     <xsl:template match="/kolekcja">
         <xsl:apply-templates select="nagłówek" />
+        <xsl:call-template name="odnośniki_wykonawców" />
+        <xsl:apply-templates select="podsumowanie" />
         <xsl:apply-templates select="wykonawcy" />
     </xsl:template>
 
     <xsl:template match="/kolekcja/nagłówek">
-        <span style="font-variant: small-caps;"><xsl:value-of select="opis" />, Data: <xsl:value-of select="data" /></span><br />
+        <span style="font-variant: small-caps; font-size: xx-large;"><xsl:value-of select="opis" />, Data: <xsl:value-of select="data" /></span><br />
+    </xsl:template>
+
+    <xsl:template name="odnośniki_wykonawców">
+        <div style="background-color: white; width: 200px; padding: 5px; margin: 5px; float: left;">
+            <xsl:text>Odnośniki: </xsl:text><br />
+            <xsl:for-each select="/kolekcja/wykonawcy/wykonawca">
+                <xsl:text>&#9733; </xsl:text> 
+                <a>
+                <xsl:attribute name="href"><xsl:value-of select="concat('#', nazwa)" /></xsl:attribute>
+                <xsl:value-of select="nazwa" />
+                </a><br />
+            </xsl:for-each>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="podsumowanie">
+        <div style="background-color: white; width: 200px; padding: 5px; margin: 5px; float: left; clear: left;">
+            <xsl:text>Podsumowanie: </xsl:text><br />
+        </div>
     </xsl:template>
 
     <xsl:template match="/kolekcja/wykonawcy">
-        <table style="background-color: peru; margin: 3ex 2em; color: black; border-style: double; border-width: 3px;">
+        <table style="background-color: peru; margin: 3px; color: black; border-style: double; border-width: 3px;">
             <xsl:attribute name="summary">Tabela ze szczegółami kolekcji płyt</xsl:attribute>
             <xsl:apply-templates select="wykonawca" />
         </table>
@@ -40,12 +61,21 @@
 
     <xsl:template match="/kolekcja/wykonawcy/wykonawca">
         <tr style="background-color: burlywood;">
-            <td colspan="4"><b><xsl:value-of select="nazwa" /></b></td>
-            <td>
-                gatunek: <div style="float: right; clear: right; text-align: right;"><xsl:value-of select="gatunek" /></div>
+            <td colspan="4">
+                <a><xsl:attribute name="name"><xsl:value-of select="nazwa" /></xsl:attribute></a>
+                <b><xsl:value-of select="nazwa" /></b>
             </td>
             <td>
-                pozycje: <div style="float: right; clear: right; text-align: right;"><xsl:value-of select="ilość_płyt" /></div>
+                <div class="gatunek" style="text-align: left; margin: 5px;">
+                <xsl:text>gatunek: </xsl:text>
+                <span style="text-align: right; float: right;"><xsl:value-of select="gatunek" /></span>
+                </div>
+            </td>
+            <td>
+                <div class="pozycje" style="text-align: left; margin: 5px;">
+                <xsl:text>pozycje: </xsl:text>
+                <span style="text-align: right; float: right;"><xsl:value-of select="ilość_płyt" /></span>
+                </div>
             </td>
         </tr>
         <xsl:apply-templates select="płyty" />
@@ -63,14 +93,13 @@
 
     <xsl:template match="/kolekcja/wykonawcy/wykonawca/płyty/płyta" mode="jedna_płyta">
         <td style="border-width: 3px; border-style: solid;">
-            <xsl:value-of select="position()" />
             <img height="300" width="300">
                 <xsl:attribute name="src"><xsl:value-of select="concat('img/okladka_', @id, '.jpg')" /></xsl:attribute>
                 <xsl:attribute name="alt"><xsl:value-of select="concat('Okładka płyty ', tytuł)" /></xsl:attribute>
             </img>
         </td>
         <td width="150" style="border-left-width: 0px; border-style: dashed;">
-            <div class="opis_płyty" style="margin: 5px;">
+            <div class="opis_płyty" style="margin: 5px; clear: left;">
                 <xsl:apply-templates select="tytuł" />
                 <xsl:apply-templates select="ranking" />
                 <xsl:apply-templates select="liczba_utworów" />
@@ -105,7 +134,5 @@
             <span style="font-weight: bold; text-align: right; float: right"><xsl:value-of select="." /></span>
         </div>
     </xsl:template>
-
-   
 
 </xsl:stylesheet>
