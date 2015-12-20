@@ -10,6 +10,8 @@
         omit-xml-declaration="no"
         indent="yes" />
 
+    <xsl:key name="jeden_gatunek" match="/kolekcja/podsumowanie/gatunki/gatunek/text()" use="." />
+
     <xsl:template match="/">
         <html>
             <head>
@@ -27,15 +29,25 @@
         <xsl:call-template name="odnośniki_wykonawców" />
         <xsl:apply-templates select="podsumowanie" />
         <xsl:apply-templates select="wykonawcy" />
+        <div>
+            <p>
+                <a href="http://validator.w3.org/check?uri=referer">
+                    <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+                </a>
+            </p>
+        </div>
     </xsl:template>
 
     <xsl:template match="/kolekcja/nagłówek">
-        <span style="font-variant: small-caps; font-size: xx-large;"><xsl:value-of select="opis" />, Data: <xsl:value-of select="data" /></span><br />
+        <div>
+            <span style="font-variant: small-caps; font-size: xx-large;"><xsl:value-of select="opis" />, Data: <xsl:value-of select="data" /></span>
+        </div>
     </xsl:template>
 
     <xsl:template name="odnośniki_wykonawców">
-        <div style="background-color: white; width: 200px; padding: 5px; margin: 5px; float: left;">
-            <xsl:text>Odnośniki: </xsl:text><br />
+        <div style="background-color: burlywood; width: 200px; padding: 5px; margin: 5px; float: left;
+            border-style: double; border-width: 3px;">
+            <xsl:text>Odnośniki: </xsl:text><br/>
             <xsl:for-each select="/kolekcja/wykonawcy/wykonawca">
                 <xsl:text>&#9733; </xsl:text> 
                 <a>
@@ -47,8 +59,32 @@
     </xsl:template>
 
     <xsl:template match="podsumowanie">
-        <div style="background-color: white; width: 200px; padding: 5px; margin: 5px; float: left; clear: left;">
+        <div style="background-color: burlywood; width: 200px; padding: 5px; margin: 5px; float: left; clear: left;
+            border-style: double; border-width: 3px;">
             <xsl:text>Podsumowanie: </xsl:text><br />
+            <table>
+                <xsl:attribute name="summary">Tabela z podsumowaniem dokumentu</xsl:attribute>
+                <tr>
+                    <td><span style="font-weight: bold; text-align: left;">Suma wykonawców:</span></td>
+                    <td><span><xsl:value-of select="wykonawców" /></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight: bold; text-align: left;">Suma płyt:</span></td>
+                    <td><span><xsl:value-of select="płyt" /></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight: bold; text-align: left;">Suma utworów:</span></td>
+                    <td><span><xsl:value-of select="utworów" /></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight: bold; text-align: left;">Gatunki:</span></td>
+                    <td><span><xsl:apply-templates select="./gatunki"/></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight: bold; text-align: left;">Średni ranking:</span></td>
+                    <td><span><xsl:value-of select="średni_ranking" /></span></td>
+                </tr>
+            </table>
         </div>
     </xsl:template>
 
@@ -62,7 +98,7 @@
     <xsl:template match="/kolekcja/wykonawcy/wykonawca">
         <tr style="background-color: burlywood;">
             <td colspan="4">
-                <a><xsl:attribute name="name"><xsl:value-of select="nazwa" /></xsl:attribute></a>
+                <a><xsl:attribute name="name"><xsl:value-of select="translate(nazwa, ' ', '_')" /></xsl:attribute></a>
                 <b><xsl:value-of select="nazwa" /></b>
             </td>
             <td>
@@ -98,7 +134,7 @@
                 <xsl:attribute name="alt"><xsl:value-of select="concat('Okładka płyty ', tytuł)" /></xsl:attribute>
             </img>
         </td>
-        <td width="150" style="border-left-width: 0px; border-style: dashed;">
+        <td style="border-left-width: 0px; border-style: dashed;">
             <div class="opis_płyty" style="margin: 5px; clear: left;">
                 <xsl:apply-templates select="tytuł" />
                 <xsl:apply-templates select="ranking" />
@@ -111,7 +147,7 @@
     <xsl:template match="/kolekcja/wykonawcy/wykonawca/płyty/płyta[not(position() mod 3 = 1)]" />
 
     <xsl:template match="/kolekcja/wykonawcy/wykonawca/płyty/płyta/tytuł">
-        <div style="font-variant: small-caps; float: left; font-size: x-large; margin-bottom: 15px; clear: both;"><p3><xsl:value-of select="." /></p3></div>
+        <div style="font-variant: small-caps; float: left; font-size: x-large; margin-bottom: 15px; clear: both;"><xsl:value-of select="." /></div>
     </xsl:template>
 
     <xsl:template match="/kolekcja/wykonawcy/wykonawca/płyty/płyta/ranking">
@@ -133,6 +169,13 @@
             <xsl:text>Czas trwania: </xsl:text>
             <span style="font-weight: bold; text-align: right; float: right"><xsl:value-of select="." /></span>
         </div>
+    </xsl:template>
+
+    <xsl:template match="/kolekcja/podsumowanie/gatunki">
+        <xsl:for-each select="gatunek/text()[generate-id()
+                                       = generate-id(key('jeden_gatunek',.)[1])]">
+            <xsl:value-of select="."/><br />
+        </xsl:for-each>
     </xsl:template>
 
 </xsl:stylesheet>
