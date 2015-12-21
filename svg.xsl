@@ -22,6 +22,7 @@
     </xsl:template>
 
     <xsl:template match="/kolekcja/nagłówek" />
+    <xsl:template match="/kolekcja/podsumowanie" />
 
     <xsl:variable name="chart" select="250" />
     <xsl:template match="/kolekcja/wykonawcy">

@@ -1,0 +1,93 @@
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.1//EN'
+  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg height="" width="800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="Gradient" x1="100%" y1="100%">
+            <stop offset="0%" stop-color="lightblue" stop-opacity=".5">
+                <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="lightblue;blue;red;red;black;red;red;purple;lightblue"/>
+            </stop>
+            <stop offset="100%" stop-color="lightblue" stop-opacity=".5">
+                <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="lightblue;orange;purple;purple;black;purple;purple;blue;lightblue"/>
+                <animate attributeName="offset" dur="14s" repeatCount="indefinite" values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95"/>
+            </stop>
+        </linearGradient>
+    </defs>
+    <rect fill="rgb(255, 120, 0)" height="460" id="ramka" stroke="black" width="790" x="10" y="10"/>
+    <text fill="rgb(255, 255, 255)" font-size="25" x="20" y="30">Wykonawcy - Ilość płyt</text>
+    <rect fill="rgb(255, 255, 255)" height="250" stroke="black" width="770" x="20" y="40"/>
+    <rect fill="rgb(255, 204, 255)" height="40" id="col1" stroke="black" width="40" x="10" y="470"/>
+    <rect fill="rgb(204, 255, 153)" height="40" id="col2" stroke="black" width="40" x="58" y="470"/>
+    <rect fill="rgb(255, 120, 0)" height="40" id="col3" stroke="black" width="40" x="106" y="470"/>
+    <script type="text/javascript">var ramka = document.getElementById(&quot;ramka&quot;);
+                var col1 = document.getElementById(&quot;col1&quot;);
+                var col2 = document.getElementById(&quot;col2&quot;);
+                var col3 = document.getElementById(&quot;col3&quot;);
+
+                col1.onclick = function() {
+                    var color = this.getAttribute(&quot;fill&quot;);
+                    ramka.setAttribute(&quot;fill&quot;,&quot;rgb(255, 204, 255)&quot;);
+                }
+
+                col2.onclick = function() {
+                    var color = this.getAttribute(&quot;fill&quot;);
+                    ramka.setAttribute(&quot;fill&quot;,&quot;rgb(204, 255, 153)&quot;);
+                }
+
+                col3.onclick = function() {
+                    var color = this.getAttribute(&quot;fill&quot;);
+                    ramka.setAttribute(&quot;fill&quot;,&quot;rgb(255, 120, 0)&quot;);
+                }</script>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="30" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 30 242" id="trigger" repeatCount="2" to="360 30 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 54.230769230769226, 310)" x="54.230769230769226" y="310">Tede</text>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="88" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 88 242" id="trigger" repeatCount="2" to="360 88 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 112.69230769230768, 310)" x="112.69230769230768" y="310">Keane</text>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="147" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 147 242" id="trigger" repeatCount="2" to="360 147 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 171.15384615384613, 310)" x="171.15384615384613" y="310">Ocean</text>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="205" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 205 242" id="trigger" repeatCount="2" to="360 205 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 229.6153846153846, 310)" x="229.6153846153846" y="310">Skeletonwitch</text>
+    <rect fill="url(#Gradient)" height="96" stroke="black" width="48.46153846153846" x="264" y="194">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 264 194" id="trigger" repeatCount="2" to="360 264 194" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 288.07692307692304, 310)" x="288.07692307692304" y="310">Saor</text>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="322" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 322 242" id="trigger" repeatCount="2" to="360 322 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 346.5384615384615, 310)" x="346.5384615384615" y="310">Anne Clark</text>
+    <rect fill="url(#Gradient)" height="144" stroke="black" width="48.46153846153846" x="381" y="146">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 381 146" id="trigger" repeatCount="2" to="360 381 146" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 405, 310)" x="405" y="310">Amorphis</text>
+    <rect fill="url(#Gradient)" height="96" stroke="black" width="48.46153846153846" x="439" y="194">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 439 194" id="trigger" repeatCount="2" to="360 439 194" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 463.46153846153845, 310)" x="463.46153846153845" y="310">Agalloch</text>
+    <rect fill="url(#Gradient)" height="48" stroke="black" width="48.46153846153846" x="498" y="242">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 498 242" id="trigger" repeatCount="2" to="360 498 242" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 521.9230769230769, 310)" x="521.9230769230769" y="310">Kanye West</text>
+    <rect fill="url(#Gradient)" height="96" stroke="black" width="48.46153846153846" x="556" y="194">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 556 194" id="trigger" repeatCount="2" to="360 556 194" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 580.3846153846155, 310)" x="580.3846153846155" y="310">Panopticon</text>
+    <rect fill="url(#Gradient)" height="144" stroke="black" width="48.46153846153846" x="615" y="146">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 615 146" id="trigger" repeatCount="2" to="360 615 146" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 638.8461538461538, 310)" x="638.8461538461538" y="310">Mastodon</text>
+    <rect fill="url(#Gradient)" height="240" stroke="black" width="48.46153846153846" x="673" y="50">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 673 50" id="trigger" repeatCount="2" to="360 673 50" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 697.3076923076924, 310)" x="697.3076923076924" y="310">Moonspell</text>
+    <rect fill="url(#Gradient)" height="96" stroke="black" width="48.46153846153846" x="732" y="194">
+        <animateTransform attributeName="transform" begin="click" dur="1s" from="0 732 194" id="trigger" repeatCount="2" to="360 732 194" type="rotate"/>
+    </rect>
+    <text fill="rgb(255, 255, 255)" font-size="20" transform="rotate(90 755.7692307692308, 310)" x="755.7692307692308" y="310">Sonata Arctica</text>
+</svg>
