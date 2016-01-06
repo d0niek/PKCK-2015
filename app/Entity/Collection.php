@@ -13,6 +13,7 @@ use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
 use Entity\Record\Track;
+use Exception;
 use SimpleXMLElement;
 
 class Collection
@@ -23,8 +24,8 @@ class Collection
     /** @var \Entity\Record\Record[] $records */
     private $records = [];
 
-    /** @var \Entity\Record\Performer[] = $performer */
-    private $performer = [];
+    /** @var \Entity\Record\Performer[] $performers */
+    private $performers = [];
 
     /**
      * Load data from xml file
@@ -38,6 +39,12 @@ class Collection
         $this->loadHeader($collectionXml->{'nagłówek'});
         $this->loadRecords($collectionXml->{'płyty'});
         $this->loadPerformers($collectionXml->wykonawcy);
+
+        foreach ($this->records as $record) {
+            $performer = $this->findPerformerById($record->getPerformer());
+
+            $record->setPerformer($performer);
+        }
     }
 
     /**
@@ -64,7 +71,7 @@ class Collection
      */
     public function addPerformer(Performer $performer)
     {
-        $this->performer[] = $performer;
+        $this->performers[] = $performer;
     }
 
     /**
@@ -106,6 +113,9 @@ class Collection
         foreach ($recordsXml->children() as $recordXml) {
             $record = new Record();
             $record->setId((string) $recordXml->attributes()->id);
+
+            // After load performers have to change Id to Performer value
+            $record->setPerformer((string) $recordXml->attributes()->wykonawca);
             $record->setRelease(new \DateTime((string) $recordXml->attributes()->data_wydania));
             $record->setTitle((string) $recordXml->{'tytuł_płyty'});
             $record->setRanking((string) $recordXml->ranking);
@@ -158,7 +168,8 @@ class Collection
      *
      * @param string $recordId
      *
-     * @return \Entity\Record\Record|null
+     * @return \Entity\Record\Record
+     * @throws \Exception
      */
     private function findRecordById($recordId)
     {
@@ -168,7 +179,26 @@ class Collection
             }
         }
 
-        return null;
+        throw new Exception("Not found record with Id $recordId");
+    }
+
+    /**
+     * Find performer in collection by Id
+     *
+     * @param string $performerId
+     *
+     * @return \Entity\Record\Performer
+     * @throws \Exception
+     */
+    private function findPerformerById($performerId)
+    {
+        foreach ($this->performers as $performer) {
+            if ($performer->getId() === $performerId) {
+                return $performer;
+            }
+        }
+
+        throw new Exception("Not found performer with Id $performerId");
     }
 
     #region Getters
@@ -192,9 +222,9 @@ class Collection
     /**
      * @return \Entity\Record\Performer[]
      */
-    public function getPerformer()
+    public function getPerformers()
     {
-        return $this->performer;
+        return $this->performers;
     }
 
     #endregion
