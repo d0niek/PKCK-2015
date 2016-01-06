@@ -8,4 +8,11 @@
 
 require_once 'vendor/autoload.php';
 
-echo "Hello PKCK";
+use Entity\Collection;
+
+$xmlFile = dirname(__FILE__) . '/kolekcja.xml';
+$collection = new Collection();
+
+if (file_exists($xmlFile)) {
+    $collection->loadFromXml($xmlFile);
+}

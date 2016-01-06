@@ -6,5 +6,8 @@
             "email": "glinka18@wp.pl"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {"": "app/"}
+    }
 }
