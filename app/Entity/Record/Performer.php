@@ -10,7 +10,7 @@ namespace Entity\Record;
 
 class Performer
 {
-    /** @var int $id */
+    /** @var string $id */
     private $id;
 
     /** @var string $name */
@@ -25,10 +25,15 @@ class Performer
     /** @var \Entity\Record\Record[] $records */
     private $records = [];
 
+    public function addRecord(Record $record)
+    {
+        $this->records[] = $record;
+    }
+
     #region Getters & Setter
 
     /**
-     * @return int
+     * @return string
      */
     public function getId()
     {
@@ -36,7 +41,7 @@ class Performer
     }
 
     /**
-     * @param int $id
+     * @param string $id
      *
      * @return $this
      */

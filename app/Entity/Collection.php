@@ -37,6 +37,7 @@ class Collection
 
         $this->loadHeader($collectionXml->{'nagłówek'});
         $this->loadRecords($collectionXml->{'płyty'});
+        $this->loadPerformers($collectionXml->wykonawcy);
     }
 
     /**
@@ -122,6 +123,52 @@ class Collection
 
             $this->addRecord($record);
         }
+    }
+
+    /**
+     * Load performers tags from Xml
+     *
+     * @param \SimpleXMLElement $performersXml
+     */
+    private function loadPerformers(SimpleXMLElement $performersXml)
+    {
+        foreach ($performersXml->children() as $performerXml) {
+            $performer = new Performer();
+            $performer->setId((string) $performerXml->attributes()->id);
+            $performer->setName((string) $performerXml->attributes()->nazwa);
+            $performer->setType((string) $performerXml->attributes()->gatunek);
+
+            $members = isset($performerXml->attributes()->{'członków'}) ?
+                (string) $performerXml->attributes()->{'członków'} :
+                1;
+            $performer->setMembers((int) $members);
+
+            foreach ($performerXml->{'wydał'} as $recordXml) {
+                $record = $this->findRecordById((string) $recordXml->attributes()->nagranie);
+
+                $performer->addRecord($record);
+            }
+
+            $this->addPerformer($performer);
+        }
+    }
+
+    /**
+     * Find record in collection by Id
+     *
+     * @param string $recordId
+     *
+     * @return \Entity\Record\Record|null
+     */
+    private function findRecordById($recordId)
+    {
+        foreach ($this->records as $record) {
+            if ($record->getId() === $recordId) {
+                return $record;
+            }
+        }
+
+        return null;
     }
 
     #region Getters
