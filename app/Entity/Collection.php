@@ -75,19 +75,19 @@ class Collection
     {
         $header = new Header();
 
-        $header->setDescription($headerXml->opis->__toString());
+        $header->setDescription((string) $headerXml->opis);
 
-        $date = $headerXml->data->attributes()->{'dzień'}->__toString() . '.';
-        $date .= $headerXml->data->attributes()->{'miesiąc'}->__toString() . '.';
+        $date = (string) $headerXml->data->attributes()->{'dzień'} . '.';
+        $date .= (string) $headerXml->data->attributes()->{'miesiąc'} . '.';
         $date .= '2015';
         $header->setDate(new \DateTime($date));
 
         foreach ($headerXml->autorzy->children() as $authorXml) {
             $author = new Author();
-            $author->setName($authorXml->{'imię'}->__toString());
-            $author->setSurname($authorXml->nazwisko->__toString());
-            $author->setIndex($authorXml->numer_indeksu->__toString());
-            $author->setCourse($authorXml->kierunek->__toString());
+            $author->setName((string) $authorXml->{'imię'});
+            $author->setSurname((string) $authorXml->nazwisko);
+            $author->setIndex((string) $authorXml->numer_indeksu);
+            $author->setCourse((string) $authorXml->kierunek);
 
             $header->addAuthor($author);
         }
@@ -104,19 +104,18 @@ class Collection
     {
         foreach ($recordsXml->children() as $recordXml) {
             $record = new Record();
-            $record->setId($recordXml->attributes()->id->__toString());
-//            $record->setPerformer(new Performer());
-            $record->setRelease(new \DateTime($recordXml->attributes()->data_wydania->__toString()));
-            $record->setTitle($recordXml->{'tytuł_płyty'}->__toString());
-            $record->setRanking($recordXml->ranking->__toString());
-            $record->setTime(new \DateTime($recordXml->czas_trwania->__toString()));
-            $record->setPrice($recordXml->cena->__toString());
+            $record->setId((string) $recordXml->attributes()->id);
+            $record->setRelease(new \DateTime((string) $recordXml->attributes()->data_wydania));
+            $record->setTitle((string) $recordXml->{'tytuł_płyty'});
+            $record->setRanking((string) $recordXml->ranking);
+            $record->setTime(new \DateTime((string) $recordXml->czas_trwania));
+            $record->setPrice((string) $recordXml->cena);
 
             foreach ($recordXml->{'lista_utworów'}->children() as $trackXml) {
                 $track = new Track();
-                $track->setNumber($trackXml->attributes()->nr->__toString());
-                $track->setTitle($trackXml->{'tytuł'}->__toString());
-                $track->setLength(new \DateTime($trackXml->{'długość'}->__toString()));
+                $track->setNumber((string) $trackXml->attributes()->nr);
+                $track->setTitle((string) $trackXml->{'tytuł'});
+                $track->setLength(new \DateTime((string) $trackXml->{'długość'}));
 
                 $record->addTrack($track);
             }
