@@ -12,6 +12,7 @@ use Entity\Header\Author;
 use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
+use Entity\Record\Track;
 use SimpleXMLElement;
 
 class Collection
@@ -35,6 +36,7 @@ class Collection
         $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
 
         $this->loadHeader($collectionXml->{'nagłówek'});
+        $this->loadRecords($collectionXml->{'płyty'});
     }
 
     /**
@@ -91,6 +93,36 @@ class Collection
         }
 
         $this->header = $header;
+    }
+
+    /**
+     * Load records tags from xml
+     *
+     * @param \SimpleXMLElement $recordsXml
+     */
+    private function loadRecords(SimpleXMLElement $recordsXml)
+    {
+        foreach ($recordsXml->children() as $recordXml) {
+            $record = new Record();
+            $record->setId($recordXml->attributes()->id->__toString());
+//            $record->setPerformer(new Performer());
+            $record->setRelease(new \DateTime($recordXml->attributes()->data_wydania->__toString()));
+            $record->setTitle($recordXml->{'tytuł_płyty'}->__toString());
+            $record->setRanking($recordXml->ranking->__toString());
+            $record->setTime(new \DateTime($recordXml->czas_trwania->__toString()));
+            $record->setPrice($recordXml->cena->__toString());
+
+            foreach ($recordXml->{'lista_utworów'}->children() as $trackXml) {
+                $track = new Track();
+                $track->setNumber($trackXml->attributes()->nr->__toString());
+                $track->setTitle($trackXml->{'tytuł'}->__toString());
+                $track->setLength(new \DateTime($trackXml->{'długość'}->__toString()));
+
+                $record->addTrack($track);
+            }
+
+            $this->addRecord($record);
+        }
     }
 
     #region Getters

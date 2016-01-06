@@ -12,7 +12,7 @@ use DateTime;
 
 class Record
 {
-    /** @var int $id */
+    /** @var string $id */
     private $id;
 
     /** @var \Entity\Record\Performer $performer */
@@ -49,7 +49,7 @@ class Record
     #region Getters & Setters
 
     /**
-     * @return int
+     * @return string
      */
     public function getId()
     {
@@ -57,7 +57,7 @@ class Record
     }
 
     /**
-     * @param int $id
+     * @param string $id
      *
      * @return $this
      */
