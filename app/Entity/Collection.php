@@ -8,6 +8,8 @@
 
 namespace Entity;
 
+use Entity\Header\Author;
+use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
 use SimpleXMLElement;
@@ -31,6 +33,8 @@ class Collection
     public function loadFromXml($xmlFile)
     {
         $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
+
+        $this->loadHeader($collectionXml->{'nagłówek'});
     }
 
     /**
@@ -58,6 +62,35 @@ class Collection
     public function addPerformer(Performer $performer)
     {
         $this->performer[] = $performer;
+    }
+
+    /**
+     * Load header tag from xml
+     *
+     * @param \SimpleXMLElement $headerXml
+     */
+    private function loadHeader(SimpleXMLElement $headerXml)
+    {
+        $header = new Header();
+
+        $header->setDescription($headerXml->opis->__toString());
+
+        $date = $headerXml->data->attributes()->{'dzień'}->__toString() . '.';
+        $date .= $headerXml->data->attributes()->{'miesiąc'}->__toString() . '.';
+        $date .= '2015';
+        $header->setDate(new \DateTime($date));
+
+        foreach ($headerXml->autorzy->children() as $authorXml) {
+            $author = new Author();
+            $author->setName($authorXml->{'imię'}->__toString());
+            $author->setSurname($authorXml->nazwisko->__toString());
+            $author->setIndex($authorXml->numer_indeksu->__toString());
+            $author->setCourse($authorXml->kierunek->__toString());
+
+            $header->addAuthor($author);
+        }
+
+        $this->header = $header;
     }
 
     #region Getters
