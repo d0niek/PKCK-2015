@@ -6,11 +6,16 @@
  * Time: 4:56 PM
  */
 
+namespace Entity;
+
 use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
+use Exception;
+use SimpleXMLElement;
+use UtilInterface\XmlEntity;
 
-class Collection
+class Collection implements XmlEntity
 {
     const FIELDS = [
         'header' => 'nagłówek',
@@ -29,58 +34,8 @@ class Collection
     /** @var \Entity\Record\Performer[] $performers */
     private $performers = [];
 
-    /**
-     * Load data from xml file
-     *
-     * @param string $xmlFile
-     */
-    public function loadFromXml($xmlFile)
+    private function __construct()
     {
-        $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
-
-        $this->header = Header::loadFromXml($collectionXml->{self::FIELDS['header']});
-
-        foreach ($collectionXml->{self::FIELDS['records']}->children() as $recordXml) {
-            $this->addRecord(Record::loadFromXml($recordXml));
-        }
-
-        foreach ($collectionXml->{self::FIELDS['performers']}->children() as $performerXml) {
-            $this->addPerformer(Performer::loadFromXml($performerXml));
-        }
-
-        $this->setRelationships();
-    }
-
-    /**
-     * Save collection as xml file
-     */
-    public function saveAsXml()
-    {
-        $root = '<?xml version="1.0" encoding="utf-8"?>' .
-            '<?xml-stylesheet type="text/xsl" href="kolekcja-pomocnicza.xsl"?>' .
-            '<!DOCTYPE kolekcja SYSTEM "kolekcja.dtd">' .
-            '<kolekcja/>';
-
-        $collectionXml = new SimpleXMLElement($root);
-
-        $headerXml = $collectionXml->addChild(self::FIELDS['header']);
-        $this->header->saveToXml($headerXml);
-
-        $recordsXml = $collectionXml->addChild(self::FIELDS['records']);
-        foreach ($this->getRecords() as $record) {
-            $recordXml = $recordsXml->addChild(self::FIELDS['record']);
-
-            $record->saveToXml($recordXml);
-        }
-
-        $performersXml = $collectionXml->addChild(self::FIELDS['performers']);
-        foreach ($this->getPerformers() as $performer) {
-            $performerXml = $performersXml->addChild(self::FIELDS['performer']);
-
-            $performer->saveToXml($performerXml);
-        }
-
-        $collectionXml->asXML(dirname(__DIR__) . '/test.xml');
     }
 
     /**
@@ -101,6 +56,59 @@ class Collection
     public function addPerformer(Performer $performer)
     {
         $this->performers[] = $performer;
+    }
+
+    /**
+     * Read xml tags and return entity object
+     *
+     * @param \SimpleXMLElement $data
+     *
+     * @return mixed
+     */
+    public static function loadFromXml(SimpleXMLElement $data)
+    {
+        $collection = new Collection();
+
+        $collection->header = Header::loadFromXml($data->{self::FIELDS['header']});
+
+        foreach ($data->{self::FIELDS['records']}->children() as $recordXml) {
+            $collection->addRecord(Record::loadFromXml($recordXml));
+        }
+
+        foreach ($data->{self::FIELDS['performers']}->children() as $performerXml) {
+            $collection->addPerformer(Performer::loadFromXml($performerXml));
+        }
+
+        $collection->setRelationships();
+
+        return $collection;
+    }
+
+    /**
+     * Save entity object to xml
+     *
+     * @param \SimpleXMLElement $data
+     */
+    public function saveToXml(SimpleXMLElement $data)
+    {
+        $headerXml = $data->addChild(self::FIELDS['header']);
+        $this->header->saveToXml($headerXml);
+
+        $recordsXml = $data->addChild(self::FIELDS['records']);
+        foreach ($this->getRecords() as $record) {
+            $recordXml = $recordsXml->addChild(self::FIELDS['record']);
+
+            $record->saveToXml($recordXml);
+        }
+
+        $performersXml = $data->addChild(self::FIELDS['performers']);
+        foreach ($this->getPerformers() as $performer) {
+            $performerXml = $performersXml->addChild(self::FIELDS['performer']);
+
+            $performer->saveToXml($performerXml);
+        }
+
+        $data->asXML(ROOT_PATH . '/test.xml');
     }
 
     /**
