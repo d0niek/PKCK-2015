@@ -6,11 +6,9 @@
  * Time: 4:56 PM
  */
 
-use Entity\Header\Author;
 use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
-use Entity\Record\Track;
 
 class Collection
 {
@@ -32,15 +30,17 @@ class Collection
     {
         $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
 
-        $this->loadHeader($collectionXml->{'nagłówek'});
-        $this->loadRecords($collectionXml->{'płyty'});
-        $this->loadPerformers($collectionXml->wykonawcy);
+        $this->header = Header::loadFromXml($collectionXml->{'nagłówek'});
 
-        foreach ($this->records as $record) {
-            $performer = $this->findPerformerById($record->getPerformer());
-
-            $record->setPerformer($performer);
+        foreach ($collectionXml->{'płyty'}->children() as $recordXml) {
+            $this->addRecord(Record::loadFromXml($recordXml));
         }
+
+        foreach ($collectionXml->wykonawcy->children() as $performerXml) {
+            $this->addPerformer(Performer::loadFromXml($performerXml));
+        }
+
+        $this->setRelationships();
     }
 
     /**
@@ -71,92 +71,24 @@ class Collection
     }
 
     /**
-     * Load header tag from xml
+     * Set relationships between objects
      *
-     * @param \SimpleXMLElement $headerXml
+     * @throws \Exception
      */
-    private function loadHeader(SimpleXMLElement $headerXml)
+    private function setRelationships()
     {
-        $header = new Header();
+        // Set relationships for records
+        foreach ($this->records as $record) {
+            $performer = $this->findPerformerById($record->getPerformer());
 
-        $header->setDescription((string) $headerXml->opis);
-
-        $date = (string) $headerXml->data->attributes()->{'dzień'} . '.';
-        $date .= (string) $headerXml->data->attributes()->{'miesiąc'} . '.';
-        $date .= '2015';
-        $header->setDate(new \DateTime($date));
-
-        foreach ($headerXml->autorzy->children() as $authorXml) {
-            $author = new Author();
-            $author->setName((string) $authorXml->{'imię'});
-            $author->setSurname((string) $authorXml->nazwisko);
-            $author->setIndex((string) $authorXml->numer_indeksu);
-            $author->setCourse((string) $authorXml->kierunek);
-
-            $header->addAuthor($author);
+            $record->setPerformer($performer);
         }
 
-        $this->header = $header;
-    }
-
-    /**
-     * Load records tags from xml
-     *
-     * @param \SimpleXMLElement $recordsXml
-     */
-    private function loadRecords(SimpleXMLElement $recordsXml)
-    {
-        foreach ($recordsXml->children() as $recordXml) {
-            $record = new Record();
-            $record->setId((string) $recordXml->attributes()->id);
-
-            // After load performers have to change Id to Performer value
-            $record->setPerformer((string) $recordXml->attributes()->wykonawca);
-
-            $record->setRelease(new \DateTime((string) $recordXml->attributes()->data_wydania));
-            $record->setTitle((string) $recordXml->{'tytuł_płyty'});
-            $record->setRanking((string) $recordXml->ranking);
-            $record->setTime(new \DateTime((string) $recordXml->czas_trwania));
-            $record->setPrice((string) $recordXml->cena);
-
-            foreach ($recordXml->{'lista_utworów'}->children() as $trackXml) {
-                $track = new Track();
-                $track->setNumber((string) $trackXml->attributes()->nr);
-                $track->setTitle((string) $trackXml->{'tytuł'});
-                $track->setLength(new \DateTime((string) $trackXml->{'długość'}));
-
-                $record->addTrack($track);
+        // Set relationships fot performers
+        foreach ($this->performers as $performer) {
+            foreach ($performer->getRecords() as &$record) {
+                $record = $this->findRecordById($record);
             }
-
-            $this->addRecord($record);
-        }
-    }
-
-    /**
-     * Load performers tags from Xml
-     *
-     * @param \SimpleXMLElement $performersXml
-     */
-    private function loadPerformers(SimpleXMLElement $performersXml)
-    {
-        foreach ($performersXml->children() as $performerXml) {
-            $performer = new Performer();
-            $performer->setId((string) $performerXml->attributes()->id);
-            $performer->setName((string) $performerXml->attributes()->nazwa);
-            $performer->setType((string) $performerXml->attributes()->gatunek);
-
-            $members = isset($performerXml->attributes()->{'członków'}) ?
-                (string) $performerXml->attributes()->{'członków'} :
-                1;
-            $performer->setMembers((int) $members);
-
-            foreach ($performerXml->{'wydał'} as $recordXml) {
-                $record = $this->findRecordById((string) $recordXml->attributes()->nagranie);
-
-                $performer->addRecord($record);
-            }
-
-            $this->addPerformer($performer);
         }
     }
 

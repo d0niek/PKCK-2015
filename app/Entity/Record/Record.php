@@ -9,8 +9,10 @@
 namespace Entity\Record;
 
 use DateTime;
+use SimpleXMLElement;
+use UtilInterface\XmlEntity;
 
-class Record
+class Record implements XmlEntity
 {
     /** @var string $id */
     private $id;
@@ -46,6 +48,44 @@ class Record
         $this->tracks[] = $track;
     }
 
+    /**
+     * Read xml tags and return entity object
+     *
+     * @param \SimpleXMLElement $data
+     *
+     * @return mixed
+     */
+    public static function loadFromXml(SimpleXMLElement $data)
+    {
+        $record = new Record();
+        $record->setId((string) $data->attributes()->id);
+
+        // After load whole xml, set relationships to Performer object
+        $record->performer = (string) $data->attributes()->wykonawca;
+
+        $record->setRelease(new \DateTime((string) $data->attributes()->data_wydania));
+        $record->setTitle((string) $data->{'tytuł_płyty'});
+        $record->setRanking((string) $data->ranking);
+        $record->setTime(new \DateTime((string) $data->czas_trwania));
+        $record->setPrice((string) $data->cena);
+
+        foreach ($data->{'lista_utworów'}->children() as $trackXml) {
+            $record->addTrack(Track::loadFromXml($trackXml));
+        }
+
+        return $record;
+    }
+
+    /**
+     * Save entity object to xml
+     *
+     * @return \SimpleXMLElement
+     */
+    public function saveToXml()
+    {
+        // TODO: Implement saveToXml() method.
+    }
+
     #region Getters & Setters
 
     /**
@@ -69,7 +109,7 @@ class Record
     }
 
     /**
-     * @return Performer
+     * @return \Entity\Record\Performer
      */
     public function getPerformer()
     {
@@ -77,11 +117,11 @@ class Record
     }
 
     /**
-     * @param Performer $performer
+     * @param \Entity\Record\Performer $performer
      *
      * @return $this
      */
-    public function setPerformer($performer)
+    public function setPerformer(Performer $performer)
     {
         $this->performer = $performer;
 
@@ -189,7 +229,7 @@ class Record
     }
 
     /**
-     * @return Track[]
+     * @return \Entity\Record\Track[]
      */
     public function getTracks()
     {

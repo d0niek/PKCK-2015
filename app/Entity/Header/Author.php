@@ -8,7 +8,10 @@
 
 namespace Entity\Header;
 
-class Author
+use SimpleXMLElement;
+use UtilInterface\XmlEntity;
+
+class Author implements XmlEntity
 {
     /** @var string $name */
     private $name;
@@ -21,6 +24,34 @@ class Author
 
     /** @var string $course */
     private $course;
+
+    /**
+     * Read xml tags and return entity object
+     *
+     * @param \SimpleXMLElement $data
+     *
+     * @return mixed
+     */
+    public static function loadFromXml(SimpleXMLElement $data)
+    {
+        $author = new Author();
+        $author->setName((string) $data->{'imię'});
+        $author->setSurname((string) $data->nazwisko);
+        $author->setIndex((string) $data->numer_indeksu);
+        $author->setCourse((string) $data->kierunek);
+
+        return $author;
+    }
+
+    /**
+     * Save entity object to xml
+     *
+     * @return \SimpleXMLElement
+     */
+    public function saveToXml()
+    {
+        // TODO: Implement saveToXml() method.
+    }
 
     #region Getters & Setters
 

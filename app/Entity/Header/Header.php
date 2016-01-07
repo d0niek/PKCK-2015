@@ -9,8 +9,10 @@
 namespace Entity\Header;
 
 use DateTime;
+use SimpleXMLElement;
+use UtilInterface\XmlEntity;
 
-class Header
+class Header implements XmlEntity
 {
     /** @var string $description */
     private $description;
@@ -29,6 +31,42 @@ class Header
     public function addAuthor(Author $author)
     {
         $this->authors[] = $author;
+    }
+
+    /**
+     * Read xml tags and return entity object
+     *
+     * @param \SimpleXMLElement $data
+     *
+     * @return mixed
+     */
+    public static function loadFromXml(SimpleXMLElement $data)
+    {
+        $header = new Header();
+        $header->setDescription((string) $data->opis);
+
+        $date = [
+            (string) $data->data->attributes()->{'dzień'},
+            (string) $data->data->attributes()->{'miesiąc'},
+            '2015'
+        ];
+        $header->setDate(new \DateTime(implode('.', $date)));
+
+        foreach ($data->autorzy->children() as $authorXml) {
+            $header->addAuthor(Author::loadFromXml($authorXml));
+        }
+
+        return $header;
+    }
+
+    /**
+     * Save entity object to xml
+     *
+     * @return \SimpleXMLElement
+     */
+    public function saveToXml()
+    {
+        // TODO: Implement saveToXml() method.
     }
 
     #region Getters & Setters

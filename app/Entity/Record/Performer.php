@@ -8,7 +8,10 @@
 
 namespace Entity\Record;
 
-class Performer
+use SimpleXMLElement;
+use UtilInterface\XmlEntity;
+
+class Performer implements XmlEntity
 {
     /** @var string $id */
     private $id;
@@ -25,9 +28,51 @@ class Performer
     /** @var \Entity\Record\Record[] $records */
     private $records = [];
 
+    /**
+     * Add new record
+     *
+     * @param \Entity\Record\Record $record
+     */
     public function addRecord(Record $record)
     {
         $this->records[] = $record;
+    }
+
+    /**
+     * Read xml tags and return entity object
+     *
+     * @param \SimpleXMLElement $data
+     *
+     * @return mixed
+     */
+    public static function loadFromXml(SimpleXMLElement $data)
+    {
+        $performer = new Performer();
+        $performer->setId((string) $data->attributes()->id);
+        $performer->setName((string) $data->attributes()->nazwa);
+        $performer->setType((string) $data->attributes()->gatunek);
+
+        $members = isset($data->attributes()->{'członków'}) ?
+            (string) $data->attributes()->{'członków'} :
+            1;
+        $performer->setMembers((int) $members);
+
+        foreach ($data->{'wydał'} as $recordXml) {
+            // After load whole xml, set relationships to Record object
+            $performer->records[] = (string) $recordXml->attributes()->nagranie;
+        }
+
+        return $performer;
+    }
+
+    /**
+     * Save entity object to xml
+     *
+     * @return \SimpleXMLElement
+     */
+    public function saveToXml()
+    {
+        // TODO: Implement saveToXml() method.
     }
 
     #region Getters & Setter
