@@ -62,11 +62,23 @@ class Header implements XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml()
+    public function saveToXml(SimpleXMLElement $data)
     {
-        // TODO: Implement saveToXml() method.
+        $data->addChild('opis', $this->getDescription());
+
+        $date = $data->addChild('data');
+        $date->addAttribute('dzień', $this->getDate()->format('d'));
+        $date->addAttribute('miesiąc', $this->getDate()->format('m'));
+
+        $authors = $data->addChild('autorzy');
+
+        foreach ($this->getAuthors() as $author) {
+            $authorXml = $authors->addChild('autor');
+
+            $author->saveToXml($authorXml);
+        }
     }
 
     #region Getters & Setters

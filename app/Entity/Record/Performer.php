@@ -68,11 +68,20 @@ class Performer implements XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml()
+    public function saveToXml(SimpleXMLElement $data)
     {
-        // TODO: Implement saveToXml() method.
+        $data->addAttribute('id', $this->getId());
+        $data->addAttribute('nazwa', $this->getName());
+        $data->addAttribute('gatunek', $this->getType());
+        $data->addAttribute('członków', $this->getMembers());
+
+        foreach ($this->getRecords() as $record) {
+            $recordXml = $data->addChild('wydał');
+
+            $recordXml->addAttribute('nagranie', $record->getId());
+        }
     }
 
     #region Getters & Setter

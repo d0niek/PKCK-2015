@@ -46,11 +46,14 @@ class Author implements XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml()
+    public function saveToXml(SimpleXMLElement $data)
     {
-        // TODO: Implement saveToXml() method.
+        $data->addChild('imię', $this->getName());
+        $data->addChild('nazwisko', $this->getSurname());
+        $data->addChild('numer_indeksu', $this->getIndex());
+        $data->addChild('kierunek', $this->getCourse());
     }
 
     #region Getters & Setters

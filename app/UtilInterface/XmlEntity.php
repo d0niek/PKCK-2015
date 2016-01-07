@@ -25,7 +25,7 @@ interface XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml();
+    public function saveToXml(SimpleXMLElement $data);
 }

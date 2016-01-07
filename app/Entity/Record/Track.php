@@ -20,8 +20,8 @@ class Track implements XmlEntity
     /** @var string $title */
     private $title;
 
-    /** @var \DateTime $time */
-    private $time;
+    /** @var \DateTime $length */
+    private $length;
 
     /**
      * Read xml tags and return entity object
@@ -43,11 +43,13 @@ class Track implements XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml()
+    public function saveToXml(SimpleXMLElement $data)
     {
-        // TODO: Implement saveToXml() method.
+        $data->addAttribute('nr', $this->getNumber());
+        $data->addChild('tytuł', htmlspecialchars($this->getTitle()));
+        $data->addChild('długość', $this->getLength()->format('H:i:s'));
     }
 
     #region Getters & Setters
@@ -97,17 +99,17 @@ class Track implements XmlEntity
      */
     public function getLength()
     {
-        return $this->time;
+        return $this->length;
     }
 
     /**
-     * @param \DateTime $time
+     * @param \DateTime $length
      *
      * @return $this
      */
-    public function setLength(DateTime $time)
+    public function setLength(DateTime $length)
     {
-        $this->time = $time;
+        $this->length = $length;
 
         return $this;
     }

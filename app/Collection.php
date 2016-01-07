@@ -48,6 +48,31 @@ class Collection
      */
     public function saveAsXml()
     {
+        $root = '<?xml version="1.0" encoding="utf-8"?>' .
+            '<?xml-stylesheet type="text/xsl" href="kolekcja-pomocnicza.xsl"?>' .
+            '<!DOCTYPE kolekcja SYSTEM "kolekcja.dtd">' .
+            '<kolekcja/>';
+
+        $collectionXml = new SimpleXMLElement($root);
+
+        $headerXml = $collectionXml->addChild('nagłówek');
+        $this->header->saveToXml($headerXml);
+
+        $recordsXml = $collectionXml->addChild('płyty');
+        foreach ($this->getRecords() as $record) {
+            $recordXml = $recordsXml->addChild('płyta');
+
+            $record->saveToXml($recordXml);
+        }
+
+        $performersXml = $collectionXml->addChild('wykonawcy');
+        foreach ($this->getPerformers() as $performer) {
+            $performerXml = $performersXml->addChild('wykonawca');
+
+            $performer->saveToXml($performerXml);
+        }
+
+        $collectionXml->asXML(dirname(__DIR__) . '/test.xml');
     }
 
     /**

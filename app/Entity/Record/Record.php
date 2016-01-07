@@ -79,11 +79,26 @@ class Record implements XmlEntity
     /**
      * Save entity object to xml
      *
-     * @return \SimpleXMLElement
+     * @param \SimpleXMLElement $data
      */
-    public function saveToXml()
+    public function saveToXml(SimpleXMLElement $data)
     {
-        // TODO: Implement saveToXml() method.
+        $data->addAttribute('id', $this->getId());
+        $data->addAttribute('wykonawca', $this->getPerformer()->getId());
+        $data->addAttribute('data_wydania', $this->getRelease()->format('Y-m-d'));
+        $data->addChild('tytuł_płyty', $this->getTitle());
+        $data->addChild('wykonawca_płyty', $this->getPerformer()->getName());
+        $data->addChild('ranking', $this->getRanking());
+        $data->addChild('czas_trwania', $this->getTime()->format('H:i:s'));
+        $data->addChild('cena', $this->getPrice());
+
+        $tracksXml = $data->addChild('lista_utworów');
+
+        foreach ($this->getTracks() as $track) {
+            $trackXml = $tracksXml->addChild('utwór');
+
+            $track->saveToXml($trackXml);
+        }
     }
 
     #region Getters & Setters
@@ -213,7 +228,7 @@ class Record implements XmlEntity
      */
     public function getPrice()
     {
-        return number_format($this->price, 2, ',');
+        return $this->price;
     }
 
     /**
