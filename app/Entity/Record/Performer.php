@@ -13,6 +13,17 @@ use UtilInterface\XmlEntity;
 
 class Performer implements XmlEntity
 {
+    const ATTRIBUTES = [
+        'id' => 'id',
+        'name' => 'nazwa',
+        'type' => 'gatunek',
+        'members' => 'członków',
+        'record' => 'nagranie',
+    ];
+    const FIELDS = [
+        'produce' => 'wydał',
+    ];
+
     /** @var string $id */
     private $id;
 
@@ -48,18 +59,18 @@ class Performer implements XmlEntity
     public static function loadFromXml(SimpleXMLElement $data)
     {
         $performer = new Performer();
-        $performer->setId((string) $data->attributes()->id);
-        $performer->setName((string) $data->attributes()->nazwa);
-        $performer->setType((string) $data->attributes()->gatunek);
+        $performer->setId((string) $data->attributes()->{self::ATTRIBUTES['id']});
+        $performer->setName((string) $data->attributes()->{self::ATTRIBUTES['name']});
+        $performer->setType((string) $data->attributes()->{self::ATTRIBUTES['type']});
 
-        $members = isset($data->attributes()->{'członków'}) ?
-            (string) $data->attributes()->{'członków'} :
+        $members = isset($data->attributes()->{self::ATTRIBUTES['members']}) ?
+            (string) $data->attributes()->{self::ATTRIBUTES['members']} :
             1;
         $performer->setMembers((int) $members);
 
-        foreach ($data->{'wydał'} as $recordXml) {
+        foreach ($data->{self::FIELDS['produce']} as $recordXml) {
             // After load whole xml, set relationships to Record object
-            $performer->records[] = (string) $recordXml->attributes()->nagranie;
+            $performer->records[] = (string) $recordXml->attributes()->{self::ATTRIBUTES['record']};
         }
 
         return $performer;
@@ -72,15 +83,15 @@ class Performer implements XmlEntity
      */
     public function saveToXml(SimpleXMLElement $data)
     {
-        $data->addAttribute('id', $this->getId());
-        $data->addAttribute('nazwa', $this->getName());
-        $data->addAttribute('gatunek', $this->getType());
-        $data->addAttribute('członków', $this->getMembers());
+        $data->addAttribute(self::ATTRIBUTES['id'], $this->getId());
+        $data->addAttribute(self::ATTRIBUTES['name'], $this->getName());
+        $data->addAttribute(self::ATTRIBUTES['type'], $this->getType());
+        $data->addAttribute(self::ATTRIBUTES['members'], $this->getMembers());
 
         foreach ($this->getRecords() as $record) {
-            $recordXml = $data->addChild('wydał');
+            $recordXml = $data->addChild(self::FIELDS['produce']);
 
-            $recordXml->addAttribute('nagranie', $record->getId());
+            $recordXml->addAttribute(self::ATTRIBUTES['record'], $record->getId());
         }
     }
 

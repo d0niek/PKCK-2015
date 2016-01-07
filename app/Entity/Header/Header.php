@@ -14,6 +14,17 @@ use UtilInterface\XmlEntity;
 
 class Header implements XmlEntity
 {
+    const ATTRIBUTES = [
+        'day' => 'dzień',
+        'month' => 'miesiąc',
+    ];
+    const FIELDS = [
+        'description' => 'opis',
+        'date' => 'data',
+        'authors' => 'autorzy',
+        'author' => 'autor',
+    ];
+
     /** @var string $description */
     private $description;
 
@@ -43,16 +54,16 @@ class Header implements XmlEntity
     public static function loadFromXml(SimpleXMLElement $data)
     {
         $header = new Header();
-        $header->setDescription((string) $data->opis);
+        $header->setDescription((string) $data->{self::FIELDS['description']});
 
         $date = [
-            (string) $data->data->attributes()->{'dzień'},
-            (string) $data->data->attributes()->{'miesiąc'},
+            (string) $data->{self::FIELDS['date']}->attributes()->{self::ATTRIBUTES['day']},
+            (string) $data->{self::FIELDS['date']}->attributes()->{self::ATTRIBUTES['month']},
             '2015'
         ];
         $header->setDate(new \DateTime(implode('.', $date)));
 
-        foreach ($data->autorzy->children() as $authorXml) {
+        foreach ($data->{self::FIELDS['authors']}->children() as $authorXml) {
             $header->addAuthor(Author::loadFromXml($authorXml));
         }
 
@@ -66,16 +77,16 @@ class Header implements XmlEntity
      */
     public function saveToXml(SimpleXMLElement $data)
     {
-        $data->addChild('opis', $this->getDescription());
+        $data->addChild(self::FIELDS['description'], $this->getDescription());
 
-        $date = $data->addChild('data');
-        $date->addAttribute('dzień', $this->getDate()->format('d'));
-        $date->addAttribute('miesiąc', $this->getDate()->format('m'));
+        $date = $data->addChild(self::FIELDS['date']);
+        $date->addAttribute(self::ATTRIBUTES['day'], $this->getDate()->format('d'));
+        $date->addAttribute(self::ATTRIBUTES['month'], $this->getDate()->format('m'));
 
-        $authors = $data->addChild('autorzy');
+        $authors = $data->addChild(self::FIELDS['authors']);
 
         foreach ($this->getAuthors() as $author) {
-            $authorXml = $authors->addChild('autor');
+            $authorXml = $authors->addChild(self::FIELDS['author']);
 
             $author->saveToXml($authorXml);
         }

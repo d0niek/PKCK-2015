@@ -14,6 +14,21 @@ use UtilInterface\XmlEntity;
 
 class Record implements XmlEntity
 {
+    const ATTRIBUTES = [
+        'id' => 'id',
+        'performer' => 'wykonawca',
+        'release' => 'data_wydania',
+    ];
+    const FIELDS = [
+        'title' => 'tytuł_płyty',
+        'performer' => 'wykonawca_płyty',
+        'ranking' => 'ranking',
+        'time' => 'czas_trwania',
+        'price' => 'cena',
+        'tracks' => 'lista_utworów',
+        'track' => 'utwór',
+    ];
+
     /** @var string $id */
     private $id;
 
@@ -58,18 +73,18 @@ class Record implements XmlEntity
     public static function loadFromXml(SimpleXMLElement $data)
     {
         $record = new Record();
-        $record->setId((string) $data->attributes()->id);
+        $record->setId((string) $data->attributes()->{self::ATTRIBUTES['id']});
 
         // After load whole xml, set relationships to Performer object
-        $record->performer = (string) $data->attributes()->wykonawca;
+        $record->performer = (string) $data->attributes()->{self::ATTRIBUTES['performer']};
 
-        $record->setRelease(new \DateTime((string) $data->attributes()->data_wydania));
-        $record->setTitle((string) $data->{'tytuł_płyty'});
-        $record->setRanking((string) $data->ranking);
-        $record->setTime(new \DateTime((string) $data->czas_trwania));
-        $record->setPrice((string) $data->cena);
+        $record->setRelease(new \DateTime((string) $data->attributes()->{self::ATTRIBUTES['release']}));
+        $record->setTitle((string) $data->{self::FIELDS['title']});
+        $record->setRanking((string) $data->{self::FIELDS['ranking']});
+        $record->setTime(new \DateTime((string) $data->{self::FIELDS['time']}));
+        $record->setPrice((string) $data->{self::FIELDS['price']});
 
-        foreach ($data->{'lista_utworów'}->children() as $trackXml) {
+        foreach ($data->{self::FIELDS['tracks']}->children() as $trackXml) {
             $record->addTrack(Track::loadFromXml($trackXml));
         }
 
@@ -83,19 +98,19 @@ class Record implements XmlEntity
      */
     public function saveToXml(SimpleXMLElement $data)
     {
-        $data->addAttribute('id', $this->getId());
-        $data->addAttribute('wykonawca', $this->getPerformer()->getId());
-        $data->addAttribute('data_wydania', $this->getRelease()->format('Y-m-d'));
-        $data->addChild('tytuł_płyty', $this->getTitle());
-        $data->addChild('wykonawca_płyty', $this->getPerformer()->getName());
-        $data->addChild('ranking', $this->getRanking());
-        $data->addChild('czas_trwania', $this->getTime()->format('H:i:s'));
-        $data->addChild('cena', $this->getPrice());
+        $data->addAttribute(self::ATTRIBUTES['id'], $this->getId());
+        $data->addAttribute(self::ATTRIBUTES['performer'], $this->getPerformer()->getId());
+        $data->addAttribute(self::ATTRIBUTES['release'], $this->getRelease()->format('Y-m-d'));
+        $data->addChild(self::FIELDS['title'], $this->getTitle());
+        $data->addChild(self::FIELDS['performer'], $this->getPerformer()->getName());
+        $data->addChild(self::FIELDS['ranking'], $this->getRanking());
+        $data->addChild(self::FIELDS['time'], $this->getTime()->format('H:i:s'));
+        $data->addChild(self::FIELDS['price'], $this->getPrice());
 
-        $tracksXml = $data->addChild('lista_utworów');
+        $tracksXml = $data->addChild(self::FIELDS['tracks']);
 
         foreach ($this->getTracks() as $track) {
-            $trackXml = $tracksXml->addChild('utwór');
+            $trackXml = $tracksXml->addChild(self::FIELDS['track']);
 
             $track->saveToXml($trackXml);
         }

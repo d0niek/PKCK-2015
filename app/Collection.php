@@ -12,6 +12,14 @@ use Entity\Record\Record;
 
 class Collection
 {
+    const FIELDS = [
+        'header' => 'nagłówek',
+        'records' => 'płyty',
+        'record' => 'płyta',
+        'performers' => 'wykonawcy',
+        'performer' => 'wykonawca',
+    ];
+
     /** @var \Entity\Header\Header $header */
     private $header;
 
@@ -30,13 +38,13 @@ class Collection
     {
         $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
 
-        $this->header = Header::loadFromXml($collectionXml->{'nagłówek'});
+        $this->header = Header::loadFromXml($collectionXml->{self::FIELDS['header']});
 
-        foreach ($collectionXml->{'płyty'}->children() as $recordXml) {
+        foreach ($collectionXml->{self::FIELDS['records']}->children() as $recordXml) {
             $this->addRecord(Record::loadFromXml($recordXml));
         }
 
-        foreach ($collectionXml->wykonawcy->children() as $performerXml) {
+        foreach ($collectionXml->{self::FIELDS['performers']}->children() as $performerXml) {
             $this->addPerformer(Performer::loadFromXml($performerXml));
         }
 
@@ -55,19 +63,19 @@ class Collection
 
         $collectionXml = new SimpleXMLElement($root);
 
-        $headerXml = $collectionXml->addChild('nagłówek');
+        $headerXml = $collectionXml->addChild(self::FIELDS['header']);
         $this->header->saveToXml($headerXml);
 
-        $recordsXml = $collectionXml->addChild('płyty');
+        $recordsXml = $collectionXml->addChild(self::FIELDS['records']);
         foreach ($this->getRecords() as $record) {
-            $recordXml = $recordsXml->addChild('płyta');
+            $recordXml = $recordsXml->addChild(self::FIELDS['record']);
 
             $record->saveToXml($recordXml);
         }
 
-        $performersXml = $collectionXml->addChild('wykonawcy');
+        $performersXml = $collectionXml->addChild(self::FIELDS['performers']);
         foreach ($this->getPerformers() as $performer) {
-            $performerXml = $performersXml->addChild('wykonawca');
+            $performerXml = $performersXml->addChild(self::FIELDS['performer']);
 
             $performer->saveToXml($performerXml);
         }

@@ -14,6 +14,12 @@ use UtilInterface\XmlEntity;
 
 class Track implements XmlEntity
 {
+    const FIELDS = [
+        'number' => 'nr',
+        'title' => 'tytuł',
+        'length' => 'długość',
+    ];
+
     /** @var int $number */
     private $number;
 
@@ -33,9 +39,9 @@ class Track implements XmlEntity
     public static function loadFromXml(SimpleXMLElement $data)
     {
         $track = new Track();
-        $track->setNumber((string) $data->attributes()->nr);
-        $track->setTitle((string) $data->{'tytuł'});
-        $track->setLength(new \DateTime((string) $data->{'długość'}));
+        $track->setNumber((string) $data->attributes()->{self::FIELDS['number']});
+        $track->setTitle((string) $data->{self::FIELDS['title']});
+        $track->setLength(new \DateTime((string) $data->{self::FIELDS['length']}));
 
         return $track;
     }
@@ -47,9 +53,9 @@ class Track implements XmlEntity
      */
     public function saveToXml(SimpleXMLElement $data)
     {
-        $data->addAttribute('nr', $this->getNumber());
-        $data->addChild('tytuł', htmlspecialchars($this->getTitle()));
-        $data->addChild('długość', $this->getLength()->format('H:i:s'));
+        $data->addAttribute(self::FIELDS['number'], $this->getNumber());
+        $data->addChild(self::FIELDS['title'], htmlspecialchars($this->getTitle()));
+        $data->addChild(self::FIELDS['length'], $this->getLength()->format('H:i:s'));
     }
 
     #region Getters & Setters

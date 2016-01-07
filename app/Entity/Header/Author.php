@@ -13,6 +13,13 @@ use UtilInterface\XmlEntity;
 
 class Author implements XmlEntity
 {
+    const FIELDS = [
+        'name' => 'imię',
+        'surname' => 'nazwisko',
+        'index' => 'numer_indeksu',
+        'course' => 'kierunek',
+    ];
+
     /** @var string $name */
     private $name;
 
@@ -35,10 +42,10 @@ class Author implements XmlEntity
     public static function loadFromXml(SimpleXMLElement $data)
     {
         $author = new Author();
-        $author->setName((string) $data->{'imię'});
-        $author->setSurname((string) $data->nazwisko);
-        $author->setIndex((string) $data->numer_indeksu);
-        $author->setCourse((string) $data->kierunek);
+        $author->setName((string) $data->{self::FIELDS['name']});
+        $author->setSurname((string) $data->{self::FIELDS['surname']});
+        $author->setIndex((string) $data->{self::FIELDS['index']});
+        $author->setCourse((string) $data->{self::FIELDS['course']});
 
         return $author;
     }
@@ -50,10 +57,10 @@ class Author implements XmlEntity
      */
     public function saveToXml(SimpleXMLElement $data)
     {
-        $data->addChild('imię', $this->getName());
-        $data->addChild('nazwisko', $this->getSurname());
-        $data->addChild('numer_indeksu', $this->getIndex());
-        $data->addChild('kierunek', $this->getCourse());
+        $data->addChild(self::FIELDS['name'], $this->getName());
+        $data->addChild(self::FIELDS['surname'], $this->getSurname());
+        $data->addChild(self::FIELDS['index'], $this->getIndex());
+        $data->addChild(self::FIELDS['course'], $this->getCourse());
     }
 
     #region Getters & Setters
