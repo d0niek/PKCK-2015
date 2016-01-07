@@ -6,15 +6,11 @@
  * Time: 4:56 PM
  */
 
-namespace Entity;
-
 use Entity\Header\Author;
 use Entity\Header\Header;
 use Entity\Record\Performer;
 use Entity\Record\Record;
 use Entity\Record\Track;
-use Exception;
-use SimpleXMLElement;
 
 class Collection
 {
@@ -116,6 +112,7 @@ class Collection
 
             // After load performers have to change Id to Performer value
             $record->setPerformer((string) $recordXml->attributes()->wykonawca);
+
             $record->setRelease(new \DateTime((string) $recordXml->attributes()->data_wydania));
             $record->setTitle((string) $recordXml->{'tytuł_płyty'});
             $record->setRanking((string) $recordXml->ranking);
