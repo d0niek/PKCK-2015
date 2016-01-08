@@ -6,11 +6,11 @@
  * Time: 2:57 PM
  */
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Entity\Collection;
 
-define('ROOT_PATH', dirname(__FILE__));
+define('ROOT_PATH', dirname(__DIR__));
 define('XML_FILE', ROOT_PATH . '/kolekcja.xml');
 
 if (file_exists(XML_FILE)) {
