@@ -38,7 +38,7 @@ return [
         'action' => 'edit',
     ],
     [
-        'route' => 'delete-author/{id}',
+        'route' => 'delete-record/{id}',
         'controller' => 'Record',
         'action' => 'delete',
     ],
