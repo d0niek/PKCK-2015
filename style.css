@@ -36,7 +36,7 @@ autor > numer_indeksu::after {
 /* END Header */
 
 kolekcja {
-    background-image: url("img/pattern.png");
+    background-image: url("public/img/pattern.png");
 }
 
 płyty {
@@ -124,7 +124,7 @@ płyta > lista_utworów > utwór::before {
 }
 
 płyta > lista_utworów > utwór {
-    background: rgba(0, 0, 0, 0.7) url("img/point.png") no-repeat;
+    background: rgba(0, 0, 0, 0.7) url("public/img/point.png") no-repeat;
     background-size: auto 100%;
     display: block;
     font-weight: normal;
@@ -138,102 +138,102 @@ utwór > długość {
 
 /* CD cover */
 płyta[id="CD1"] {
-    background: url("img/okladka_1.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_1.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD2"] {
-    background: url("img/okladka_2.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_2.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD3"] {
-    background: url("img/okladka_3.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_3.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD4"] {
-    background: url("img/okladka_4.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_4.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD5"] {
-    background: url("img/okladka_5.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_5.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD6"] {
-    background: url("img/okladka_6.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_6.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD7"] {
-    background: url("img/okladka_7.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_7.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD8"] {
-    background: url("img/okladka_8.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_8.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD9"] {
-    background: url("img/okladka_9.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_9.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD10"] {
-    background: url("img/okladka_10.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_10.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD11"] {
-    background: url("img/okladka_11.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_11.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD12"] {
-    background: url("img/okladka_12.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_12.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD13"] {
-    background: url("img/okladka_13.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_13.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD14"] {
-    background: url("img/okladka_14.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_14.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD15"] {
-    background: url("img/okladka_15.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_15.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD16"] {
-    background: url("img/okladka_16.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_16.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD17"] {
-    background: url("img/okladka_17.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_17.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD18"] {
-    background: url("img/okladka_18.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_18.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD19"] {
-    background: url("img/okladka_19.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_19.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD20"] {
-    background: url("img/okladka_20.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_20.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD21"] {
-    background: url("img/okladka_21.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_21.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD22"] {
-    background: url("img/okladka_22.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_22.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD23"] {
-    background: url("img/okladka_23.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_23.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD24"] {
-    background: url("img/okladka_24.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_24.jpg") no-repeat 0 0 / 100% 100%;
 }
 
 płyta[id="CD25"] {
-    background: url("img/okladka_25.jpg") no-repeat 0 0 / 100% 100%;
+    background: url("public/img/okladka_25.jpg") no-repeat 0 0 / 100% 100%;
 }
 /* END CD cover */
