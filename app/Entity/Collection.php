@@ -107,8 +107,6 @@ class Collection implements XmlEntity
 
             $performer->saveToXml($performerXml);
         }
-
-        $data->asXML(ROOT_PATH . '/test.xml');
     }
 
     /**
