@@ -9,6 +9,7 @@
 namespace Controller;
 
 use Entity\Collection;
+use Exception;
 
 abstract class Controller
 {
@@ -18,6 +19,27 @@ abstract class Controller
     public function __construct(Collection $collection)
     {
         $this->collection = $collection;
+    }
+
+    /**
+     * Renders template
+     *
+     * @param string $template
+     * @param array $params
+     *
+     * @throws \Exception
+     */
+    public function render($template, $params = [])
+    {
+        $templateFile = dirname(__DIR__) . '/Templates/' . $template;
+
+        if (file_exists($templateFile)) {
+            extract($params);
+
+            require_once($templateFile);
+        } else {
+            throw new Exception("Could not find template $templateFile");
+        }
     }
 
     #region Getters

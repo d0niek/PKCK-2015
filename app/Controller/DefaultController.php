@@ -12,6 +12,12 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        echo "Default Controller";
+        $this->render(
+            'index.php',
+            [
+                'header' => $this->getCollection()->getHeader(),
+                'records' => $this->getCollection()->getRecords(),
+            ]
+        );
     }
 }
