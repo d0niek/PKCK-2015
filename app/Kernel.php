@@ -32,9 +32,9 @@ class Kernel
      */
     public function start()
     {
-        $pathInfo = isset($_SERVER['PATH_INFO']) ? substr($_SERVER['PATH_INFO'], 1) : '';
+        $requestUri = isset($_SERVER['REQUEST_URI']) ? substr($_SERVER['REQUEST_URI'], 1) : '';
 
-        $routeArray = $this->findRoute(explode('/', $pathInfo));
+        $routeArray = $this->findRoute(explode('/', $requestUri));
 
         $controllerClass = 'Controller\\' . $routeArray['controller'] . 'Controller';
         $actionMethod = $routeArray['action'] . 'Action';
@@ -46,15 +46,15 @@ class Kernel
     /**
      * Find route to requested url
      *
-     * @param array $pathArray
+     * @param array $requestArray
      *
      * @return array
      * @throws \Exception
      */
-    private function findRoute(array $pathArray)
+    private function findRoute(array $requestArray)
     {
         foreach ($this->routes as $r) {
-            $route = $this->comparePath($pathArray, $r);
+            $route = $this->comparePath($requestArray, $r);
 
             if ($route !== false) {
                 return $route;
@@ -67,16 +67,16 @@ class Kernel
     /**
      * Compare requested url with route and return it
      *
-     * @param array $pathArray
+     * @param array $requestArray
      * @param array $route
      *
      * @return array|bool
      */
-    private function comparePath(array $pathArray, array $route)
+    private function comparePath(array $requestArray, array $route)
     {
         $routeArray = explode('/', $route['route']);
 
-        if (count($pathArray) !== count($routeArray)) {
+        if (count($requestArray) !== count($routeArray)) {
             return false;
         }
 
@@ -86,13 +86,13 @@ class Kernel
             'params' => [],
         ];
 
-        for ($i = 0; $i < count($pathArray); $i++) {
+        for ($i = 0; $i < count($requestArray); $i++) {
             // Gets param from url
             if (preg_match("/{[a-zA-Z0-9\-\\_\\.]+}/", $routeArray[$i])) {
                 $pathParam = substr($routeArray[$i], 1, strlen($routeArray[$i]) - 1);
 
-                $pathParams['params'][$pathParam] = $pathArray[$i];
-            } else if ($pathArray[$i] !== $routeArray[$i]) {
+                $pathParams['params'][$pathParam] = $requestArray[$i];
+            } else if ($requestArray[$i] !== $routeArray[$i]) {
                 return false;
             }
         }
