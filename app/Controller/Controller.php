@@ -36,6 +36,8 @@ abstract class Controller
         if (file_exists($templateFile)) {
             extract($params);
 
+            $baseUrl = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
+
             require_once($templateFile);
         } else {
             throw new Exception("Could not find template $templateFile");
