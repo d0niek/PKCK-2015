@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo $header->getDescription(); ?></title>
-    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/public/style/style.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/style.css">
 </head>
 <body>
     <header>
@@ -17,6 +17,7 @@
         </div>
         <?php endforeach; ?>
     </header>
+
     <div class="container">
         <?php foreach ($records as $record): ?>
         <div id="<?php echo $record->getId(); ?>" class="record">
