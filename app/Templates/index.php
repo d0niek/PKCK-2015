@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/style.css">
 </head>
 <body>
-    <header>
-        <h2><?php echo $header->getDescription(); ?></h2>
+<header>
+    <h2><?php echo $header->getDescription(); ?></h2>
 
-        <?php foreach ($header->getAuthors() as $author): ?>
+    <?php foreach ($header->getAuthors() as $author): ?>
         <div>
             <p class="name"><?php echo $author->getName(), ' ', $author->getSurname(); ?></p>
             <p class="index"><?php echo $author->getIndex(); ?></p>
             <p class="course"><?php echo $author->getCourse(); ?></p>
         </div>
-        <?php endforeach; ?>
-    </header>
+    <?php endforeach; ?>
+</header>
 
-    <div id="container">
-        <?php foreach ($records as $record): ?>
+<div id="container">
+    <?php foreach ($records as $record): ?>
         <div id="<?php echo $record->getId(); ?>" class="record">
             <div class="options">
                 <a class="edit" href="<?php echo "$baseUrl/edit-record/" . $record->getId(); ?>">Edit</a>
@@ -35,16 +35,16 @@
 
             <ul class="tracks">
                 <?php foreach ($record->getTracks() as $track): ?>
-                <li class="<?php echo $track->getNumber(); ?>">
-                    <?php echo $track->getTitle(); ?>
-                    <em><?php echo $track->getLength()->format('H:i:s'); ?></em>
-                </li>
+                    <li class="<?php echo $track->getNumber(); ?>">
+                        <?php echo $track->getTitle(); ?>
+                        <em><?php echo $track->getLength()->format('H:i:s'); ?></em>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>
-        <?php endforeach; ?>
+    <?php endforeach; ?>
 
-        <a id="add-new-record" href="<?php echo $baseUrl; ?>/add-record">Dodaj nową płytę</a>
-    </div>
+    <a id="add-new-record" href="<?php echo $baseUrl; ?>/add-record">Dodaj nową płytę</a>
+</div>
 </body>
 </html>
