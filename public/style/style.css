@@ -48,12 +48,232 @@ header > div p.index::after {
 header > div p.course {
     margin: 0;
 }
+
 /* END Header */
 
-div.container {
+div#container {
     background: rgba(0, 0, 0, 0.8);
     margin: 0 auto;
     width: 1068px;
     padding: 61px 10px 10px;
     overflow: auto;
 }
+
+div#container > .record, div#container > #add-new-record {
+    color: rgb(255, 255, 255);
+    float: left;
+    font-weight: bold;
+    height: 470px;
+    margin: 15px;
+    padding: 15px;
+    width: 470px;
+    border: rgb(183, 173, 113) outset 2px;
+    position: relative;
+}
+
+.record .options {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.record .options .edit, .record .options .delete {
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(0, 255, 57);
+}
+
+.record .options .delete {
+    color: rgb(134, 0, 0);
+}
+
+.record > h3::before {
+    content: "Tytuł: ";
+    font-weight: normal;
+}
+
+.record > h3, .record > h4 {
+    background: rgba(0, 0, 0, 0.7);
+    font-variant: small-caps;
+    font-size: x-large;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.record > h4::before {
+    content: "Wykonawca: ";
+    font-weight: normal;
+}
+
+.record > h4 {
+    font-size: large;
+}
+
+.record > .ranking, .record > .time, .record > .price {
+    margin: 0;
+}
+
+.record > .time::before {
+    content: "Łączny czas nagrań: ";
+    font-weight: normal;
+    padding: 5px;
+}
+
+.record > .time {
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 5px;
+    text-align: center;
+    width: 220px;
+}
+
+.record > .price::before {
+    padding: 5px;
+    content: "Cena: ";
+    font-weight: normal;
+}
+
+.record > .price {
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.record > .tracks {
+    bottom: 15px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 94%;
+}
+
+.record > .tracks > li::before {
+    content: attr(class) ". ";
+}
+
+.record > .tracks > li {
+    background: rgba(0, 0, 0, 0.7) url("../img/point.png") no-repeat;
+    background-size: auto 100%;
+    display: block;
+    font-weight: normal;
+    padding-left: 25px;
+    margin-top: 3px;
+}
+
+.record > .tracks > li > em {
+    float: right;
+    font-style: normal;
+}
+
+div#container > #add-new-record {
+    font-size: 30px;
+    height: 248px;
+    padding-top: 237px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* CD cover */
+.record[id="CD1"] {
+    background: url("../img/okladka_1.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD2"] {
+    background: url("../img/okladka_2.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD3"] {
+    background: url("../img/okladka_3.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD4"] {
+    background: url("../img/okladka_4.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD5"] {
+    background: url("../img/okladka_5.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD6"] {
+    background: url("../img/okladka_6.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD7"] {
+    background: url("../img/okladka_7.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD8"] {
+    background: url("../img/okladka_8.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD9"] {
+    background: url("../img/okladka_9.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD10"] {
+    background: url("../img/okladka_10.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD11"] {
+    background: url("../img/okladka_11.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD12"] {
+    background: url("../img/okladka_12.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD13"] {
+    background: url("../img/okladka_13.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD14"] {
+    background: url("../img/okladka_14.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD15"] {
+    background: url("../img/okladka_15.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD16"] {
+    background: url("../img/okladka_16.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD17"] {
+    background: url("../img/okladka_17.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD18"] {
+    background: url("../img/okladka_18.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD19"] {
+    background: url("../img/okladka_19.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD20"] {
+    background: url("../img/okladka_20.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD21"] {
+    background: url("../img/okladka_21.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD22"] {
+    background: url("../img/okladka_22.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD23"] {
+    background: url("../img/okladka_23.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD24"] {
+    background: url("../img/okladka_24.jpg") no-repeat 0 0 / 100% 100%;
+}
+
+.record[id="CD25"] {
+    background: url("../img/okladka_25.jpg") no-repeat 0 0 / 100% 100%;
+}
+/* END CD cover */
+

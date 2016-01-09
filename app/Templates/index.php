@@ -18,12 +18,12 @@
         <?php endforeach; ?>
     </header>
 
-    <div class="container">
+    <div id="container">
         <?php foreach ($records as $record): ?>
         <div id="<?php echo $record->getId(); ?>" class="record">
             <div class="options">
-                <a href="<?php echo "$baseUrl/edit-record/" . $record->getId(); ?>">Edit</a>
-                <a href="<?php echo "$baseUrl/delete-record/" . $record->getId(); ?>">Delete</a>
+                <a class="edit" href="<?php echo "$baseUrl/edit-record/" . $record->getId(); ?>">Edit</a>
+                <a class="delete" href="<?php echo "$baseUrl/delete-record/" . $record->getId(); ?>">Delete</a>
             </div>
 
             <h3><?php echo $record->getTitle(); ?></h3>
@@ -44,7 +44,7 @@
         </div>
         <?php endforeach; ?>
 
-        <a href="<?php echo $baseUrl; ?>/add-record">Dodaj nową płytę</a>
+        <a id="add-new-record" href="<?php echo $baseUrl; ?>/add-record">Dodaj nową płytę</a>
     </div>
 </body>
 </html>
