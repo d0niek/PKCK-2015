@@ -33,6 +33,8 @@ class RecordController extends Controller
 
             $performer->addRecord($record);
 
+            $this->getKernel()->saveCollection();
+
             $this->redirect($this->getBaseUrl());
         }
 
@@ -65,7 +67,7 @@ class RecordController extends Controller
         for ($i = 0; $i < 13; $i++) {
             if ($post['track_' . $i] && $post['track_length_' . $i]) {
                 $track = new Track();
-                $track->setNumber($i);
+                $track->setNumber($i + 1);
                 $track->setTitle($post['track_' . $i]);
                 $track->setLength(new DateTime($post['track_length_' . $i]));
 

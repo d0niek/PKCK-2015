@@ -8,20 +8,20 @@
 
 namespace Controller;
 
-use Entity\Collection;
 use Exception;
+use Kernel;
 
 abstract class Controller
 {
-    /** @var \Entity\Collection $collection */
-    private $collection;
+    /** @var Kernel $kernel */
+    private $kernel;
 
     /** @var string $baseUrl */
     private $baseUrl;
 
-    public function __construct(Collection $collection)
+    public function __construct(Kernel $kernel)
     {
-        $this->collection = $collection;
+        $this->kernel = $kernel;
         $this->baseUrl = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
     }
 
@@ -89,11 +89,11 @@ abstract class Controller
     #region Getters
 
     /**
-     * @return \Entity\Collection
+     * @return \Kernel
      */
-    public function getCollection()
+    public function getKernel()
     {
-        return $this->collection;
+        return $this->kernel;
     }
 
     /**
@@ -102,6 +102,14 @@ abstract class Controller
     public function getBaseUrl()
     {
         return $this->baseUrl;
+    }
+
+    /**
+     * @return \Entity\Collection
+     */
+    public function getCollection()
+    {
+        return $this->getKernel()->getCollection();
     }
 
     #endregion

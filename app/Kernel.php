@@ -16,6 +16,9 @@ class Kernel
     /** @var array $routes */
     private $routes;
 
+    /** @var string $xmlFile */
+    private $xmlFile;
+
     public function __construct($xmlFile)
     {
         $collectionXml = new SimpleXMLElement(file_get_contents($xmlFile));
@@ -23,6 +26,8 @@ class Kernel
         $this->collection = Collection::loadFromXml($collectionXml);
 
         $this->routes = require_once(dirname(__FILE__) . '/routes.php');
+
+        $this->xmlFile = $xmlFile;
     }
 
     /**
@@ -41,9 +46,28 @@ class Kernel
         $controllerClass = 'Controller\\' . $routeArray['controller'] . 'Controller';
         $actionMethod = $routeArray['action'] . 'Action';
 
-        $controller = new $controllerClass($this->collection);
+        $controller = new $controllerClass($this);
 
         call_user_func_array([$controller, $actionMethod], $routeArray['params']);
+    }
+
+    /**
+     * Save collection back to xml file
+     */
+    public function saveCollection()
+    {
+        $root = file_get_contents(dirname(__FILE__) . '/Templates/collectionRoot.xml');
+
+        $collectionXml = new SimpleXMLElement($root);
+
+        $this->collection->saveToXml($collectionXml);
+
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($collectionXml->asXML());
+
+        $dom->save($this->xmlFile);
     }
 
     /**
@@ -102,4 +126,16 @@ class Kernel
 
         return $pathParams;
     }
+
+    #region Getters
+
+    /**
+     * @return Collection
+     */
+    public function getCollection()
+    {
+        return $this->collection;
+    }
+
+    #endregion
 }
