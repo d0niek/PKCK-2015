@@ -31,12 +31,14 @@ abstract class Controller
      */
     public function render($template, array $params = [])
     {
-        $templateFile = dirname(__DIR__) . '/Templates/' . $template;
+        $basePath = dirname(__DIR__) . '/Templates';
+        $templateFile = "$basePath/$template";
 
         if (file_exists($templateFile)) {
-            extract($params);
+            $params['header'] = $this->getCollection()->getHeader();
+            $params['baseUrl'] = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
 
-            $baseUrl = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
+            extract($params);
 
             require_once($templateFile);
         } else {
