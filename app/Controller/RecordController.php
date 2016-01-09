@@ -12,7 +12,7 @@ class RecordController extends Controller
 {
     public function addAction()
     {
-        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $this->validForm($_POST)) {
             $this->redirect($this->getBaseUrl());
         }
 
