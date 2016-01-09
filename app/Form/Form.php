@@ -8,6 +8,7 @@
 
 namespace Form;
 
+use Entity\Collection;
 use Exception;
 
 abstract class Form
@@ -16,6 +17,14 @@ abstract class Form
     const FIELD_REGEXP = 'regexp';
     const FIELD_ENTITY = 'entity';
     const FIELDS = [];
+
+    /** @var \Entity\Collection $collection */
+    private $collection;
+
+    public function __construct(Collection $collection)
+    {
+        $this->collection = $collection;
+    }
 
     /**
      * Validate form
@@ -68,6 +77,7 @@ abstract class Form
                 break;
 
             case self::FIELD_ENTITY:
+                $this->collection->findPerformerById($fieldValue);
                 break;
         }
     }

@@ -75,7 +75,7 @@ abstract class Controller
         $formClass = 'Form\\' . substr($class, 1) . 'Form';
 
         /** @var \Form\Form $form */
-        $form = new $formClass();
+        $form = new $formClass($this->getCollection());
 
         try {
             return $form->validForm($post);
