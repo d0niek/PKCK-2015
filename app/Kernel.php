@@ -32,6 +32,8 @@ class Kernel
      */
     public function start()
     {
+        session_start();
+
         $requestUri = isset($_SERVER['REQUEST_URI']) ? substr($_SERVER['REQUEST_URI'], 1) : '';
 
         $routeArray = $this->findRoute(explode('/', $requestUri));

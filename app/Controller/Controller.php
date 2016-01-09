@@ -62,6 +62,23 @@ abstract class Controller
         exit();
     }
 
+    protected function validForm(array $post)
+    {
+        $class = str_replace('Controller', '', get_class($this));
+        $formClass = 'Form\\' . substr($class, 1) . 'Form';
+
+        /** @var \Form\Form $form */
+        $form = new $formClass();
+
+        try {
+            return $form->validForm($post);
+        } catch (Exception $e) {
+            $_SESSION['validMessage'] = $e->getMessage();
+
+            return false;
+        }
+    }
+
     #region Getters
 
     /**
