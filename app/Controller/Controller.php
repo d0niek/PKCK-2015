@@ -16,9 +16,13 @@ abstract class Controller
     /** @var \Entity\Collection $collection */
     private $collection;
 
+    /** @var string $baseUrl */
+    private $baseUrl;
+
     public function __construct(Collection $collection)
     {
         $this->collection = $collection;
+        $this->baseUrl = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
     }
 
     /**
@@ -36,7 +40,7 @@ abstract class Controller
 
         if (file_exists($templateFile)) {
             $params['header'] = $this->getCollection()->getHeader();
-            $params['baseUrl'] = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["HTTP_HOST"];
+            $params['baseUrl'] = $this->getBaseUrl();
 
             extract($params);
 
@@ -44,6 +48,18 @@ abstract class Controller
         } else {
             throw new Exception("Could not find template $templateFile");
         }
+    }
+
+    /**
+     * Redirect to specific url
+     *
+     * @param string $url
+     */
+    public function redirect($url)
+    {
+        header("Location:$url");
+
+        exit();
     }
 
     #region Getters
@@ -54,6 +70,14 @@ abstract class Controller
     public function getCollection()
     {
         return $this->collection;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
     }
 
     #endregion
