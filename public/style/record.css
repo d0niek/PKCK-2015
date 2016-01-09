@@ -1,9 +1,9 @@
-h2#add-record-title {
+h2#add-record-title, h2#edit-record-title {
     color: rgb(255, 255, 255);
     position: fixed;
 }
 
-form#add-record-form {
+form#add-record-form, form#edit-record-form {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     margin: 15px auto;
@@ -27,7 +27,7 @@ form#add-record-form {
 .form-group input[title="dataWydania"],
 .form-group input[title="ranking"],
 .form-group input[title="price"] {
-    width: 71px;
+    width: 77px;
 }
 
 .form-group .track > input:first-child {

@@ -1,6 +1,6 @@
 <?php require_once("$basePath/header.php"); ?>
 
-<link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/add-record.css">
+<link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/record.css">
 <link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/form.css">
 
 <h2 id="add-record-title">Add new record</h2>

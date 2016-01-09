@@ -52,7 +52,22 @@ class RecordController extends Controller
 
     public function editAction($id)
     {
-        echo 'Edit record ' . $id;
+        $record = $this->getCollection()->findRecordById($id);
+
+        $form = new RecordForm($this->getCollection());
+
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $this->redirect($this->getBaseUrl());
+        }
+
+        $this->render(
+            'edit-record.php',
+            [
+                'performers' => $this->getCollection()->getPerformers(),
+                'form' => $form,
+                'record' => $record,
+            ]
+        );
     }
 
     public function deleteAction()
