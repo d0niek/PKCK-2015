@@ -40,7 +40,8 @@ class Kernel
         $actionMethod = $routeArray['action'] . 'Action';
 
         $controller = new $controllerClass($this->collection);
-        $controller->$actionMethod();
+
+        call_user_func_array([$controller, $actionMethod], $routeArray['params']);
     }
 
     /**

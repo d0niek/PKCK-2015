@@ -15,9 +15,9 @@ class RecordController
         echo 'Add record';
     }
 
-    public function editAction()
+    public function editAction($id)
     {
-        echo 'Edit record';
+        echo 'Edit record ' . $id;
     }
 
     public function deleteAction()
