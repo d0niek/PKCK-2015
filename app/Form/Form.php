@@ -16,7 +16,9 @@ abstract class Form
     const FIELD_SIMPLE = 'simple';
     const FIELD_REGEXP = 'regexp';
     const FIELD_ENTITY = 'entity';
-    const FIELDS = [];
+
+    /** @var array $fields */
+    private $fields = [];
 
     /** @var \Entity\Collection $collection */
     private $collection;
@@ -24,6 +26,8 @@ abstract class Form
     public function __construct(Collection $collection)
     {
         $this->collection = $collection;
+
+        $this->build();
     }
 
     /**
@@ -34,20 +38,26 @@ abstract class Form
      * @return bool
      * @throws \Exception
      */
-    public function validForm(array &$post)
+    public function valid(array &$post)
     {
-        foreach ($this::FIELDS as $field => $value) {
-            if (!array_key_exists($field, $post)) {
-                throw new Exception('Form dose not have field "' . $field . '"');
+        foreach ($this->fields as $field => &$options) {
+            try {
+                $post[$field] = isset($post[$field]) ? $post[$field] : '';
+
+                $post[$field] = trim($post[$field]);
+                $post[$field] = preg_replace('/[\ ]{2,}/', ' ', $post[$field]);
+
+                $options['value'] = $post[$field];
+
+                $this->validField($post[$field], $field, $options);
+            } catch (Exception $e) {
+                if (!isset($_SESSION['validMessage'])) {
+                    $_SESSION['validMessage'] = $e->getMessage();
+                }
             }
-
-            $post[$field] = trim($post[$field]);
-            $post[$field] = preg_replace('/[\ ]{2,}/', ' ', $post[$field]);
-
-            $this->validField($post[$field], $field, $value);
         }
 
-        return true;
+        return !isset($_SESSION['validMessage']);
     }
 
     /**
@@ -55,26 +65,26 @@ abstract class Form
      *
      * @param mixed $fieldValue
      * @param string $fieldName
-     * @param array $validInformation
+     * @param array $options
      *
      * @throws \Exception
      */
-    private function validField($fieldValue, $fieldName, array $validInformation)
+    private function validField($fieldValue, $fieldName, array $options)
     {
         if (empty($fieldValue)) {
-            if ($validInformation['required'] === true) {
+            if ($options['required'] === true) {
                 throw new Exception('Required field "' . $fieldName . '" is empty');
             }
 
             return;
         }
 
-        switch ($validInformation['type']) {
+        switch ($options['type']) {
             case self::FIELD_SIMPLE:
                 break;
 
             case self::FIELD_REGEXP:
-                if (!preg_match($validInformation['pattern'], $fieldValue)) {
+                if (!preg_match($options['pattern'], $fieldValue)) {
                     throw new Exception('Field "' . $fieldName . '" has wrong format');
                 }
                 break;
@@ -84,4 +94,72 @@ abstract class Form
                 break;
         }
     }
+
+    /**
+     * Builds form
+     */
+    abstract protected function build();
+
+    /**
+     * Adds field to list
+     *
+     * @param string $fieldName
+     * @param array $options
+     *
+     * @return $this
+     * @throws \Exception
+     */
+    protected function addField($fieldName, array $options = [])
+    {
+        if (isset($this->fields[$fieldName])) {
+            throw new Exception('Duplicate field "' . $fieldName . '" in form ' . get_class($this));
+        }
+
+        if (!isset($options['type'])) {
+            $options['type'] = self::FIELD_SIMPLE;
+        }
+
+        if (!isset($options['required'])) {
+            $options['required'] = true;
+        }
+
+        if ($options['type'] === self::FIELD_REGEXP && !isset($options['pattern'])) {
+            throw new Exception('Field "' . $fieldName . '" is regexp type but dose not have pattern');
+        }
+
+        $options['value'] = '';
+
+        $this->fields[$fieldName] = $options;
+
+        return $this;
+    }
+
+    #region Getters
+
+    /**
+     * @return array
+     */
+    public function getFields()
+    {
+        return $this->fields;
+    }
+
+    /**
+     * Gets field from form
+     *
+     * @param string $field
+     *
+     * @return array
+     * @throws \Exception
+     */
+    public function getField($field)
+    {
+        if (isset($this->fields[$field])) {
+            return $this->fields[$field];
+        }
+
+        throw new Exception('Can not find field "' . $field . '" in form ' . get_class($this));
+    }
+
+    #endregion
 }

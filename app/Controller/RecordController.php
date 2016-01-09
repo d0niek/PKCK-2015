@@ -11,12 +11,15 @@ namespace Controller;
 use DateTime;
 use Entity\Record\Record;
 use Entity\Record\Track;
+use Form\RecordForm;
 
 class RecordController extends Controller
 {
     public function addAction()
     {
-        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $this->validForm($_POST)) {
+        $form = new RecordForm($this->getCollection());
+
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
             $performer = $this->getCollection()->findPerformerById($_POST['performers']);
 
             $record = new Record();
