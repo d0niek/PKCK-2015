@@ -29,7 +29,7 @@ abstract class Controller
      *
      * @throws \Exception
      */
-    public function render($template, $params = [])
+    public function render($template, array $params = [])
     {
         $templateFile = dirname(__DIR__) . '/Templates/' . $template;
 
