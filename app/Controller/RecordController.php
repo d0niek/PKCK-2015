@@ -8,11 +8,20 @@
 
 namespace Controller;
 
-class RecordController
+class RecordController extends Controller
 {
     public function addAction()
     {
-        echo 'Add record';
+        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+            $this->redirect($this->getBaseUrl());
+        }
+
+        $this->render(
+            'add-record.php',
+            [
+                'performers' => $this->getCollection()->getPerformers(),
+            ]
+        );
     }
 
     public function editAction($id)

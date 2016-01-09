@@ -1,0 +1,26 @@
+.form-group {
+    clear: both;
+    margin: 10px 0;
+    padding: 0 15px;
+    position: relative;
+}
+
+.form-group > label {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.form-group input {
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.form-group select {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 10px;
+}
