@@ -47,9 +47,9 @@
 
         <?php for ($i = 0; $i < 13; $i++): ?>
             <div class="track">
-                <input type="text" title="tract_<?php echo $i; ?>"
+                <input type="text" title="track_<?php echo $i; ?>"
                        name="track_<?php echo $i; ?>" placeholder="<?php echo ($i + 1); ?>. Tytuł utworu">
-                <input type="text" title="tract_length_<?php echo $i; ?>"
+                <input type="text" title="track_length_<?php echo $i; ?>"
                        name="track_length_<?php echo $i; ?>" placeholder="00:00:00">
             </div>
         <?php endfor; ?>
