@@ -34,12 +34,15 @@ abstract class Form
      * @return bool
      * @throws \Exception
      */
-    public function validForm(array $post)
+    public function validForm(array &$post)
     {
         foreach ($this::FIELDS as $field => $value) {
             if (!array_key_exists($field, $post)) {
                 throw new Exception('Form dose not have field "' . $field . '"');
             }
+
+            $post[$field] = trim($post[$field]);
+            $post[$field] = preg_replace('/[\ ]{2,}/', ' ', $post[$field]);
 
             $this->validField($post[$field], $field, $value);
         }

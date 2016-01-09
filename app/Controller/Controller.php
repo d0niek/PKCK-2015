@@ -69,7 +69,7 @@ abstract class Controller
      *
      * @return bool
      */
-    protected function validForm(array $post)
+    protected function validForm(array &$post)
     {
         $class = str_replace('Controller', '', get_class($this));
         $formClass = 'Form\\' . substr($class, 1) . 'Form';
