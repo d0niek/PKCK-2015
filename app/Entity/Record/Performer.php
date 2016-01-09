@@ -50,6 +50,22 @@ class Performer implements XmlEntity
     }
 
     /**
+     * Delete record from list
+     *
+     * @param \Entity\Record\Record $record
+     */
+    public function deleteRecord(Record $record)
+    {
+        for ($i = 0; $i < count($this->records); $i++) {
+            if ($this->records[$i]->getId() === $record->getId()) {
+                unset($this->records[$i]);
+
+                break;
+            }
+        }
+    }
+
+    /**
      * Read xml tags and return entity object
      *
      * @param \SimpleXMLElement $data
