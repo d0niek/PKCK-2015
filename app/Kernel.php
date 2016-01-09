@@ -40,6 +40,7 @@ class Kernel
         session_start();
 
         $requestUri = isset($_SERVER['REQUEST_URI']) ? substr($_SERVER['REQUEST_URI'], 1) : '';
+        $requestUri = array_shift(explode('?', $requestUri, 2));
 
         $routeArray = $this->findRoute(explode('/', $requestUri));
 
