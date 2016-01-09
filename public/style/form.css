@@ -1,3 +1,10 @@
+.valid-message {
+    color: rgb(111, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .form-group {
     clear: both;
     margin: 10px 0;

@@ -5,6 +5,11 @@
 
 <h2 id="add-record-title">Add new record</h2>
 
+<?php if (isset($_SESSION['validMessage'])): ?>
+    <p class="valid-message"><?php echo $_SESSION['validMessage']; ?></p>
+    <?php unset($_SESSION['validMessage']); ?>
+<?php endif; ?>
+
 <form id="add-record-form" action="<?php echo "$baseUrl/add-record"; ?>" method="post">
     <div class="form-group">
         <label>Tytuł</label>
