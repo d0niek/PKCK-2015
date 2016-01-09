@@ -57,6 +57,27 @@ class RecordController extends Controller
         $form = new RecordForm($this->getCollection());
 
         if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $record->setTitle($_POST['title']);
+            $record->setRelease(new DateTime($_POST['release']));
+            $record->setRanking($_POST['ranking']);
+            $record->setPrice($_POST['price']);
+            $record->setTime(new DateTime('00:00:00'));
+
+            $record->clearTracks();
+            $this->addTrack($record, $_POST);
+
+            $performer = $this->getCollection()->findPerformerById($_POST['performers']);
+
+            if ($record->getPerformer()->getId() !== $performer->getId()) {
+                $record->getPerformer()->deleteRecord($record);
+
+                $record->setPerformer($performer);
+
+                $record->getPerformer()->addRecord($record);
+            }
+
+            $this->getKernel()->saveCollection();
+
             $this->redirect($this->getBaseUrl());
         }
 
