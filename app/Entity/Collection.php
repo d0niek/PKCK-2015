@@ -45,6 +45,24 @@ class Collection implements XmlEntity
      */
     public function addRecord(Record $record)
     {
+        if (count($this->records) > 0) {
+            $recordId = 0;
+
+            foreach ($this->records as $r) {
+                $id = substr($r->getId(), 2);
+
+                if ($id > $recordId) {
+                    $recordId = $id;
+                }
+            }
+
+            $recordId++;
+        } else {
+            $recordId = 1;
+        }
+
+        $record->setId("CD$recordId");
+
         $this->records[] = $record;
     }
 
@@ -72,7 +90,7 @@ class Collection implements XmlEntity
         $collection->header = Header::loadFromXml($data->{self::FIELDS['header']});
 
         foreach ($data->{self::FIELDS['records']}->children() as $recordXml) {
-            $collection->addRecord(Record::loadFromXml($recordXml));
+            $collection->records[] = Record::loadFromXml($recordXml);
         }
 
         foreach ($data->{self::FIELDS['performers']}->children() as $performerXml) {
@@ -110,6 +128,44 @@ class Collection implements XmlEntity
     }
 
     /**
+     * Find record in collection by Id
+     *
+     * @param string $recordId
+     *
+     * @return \Entity\Record\Record
+     * @throws \Exception
+     */
+    public function findRecordById($recordId)
+    {
+        foreach ($this->records as $record) {
+            if ($record->getId() === $recordId) {
+                return $record;
+            }
+        }
+
+        throw new Exception("Not found record with Id $recordId");
+    }
+
+    /**
+     * Find performer in collection by Id
+     *
+     * @param string $performerId
+     *
+     * @return \Entity\Record\Performer
+     * @throws \Exception
+     */
+    public function findPerformerById($performerId)
+    {
+        foreach ($this->performers as $performer) {
+            if ($performer->getId() === $performerId) {
+                return $performer;
+            }
+        }
+
+        throw new Exception("Not found performer with Id $performerId");
+    }
+
+    /**
      * Set relationships between objects
      *
      * @throws \Exception
@@ -129,44 +185,6 @@ class Collection implements XmlEntity
                 $record = $this->findRecordById($record);
             }
         }
-    }
-
-    /**
-     * Find record in collection by Id
-     *
-     * @param string $recordId
-     *
-     * @return \Entity\Record\Record
-     * @throws \Exception
-     */
-    private function findRecordById($recordId)
-    {
-        foreach ($this->records as $record) {
-            if ($record->getId() === $recordId) {
-                return $record;
-            }
-        }
-
-        throw new Exception("Not found record with Id $recordId");
-    }
-
-    /**
-     * Find performer in collection by Id
-     *
-     * @param string $performerId
-     *
-     * @return \Entity\Record\Performer
-     * @throws \Exception
-     */
-    private function findPerformerById($performerId)
-    {
-        foreach ($this->performers as $performer) {
-            if ($performer->getId() === $performerId) {
-                return $performer;
-            }
-        }
-
-        throw new Exception("Not found performer with Id $performerId");
     }
 
     #region Getters
