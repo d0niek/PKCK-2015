@@ -28,17 +28,22 @@ return [
         'action' => 'delete',
     ],
     [
-        'route' => 'add-performer',
+        'route' => 'performers',
+        'controller' => 'Performer',
+        'action' => 'index',
+    ],
+    [
+        'route' => 'performer/add',
         'controller' => 'Performer',
         'action' => 'add',
     ],
     [
-        'route' => 'edit-performer/{id}',
+        'route' => 'performer/edit/{id}',
         'controller' => 'Performer',
         'action' => 'edit',
     ],
     [
-        'route' => 'delete-performer/{id}',
+        'route' => 'performer/delete/{id}',
         'controller' => 'Performer',
         'action' => 'delete',
     ],

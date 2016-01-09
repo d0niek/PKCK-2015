@@ -8,19 +8,29 @@
 
 namespace Controller;
 
-class PerformerController
+class PerformerController extends Controller
 {
+    public function indexAction()
+    {
+        $this->render(
+            'performers.php',
+            [
+                'performers' => $this->getCollection()->getPerformers(),
+            ]
+        );
+    }
+
     public function addAction()
     {
         echo 'Add performer';
     }
 
-    public function editAction()
+    public function editAction($id)
     {
         echo 'Edit performer';
     }
 
-    public function deleteAction()
+    public function deleteAction($id)
     {
         echo 'Delete performer';
     }
