@@ -62,6 +62,13 @@ abstract class Controller
         exit();
     }
 
+    /**
+     * Validate form
+     *
+     * @param array $post
+     *
+     * @return bool
+     */
     protected function validForm(array $post)
     {
         $class = str_replace('Controller', '', get_class($this));
