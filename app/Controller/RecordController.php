@@ -45,6 +45,7 @@ class RecordController extends Controller
             'add-record.php',
             [
                 'performers' => $this->getCollection()->getPerformers(),
+                'form' => $form,
             ]
         );
     }
@@ -67,10 +68,10 @@ class RecordController extends Controller
      */
     private function addTrack(Record $record, array $post)
     {
-        for ($i = 0; $i < 13; $i++) {
+        for ($i = 0, $j = 1; $i < 13; $i++) {
             if ($post['track_' . $i] && $post['track_length_' . $i]) {
                 $track = new Track();
-                $track->setNumber($i + 1);
+                $track->setNumber($j++);
                 $track->setTitle($post['track_' . $i]);
                 $track->setLength(new DateTime($post['track_length_' . $i]));
 
