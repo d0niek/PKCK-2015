@@ -64,6 +64,14 @@ class Record implements XmlEntity
     }
 
     /**
+     * Clears list of tracks
+     */
+    public function clearTracks()
+    {
+        $this->tracks = [];
+    }
+
+    /**
      * Read xml tags and return entity object
      *
      * @param \SimpleXMLElement $data
@@ -82,7 +90,9 @@ class Record implements XmlEntity
         $record->setTitle((string) $data->{self::FIELDS['title']});
         $record->setRanking((string) $data->{self::FIELDS['ranking']});
         $record->setTime(new \DateTime((string) $data->{self::FIELDS['time']}));
-        $record->setPrice((string) $data->{self::FIELDS['price']});
+
+        $price = (string) $data->{self::FIELDS['price']};
+        $record->setPrice(substr($price, 0, strlen($price) - 3));
 
         foreach ($data->{self::FIELDS['tracks']}->children() as $trackXml) {
             $record->addTrack(Track::loadFromXml($trackXml));
@@ -105,7 +115,7 @@ class Record implements XmlEntity
         $data->addChild(self::FIELDS['performer'], $this->getPerformer()->getName());
         $data->addChild(self::FIELDS['ranking'], $this->getRanking());
         $data->addChild(self::FIELDS['time'], $this->getTime()->format('H:i:s'));
-        $data->addChild(self::FIELDS['price'], $this->getPrice());
+        $data->addChild(self::FIELDS['price'], $this->getPrice() . 'zł');
 
         $tracksXml = $data->addChild(self::FIELDS['tracks']);
 
