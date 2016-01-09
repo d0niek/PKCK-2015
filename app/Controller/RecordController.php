@@ -11,6 +11,7 @@ namespace Controller;
 use DateTime;
 use Entity\Record\Record;
 use Entity\Record\Track;
+use Form\DeleteRecordForm;
 use Form\RecordForm;
 
 class RecordController extends Controller
@@ -91,9 +92,22 @@ class RecordController extends Controller
         );
     }
 
-    public function deleteAction()
+    public function deleteAction($id)
     {
-        echo 'Delete record';
+        $record = $this->getCollection()->findRecordById($id);
+
+        $form = new DeleteRecordForm($this->getCollection());
+
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $this->redirect($this->getBaseUrl());
+        }
+
+        $this->render(
+            'delete-record.php',
+            [
+                'record' => $record,
+            ]
+        );
     }
 
     /**
