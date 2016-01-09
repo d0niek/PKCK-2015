@@ -49,8 +49,12 @@ abstract class Form
      */
     private function validField($fieldValue, $fieldName, array $validInformation)
     {
-        if (empty($fieldValue) && $validInformation['required'] === true) {
-            throw new Exception('Required field "' . $fieldName . '" is empty');
+        if (empty($fieldValue)) {
+            if ($validInformation['required'] === true) {
+                throw new Exception('Required field "' . $fieldName . '" is empty');
+            }
+
+            return;
         }
 
         switch ($validInformation['type']) {
