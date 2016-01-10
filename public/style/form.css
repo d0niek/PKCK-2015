@@ -31,3 +31,8 @@
     margin: 0;
     padding: 5px 10px;
 }
+
+.go-back {
+    color: rgb(65, 106, 255);
+    text-decoration: none;
+}

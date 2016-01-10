@@ -84,6 +84,8 @@
     <div class="form-group">
         <input type="submit" value="Edytuj płytę">
     </div>
+
+    <a class="go-back" href="<?php echo $baseUrl; ?>">← Wróć</a>
 </form>
 
 <?php require_once("$basePath/footer.php"); ?>

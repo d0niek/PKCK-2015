@@ -22,4 +22,6 @@
     <input type="submit" value="Usuń wykonawcę">
 </form>
 
+<a class="go-back" href="<?php echo "$baseUrl/performers"; ?>">← Wróć</a>
+
 <?php require_once("$basePath/footer.php"); ?>

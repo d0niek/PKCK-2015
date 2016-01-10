@@ -39,4 +39,6 @@
     <input type="submit" value="Usuń płytę">
 </form>
 
+<a class="go-back" href="<?php echo $baseUrl; ?>">← Wróć</a>
+
 <?php require_once("$basePath/footer.php"); ?>

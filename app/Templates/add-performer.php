@@ -38,6 +38,8 @@
     <div class="form-group">
         <input type="submit" value="Dodaj wykonawcę">
     </div>
+
+    <a class="go-back" href="<?php echo "$baseUrl/performers"; ?>">← Wróć</a>
 </form>
 
 <?php require_once("$basePath/footer.php"); ?>
