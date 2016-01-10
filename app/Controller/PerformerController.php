@@ -40,7 +40,7 @@ class PerformerController extends Controller
 
                 $this->getKernel()->saveCollection();
 
-                $this->redirect($this->getBaseUrl());
+                $this->redirect($this->getBaseUrl() . '/performers');
             } catch (Exception $e) {
                 $_SESSION['validMessage'] = $e->getMessage();
             }
@@ -76,7 +76,7 @@ class PerformerController extends Controller
 
                 $this->getKernel()->saveCollection();
 
-                $this->redirect($this->getBaseUrl());
+                $this->redirect($this->getBaseUrl() . '/performers');
             } catch (Exception $e) {
                 $_SESSION['validMessage'] = $e->getMessage();
             }
@@ -103,7 +103,7 @@ class PerformerController extends Controller
 
             $this->getKernel()->saveCollection();
 
-            $this->redirect($this->getBaseUrl());
+            $this->redirect($this->getBaseUrl() . '/performers');
         }
 
         $this->render(

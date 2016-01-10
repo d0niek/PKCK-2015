@@ -10,7 +10,7 @@
     <?php unset($_SESSION['validMessage']); ?>
 <?php endif; ?>
 
-<form id="add-performer-form" action="<?php echo "$baseUrl/add-performer"; ?>" method="post">
+<form id="add-performer-form" action="<?php echo "$baseUrl/performer/add"; ?>" method="post">
     <div class="form-group">
         <label>Nazwa</label>
         <input type="text" title="name" name="name"

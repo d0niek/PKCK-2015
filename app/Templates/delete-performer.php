@@ -15,7 +15,8 @@
     <h3><?php echo $performer->getName(); ?></h3>
 </div>
 
-<form id="delete-performer-form" action="<?php echo "$baseUrl/delete-performer/" . $performer->getId(); ?>" method="post">
+<form id="delete-performer-form" action="<?php echo "$baseUrl/performer/delete/" . $performer->getId(); ?>"
+    method="post">
     <input type="hidden" title="performerId" name="performerId" value="<?php echo $performer->getId(); ?>">
 
     <input type="submit" value="Usuń wykonawcę">

@@ -10,7 +10,7 @@
     <?php unset($_SESSION['validMessage']); ?>
 <?php endif; ?>
 
-<form id="edit-performer-form" action="<?php echo "$baseUrl/edit-performer/" . $performer->getId(); ?>"
+<form id="edit-performer-form" action="<?php echo "$baseUrl/performer/edit/" . $performer->getId(); ?>"
     method="post">
     <div class="form-group">
         <label>Nazwa</label>

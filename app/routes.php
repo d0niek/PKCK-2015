@@ -33,17 +33,17 @@ return [
         'action' => 'index',
     ],
     [
-        'route' => 'add-performer',
+        'route' => 'performer/add',
         'controller' => 'Performer',
         'action' => 'add',
     ],
     [
-        'route' => 'edit-performer/{id}',
+        'route' => 'performer/edit/{id}',
         'controller' => 'Performer',
         'action' => 'edit',
     ],
     [
-        'route' => 'delete-performer/{id}',
+        'route' => 'performer/delete/{id}',
         'controller' => 'Performer',
         'action' => 'delete',
     ],
