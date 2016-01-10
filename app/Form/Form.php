@@ -90,7 +90,9 @@ abstract class Form
                 break;
 
             case self::FIELD_ENTITY:
-                $this->collection->findPerformerById($fieldValue);
+                $method = 'find' . $options['entity'] . 'ById';
+
+                $this->collection->$method($fieldValue);
                 break;
         }
     }
@@ -125,6 +127,16 @@ abstract class Form
 
         if ($options['type'] === self::FIELD_REGEXP && !isset($options['pattern'])) {
             throw new Exception('Field "' . $fieldName . '" is regexp type but dose not have pattern');
+        }
+
+        if ($options['type'] === self::FIELD_ENTITY) {
+            if (!isset($options['entity'])) {
+                throw new Exception('Field "' . $fieldName . '" dose not have assigned entity');
+            }
+
+            if ($options['entity'] !== 'Record' && $options['entity'] !== 'Performer') {
+                throw new Exception('Unknown entity type ' . $options['entity']);
+            }
         }
 
         $options['value'] = '';

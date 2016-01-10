@@ -18,6 +18,7 @@ class DeleteRecordForm extends Form
         $this
             ->addField('recordId', [
                 'type' => self::FIELD_ENTITY,
+                'entity' => 'Record',
                 'required' => true,
             ]);
     }

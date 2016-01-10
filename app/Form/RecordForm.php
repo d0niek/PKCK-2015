@@ -15,7 +15,8 @@ class RecordForm extends Form
         $this
             ->addField('title')
             ->addField('performers', [
-                'type' => self::FIELD_ENTITY
+                'type' => self::FIELD_ENTITY,
+                'entity' => 'Performer',
             ])
             ->addField('release', [
                 'type' => self::FIELD_REGEXP,
