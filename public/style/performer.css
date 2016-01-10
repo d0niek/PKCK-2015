@@ -1,6 +1,52 @@
-h2#add-performer-title, h2#edit-performer-title {
+h2#performers-title, h2#add-performer-title, h2#edit-performer-title {
     color: rgb(255, 255, 255);
     position: fixed;
+}
+
+div.performer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin: 15px auto;
+    padding: 15px;
+    position: relative;
+    width: 500px;
+}
+
+div.performer > p {
+    font-weight: bold;
+    margin: 0;
+}
+
+div.performer > p.name:before, div.performer > p.type:before, div.performer > p.members:before {
+    content: "Nazwa: ";
+    display: inline-block;
+    font-weight: normal;
+    width: 90px;
+}
+
+div.performer > p.type:before {
+    content: "Gatunek: ";
+}
+
+div.performer > p.members:before {
+    content: "Członków: ";
+}
+
+div.performer > div.options {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.performer .options .edit, .performer .options .delete {
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(0, 255, 57);
+}
+
+.performer .options .delete {
+    color: rgb(134, 0, 0);
 }
 
 form#add-performer-form, form#edit-performer-form {
@@ -9,6 +55,18 @@ form#add-performer-form, form#edit-performer-form {
     margin: 15px auto;
     padding: 15px;
     width: 500px;
+}
+
+a#add-new-performer {
+    background-color: rgb(65, 106, 255);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 15px;
+    text-decoration: none;
+    width: 250px;
 }
 
 .form-group > label {
