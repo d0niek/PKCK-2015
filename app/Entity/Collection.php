@@ -86,6 +86,8 @@ class Collection implements XmlEntity
      * Add new performer
      *
      * @param \Entity\Record\Performer $performer
+     *
+     * @throws \Exception
      */
     public function addPerformer(Performer $performer)
     {
@@ -93,6 +95,10 @@ class Collection implements XmlEntity
             $performerId = 0;
 
             foreach ($this->performers as $p) {
+                if ($p->getName() === $performer->getName()) {
+                    throw new Exception('Performer with name ' . $p->getName() . ' already is in collection');
+                }
+
                 $id = substr($p->getId(), 3);
 
                 if ($id > $performerId) {
@@ -128,7 +134,7 @@ class Collection implements XmlEntity
         }
 
         foreach ($data->{self::FIELDS['performers']}->children() as $performerXml) {
-            $collection->addPerformer(Performer::loadFromXml($performerXml));
+            $collection->performers[] = Performer::loadFromXml($performerXml);
         }
 
         $collection->setRelationships();

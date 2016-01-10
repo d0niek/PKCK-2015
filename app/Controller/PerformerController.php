@@ -9,6 +9,7 @@
 namespace Controller;
 
 use Entity\Record\Performer;
+use Exception;
 use Form\PerformerForm;
 
 class PerformerController extends Controller
@@ -33,11 +34,15 @@ class PerformerController extends Controller
             $performer->setType($_POST['type']);
             $performer->setMembers($_POST['members']);
 
-            $this->getCollection()->addPerformer($performer);
+            try {
+                $this->getCollection()->addPerformer($performer);
 
-            $this->getKernel()->saveCollection();
+                $this->getKernel()->saveCollection();
 
-            $this->redirect($this->getBaseUrl());
+                $this->redirect($this->getBaseUrl());
+            } catch (Exception $e) {
+                $_SESSION['validMessage'] = $e->getMessage();
+            }
         }
 
         $this->render(
