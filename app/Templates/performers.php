@@ -9,7 +9,7 @@
         <p class="name"><?php echo $performer->getName(); ?></p>
         <p class="type"><?php echo $performer->getType(); ?></p>
         <p class="members"><?php echo $performer->getMembers(); ?></p>
-
+        <p class="records"><?php echo count($performer->getRecords()); ?></p>
 
         <div class="options">
             <a class="edit" href="<?php echo "$baseUrl/performer/edit/" . $performer->getId(); ?>">

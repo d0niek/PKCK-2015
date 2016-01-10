@@ -18,11 +18,14 @@ div.performer > p {
     margin: 0;
 }
 
-div.performer > p.name:before, div.performer > p.type:before, div.performer > p.members:before {
+div.performer > p.name:before,
+div.performer > p.type:before,
+div.performer > p.members:before,
+div.performer > p.records:before{
     content: "Nazwa: ";
     display: inline-block;
     font-weight: normal;
-    width: 90px;
+    width: 130px;
 }
 
 div.performer > p.type:before {
@@ -31,6 +34,10 @@ div.performer > p.type:before {
 
 div.performer > p.members:before {
     content: "Członków: ";
+}
+
+div.performer > p.records:before {
+    content: "Wydanych płyt: ";
 }
 
 div.performer > div.options {
