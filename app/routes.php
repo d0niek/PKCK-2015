@@ -33,12 +33,12 @@ return [
         'action' => 'index',
     ],
     [
-        'route' => 'performer/add',
+        'route' => 'add-performer',
         'controller' => 'Performer',
         'action' => 'add',
     ],
     [
-        'route' => 'performer/edit/{id}',
+        'route' => 'edit-performer/{id}',
         'controller' => 'Performer',
         'action' => 'edit',
     ],
