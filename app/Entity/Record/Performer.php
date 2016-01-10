@@ -65,6 +65,9 @@ class Performer implements XmlEntity
         }
     }
 
+    /**
+     * Clear records list
+     */
     public function clearRecords()
     {
         $this->records = [];
