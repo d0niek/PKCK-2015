@@ -77,6 +77,8 @@ class Collection implements XmlEntity
             if ($this->records[$i]->getId() === $record->getId()) {
                 unset($this->records[$i]);
 
+                $this->records = array_values($this->records);
+
                 break;
             }
         }
