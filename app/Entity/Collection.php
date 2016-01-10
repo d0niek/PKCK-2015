@@ -89,6 +89,24 @@ class Collection implements XmlEntity
      */
     public function addPerformer(Performer $performer)
     {
+        if (count($this->performers) > 0) {
+            $performerId = 0;
+
+            foreach ($this->performers as $p) {
+                $id = substr($p->getId(), 3);
+
+                if ($id > $performerId) {
+                    $performerId = $id;
+                }
+            }
+
+            $performerId++;
+        } else {
+            $performerId = 1;
+        }
+
+        $performer->setId("WYK$performerId");
+
         $this->performers[] = $performer;
     }
 

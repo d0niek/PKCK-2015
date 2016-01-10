@@ -8,6 +8,7 @@
 
 namespace Controller;
 
+use Entity\Record\Performer;
 use Form\PerformerForm;
 
 class PerformerController extends Controller
@@ -27,6 +28,15 @@ class PerformerController extends Controller
         $form = new PerformerForm($this->getCollection());
 
         if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $performer = new Performer();
+            $performer->setName($_POST['name']);
+            $performer->setType($_POST['type']);
+            $performer->setMembers($_POST['members']);
+
+            $this->getCollection()->addPerformer($performer);
+
+            $this->getKernel()->saveCollection();
+
             $this->redirect($this->getBaseUrl());
         }
 
