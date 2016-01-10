@@ -1,4 +1,4 @@
-h2#performers-title, h2#add-performer-title, h2#edit-performer-title {
+h2#performers-title, h2#add-performer-title, h2#edit-performer-title, h2#delete-performer-title {
     color: rgb(255, 255, 255);
     position: fixed;
 }

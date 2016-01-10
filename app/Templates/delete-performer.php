@@ -1,7 +1,7 @@
 <?php require_once("$basePath/header.php"); ?>
 
-<link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/style.css">
 <link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/form.css">
+<link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/performer.css">
 <link rel="stylesheet" href="<?php echo $baseUrl; ?>/style/delete-performer.css">
 
 <h2 id="delete-performer-title">Delete performer</h2>
@@ -12,7 +12,16 @@
 <?php endif; ?>
 
 <div id="<?php echo $performer->getId(); ?>" class="performer">
-    <h3><?php echo $performer->getName(); ?></h3>
+    <p class="name"><?php echo $performer->getName(); ?></p>
+    <p class="type"><?php echo $performer->getType(); ?></p>
+    <p class="members"><?php echo $performer->getMembers(); ?></p>
+
+
+    <div class="options">
+        <a class="edit" href="<?php echo "$baseUrl/performer/edit/" . $performer->getId(); ?>">
+            Edit
+        </a>
+    </div>
 </div>
 
 <form id="delete-performer-form" action="<?php echo "$baseUrl/performer/delete/" . $performer->getId(); ?>"
