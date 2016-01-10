@@ -56,11 +56,61 @@ class PerformerController extends Controller
 
     public function editAction($id)
     {
-        echo 'Edit performer';
+        $performer = $this->getCollection()->findPerformerById($id);
+
+        $form = new PerformerForm($this->getCollection());
+
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            try {
+                $performer->setType($_POST['type']);
+                $performer->setMembers($_POST['members']);
+
+                if ($performer->getName() !== $_POST['name'] && !$this->isPerformerNameFree($_POST['name'])) {
+                    throw new Exception(
+                        'Performer with name ' . $_POST['name'] . ' already is in collection'
+                    );
+                }
+
+                $performer->setName($_POST['name']);
+
+                $this->getKernel()->saveCollection();
+
+                $this->redirect($this->getBaseUrl());
+            } catch (Exception $e) {
+                $_SESSION['validMessage'] = $e->getMessage();
+            }
+        }
+
+        $this->render(
+            'edit-performer.php',
+            [
+                'form' => $form,
+                'types' => explode('|', 'metal|rock|rap|hip-hop|drum-and-bass|disco-polo|art-pop|sludge|indie'),
+                'performer' => $performer,
+            ]
+        );
     }
 
     public function deleteAction($id)
     {
         echo 'Delete performer';
+    }
+
+    /**
+     * Checks if performer name is free
+     *
+     * @param string $performerName
+     *
+     * @return bool
+     */
+    private function isPerformerNameFree($performerName)
+    {
+        foreach ($this->getCollection()->getPerformers() as $p) {
+            if ($p->getName() === $performerName) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
