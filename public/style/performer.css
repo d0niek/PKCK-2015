@@ -1,0 +1,41 @@
+h2#add-performer-title, h2#edit-performer-title {
+    color: rgb(255, 255, 255);
+    position: fixed;
+}
+
+form#add-performer-form, form#edit-performer-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin: 15px auto;
+    padding: 15px;
+    width: 500px;
+}
+
+.form-group > label {
+    display: inline-block;
+    width: 140px;
+}
+
+.form-group input {
+    width: 300px;
+}
+
+.form-group select {
+    width: 321px;
+}
+
+.form-group input[title="members"] {
+    width: 77px;
+}
+
+.form-group input[type="submit"] {
+    background-color: rgb(37, 171, 37);
+    border: 0;
+    color: rgb(255,255,255);
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin: 20px auto;
+    padding: 10px 15px;
+    width: auto;
+}
