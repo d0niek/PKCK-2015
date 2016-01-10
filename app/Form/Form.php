@@ -16,6 +16,7 @@ abstract class Form
     const FIELD_SIMPLE = 'simple';
     const FIELD_REGEXP = 'regexp';
     const FIELD_ENTITY = 'entity';
+    const FIELD_NUMBER = 'number';
 
     /** @var array $fields */
     private $fields = [];
@@ -81,6 +82,12 @@ abstract class Form
 
         switch ($options['type']) {
             case self::FIELD_SIMPLE:
+                break;
+
+            case self::FIELD_NUMBER:
+                if (is_numeric($fieldValue)) {
+                    throw new Exception('Field "' . $fieldName . '" should be an number');
+                }
                 break;
 
             case self::FIELD_REGEXP:
