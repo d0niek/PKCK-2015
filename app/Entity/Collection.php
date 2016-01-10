@@ -91,26 +91,28 @@ class Collection implements XmlEntity
      */
     public function addPerformer(Performer $performer)
     {
-        {
-            if (count($this->performers) > 0) {
-                $performerId = 0;
-                foreach ($this->performers as $p) {
-                    if ($p->getName() === $performer->getName()) {
-                        throw new Exception('Performer with name ' . $p->getName() . ' already is in collection');
-                    }
-                    $id = substr($p->getId(), 3);
-                    if ($id > $performerId) {
-                        $performerId = $id;
-                    }
+        if (count($this->performers) > 0) {
+            $performerId = 0;
+
+            foreach ($this->performers as $p) {
+                if ($p->getName() === $performer->getName()) {
+                    throw new Exception('Performer with name ' . $p->getName() . ' already is in collection');
                 }
-                $performerId++;
-            } else {
-                $performerId = 1;
+
+                $id = substr($p->getId(), 3);
+
+                if ($id > $performerId) {
+                    $performerId = $id;
+                }
             }
-            $performer->setId("WYK$performerId");
-            $this->performers[] = $performer;
+            $performerId++;
+        } else {
+            $performerId = 1;
         }
 
+        $performer->setId("WYK$performerId");
+
+        $this->performers[] = $performer;
     }
 
     /**
@@ -120,11 +122,10 @@ class Collection implements XmlEntity
      */
     public function deletePerformer(Performer $performer)
     {
-        if(!count($performer->getRecords())){
-            foreach ($performer->getRecords() as $record) {
-                $this->deleteRecord($record);
-            }
+        foreach ($performer->getRecords() as $record) {
+            $this->deleteRecord($record);
         }
+
         for ($i = 0; $i < count($this->performers); $i++) {
             if ($this->performers[$i]->getId() === $performer->getId()) {
                 unset($this->performers[$i]);
