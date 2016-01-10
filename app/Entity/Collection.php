@@ -67,6 +67,22 @@ class Collection implements XmlEntity
     }
 
     /**
+     * Delete record from list
+     *
+     * @param \Entity\Record\Record $record
+     */
+    public function deleteRecord(Record $record)
+    {
+        for ($i = 0; $i < count($this->records); $i++) {
+            if ($this->records[$i]->getId() === $record->getId()) {
+                unset($this->records[$i]);
+
+                break;
+            }
+        }
+    }
+
+    /**
      * Add new performer
      *
      * @param \Entity\Record\Performer $performer

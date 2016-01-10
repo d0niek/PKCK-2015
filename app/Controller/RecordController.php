@@ -99,6 +99,12 @@ class RecordController extends Controller
         $form = new DeleteRecordForm($this->getCollection());
 
         if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $record->getPerformer()->deleteRecord($record);
+
+            $this->getCollection()->deleteRecord($record);
+
+            $this->getKernel()->saveCollection();
+
             $this->redirect($this->getBaseUrl());
         }
 
