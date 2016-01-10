@@ -43,7 +43,7 @@ return [
         'action' => 'edit',
     ],
     [
-        'route' => 'performer/delete/{id}',
+        'route' => 'delete-performer/{id}',
         'controller' => 'Performer',
         'action' => 'delete',
     ],

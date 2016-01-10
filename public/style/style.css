@@ -1,4 +1,4 @@
-div#container > .record, div#container > #add-new-record {
+div#container > .record, div#container > #add-new-record, div#container > a#add-new-performer {
     color: rgb(255, 255, 255);
     float: left;
     font-weight: bold;
@@ -108,6 +108,15 @@ div#container > .record, div#container > #add-new-record {
 
 div#container > #add-new-record {
     background-color: rgb(17, 33, 17);
+    font-size: 30px;
+    height: 248px;
+    padding-top: 237px;
+    text-decoration: none;
+    text-align: center;
+}
+
+div#container > #add-new-performer {
+    background-color: rgb(33, 16, 11);
     font-size: 30px;
     height: 248px;
     padding-top: 237px;

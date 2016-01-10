@@ -11,6 +11,7 @@ namespace Controller;
 use Entity\Record\Performer;
 use Exception;
 use Form\PerformerForm;
+use Form\DeletePerformerForm;
 
 class PerformerController extends Controller
 {
@@ -93,7 +94,24 @@ class PerformerController extends Controller
 
     public function deleteAction($id)
     {
-        echo 'Delete performer';
+        $performer = $this->getCollection()->findPerformerById($id);
+
+        $form = new DeletePerformerForm($this->getCollection());
+
+        if ($_SERVER["REQUEST_METHOD"] === 'POST' && $form->valid($_POST)) {
+            $this->getCollection()->deletePerformer($performer);
+
+            $this->getKernel()->saveCollection();
+
+            $this->redirect($this->getBaseUrl());
+        }
+
+        $this->render(
+            'delete-performer.php',
+            [
+                'performer' => $performer,
+            ]
+        );
     }
 
     /**

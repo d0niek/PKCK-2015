@@ -28,5 +28,6 @@
 <?php endforeach; ?>
 
 <a id="add-new-record" href="<?php echo $baseUrl; ?>/add-record">Dodaj nową płytę</a>
+<a id="add-new-performer" href="<?php echo $baseUrl; ?>/performers">Edytuj wykonawców</a>
 
 <?php require_once("$basePath/footer.php"); ?>
