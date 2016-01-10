@@ -85,7 +85,7 @@ abstract class Form
                 break;
 
             case self::FIELD_NUMBER:
-                if (is_numeric($fieldValue)) {
+                if (!is_numeric($fieldValue)) {
                     throw new Exception('Field "' . $fieldName . '" should be an number');
                 }
                 break;
