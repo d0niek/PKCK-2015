@@ -197,8 +197,14 @@ class Collection implements XmlEntity
 
         // Set relationships fot performers
         foreach ($this->performers as $performer) {
-            foreach ($performer->getRecords() as &$record) {
+            $records = $performer->getRecords();
+
+            $performer->clearRecords();
+
+            foreach ($records as $record) {
                 $record = $this->findRecordById($record);
+
+                $performer->addRecord($record);
             }
         }
     }

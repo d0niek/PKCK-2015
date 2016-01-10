@@ -65,6 +65,11 @@ class Performer implements XmlEntity
         }
     }
 
+    public function clearRecords()
+    {
+        $this->records = [];
+    }
+
     /**
      * Read xml tags and return entity object
      *
