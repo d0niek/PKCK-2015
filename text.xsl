@@ -18,7 +18,7 @@
     <xsl:variable name="rtCorner" select="'╗'" />
     <xsl:variable name="rbCorner" select="'╝'" />
     <xsl:variable name="lhLine" select="'─'" />
-    <xsl:variable name="width" select="50" />
+    <xsl:variable name="width" select="90" />
 
     <xsl:template match="/">
         <xsl:apply-templates />
@@ -77,7 +77,27 @@
             <xsl:with-param name="nesting" select="1" />
         </xsl:call-template>
 
+        <xsl:call-template name="topFrame">
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="title" select="''" />
+            <xsl:with-param name="nesting" select="2" />
+        </xsl:call-template>
+
+        <xsl:call-template name="textInTable">
+            <xsl:with-param name="recordName" select="'Tytuł'" />
+            <xsl:with-param name="ranking" select="'Ranking'" />
+            <xsl:with-param name="tracks" select="'Liczba utworów'" />
+            <xsl:with-param name="time" select="'Czas trwania'" />
+            <xsl:with-param name="price" select="'Cena (VAT)'" />
+            <xsl:with-param name="nesting" select="2" />
+        </xsl:call-template>
+
         <xsl:apply-templates select="płyty/płyta" />
+
+        <xsl:call-template name="bottomFrame">
+            <xsl:with-param name="length" select="$width" />
+            <xsl:with-param name="nesting" select="2" />
+        </xsl:call-template>
 
         <xsl:call-template name="bottomFrame">
             <xsl:with-param name="length" select="$width" />
@@ -86,38 +106,12 @@
     </xsl:template>
 
     <xsl:template match="/kolekcja/wykonawcy/wykonawca/płyty/płyta">
-        <xsl:call-template name="topFrame">
-            <xsl:with-param name="length" select="$width" />
-            <xsl:with-param name="title" select="concat(' ', tytuł, ' ')" />
-            <xsl:with-param name="nesting" select="2" />
-        </xsl:call-template>
-
-        <xsl:call-template name="textInFrame">
-            <xsl:with-param name="text" select="concat('Ranking: ', ranking)" />
-            <xsl:with-param name="length" select="$width" />
-            <xsl:with-param name="nesting" select="2" />
-        </xsl:call-template>
-
-        <xsl:call-template name="textInFrame">
-            <xsl:with-param name="text" select="concat('Liczba utworów: ', liczba_utworów)" />
-            <xsl:with-param name="length" select="$width" />
-            <xsl:with-param name="nesting" select="2" />
-        </xsl:call-template>
-
-        <xsl:call-template name="textInFrame">
-            <xsl:with-param name="text" select="concat('Czas trwania: ', czas_trwania)" />
-            <xsl:with-param name="length" select="$width" />
-            <xsl:with-param name="nesting" select="2" />
-        </xsl:call-template>
-
-        <xsl:call-template name="textInFrame">
-            <xsl:with-param name="text" select="concat('Cena: ', cena/brutto, ' (VAT ', cena/VAT, ')')" />
-            <xsl:with-param name="length" select="$width" />
-            <xsl:with-param name="nesting" select="2" />
-        </xsl:call-template>
-
-        <xsl:call-template name="bottomFrame">
-            <xsl:with-param name="length" select="$width" />
+        <xsl:call-template name="textInTable">
+            <xsl:with-param name="recordName" select="tytuł" />
+            <xsl:with-param name="ranking" select="ranking" />
+            <xsl:with-param name="tracks" select="liczba_utworów" />
+            <xsl:with-param name="time" select="czas_trwania" />
+            <xsl:with-param name="price" select="concat(cena/brutto, ' (', cena/VAT, ')')" />
             <xsl:with-param name="nesting" select="2" />
         </xsl:call-template>
     </xsl:template>
@@ -184,6 +178,52 @@
             <xsl:with-param name="length" select="$width" />
             <xsl:with-param name="nesting" select="1" />
         </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="textInTable">
+        <xsl:param name="recordName" />
+        <xsl:param name="ranking" />
+        <xsl:param name="tracks" />
+        <xsl:param name="time" />
+        <xsl:param name="price" />
+        <xsl:param name="nesting" />
+
+        <xsl:call-template name="repeat">
+            <xsl:with-param name="char" select="$vLine" />
+            <xsl:with-param name="length" select="$nesting" />
+        </xsl:call-template>
+
+        <xsl:value-of select="$vLine" />
+
+        <xsl:call-template name="textInWidth">
+            <xsl:with-param name="text" select="$recordName" />
+            <xsl:with-param name="colWidth" select="30" />
+        </xsl:call-template>
+        <xsl:call-template name="textInWidth">
+            <xsl:with-param name="text" select="$ranking" />
+            <xsl:with-param name="colWidth" select="8" />
+        </xsl:call-template>
+        <xsl:call-template name="textInWidth">
+            <xsl:with-param name="text" select="$tracks" />
+            <xsl:with-param name="colWidth" select="15" />
+        </xsl:call-template>
+        <xsl:call-template name="textInWidth">
+            <xsl:with-param name="text" select="$time" />
+            <xsl:with-param name="colWidth" select="13" />
+        </xsl:call-template>
+        <xsl:call-template name="textInWidth">
+            <xsl:with-param name="text" select="$price" />
+            <xsl:with-param name="colWidth" select="20" />
+        </xsl:call-template>
+
+        <xsl:value-of select="$vLine" />
+
+        <xsl:call-template name="repeat">
+            <xsl:with-param name="char" select="$vLine" />
+            <xsl:with-param name="length" select="$nesting" />
+        </xsl:call-template>
+
+        <xsl:value-of select="$endl" />
     </xsl:template>
 
     <xsl:template name="topFrame">
@@ -271,6 +311,30 @@
         </xsl:call-template>
 
         <xsl:value-of select="$endl" />
+    </xsl:template>
+
+    <xsl:template name="textInWidth">
+        <xsl:param name="text" />
+        <xsl:param name="colWidth" />
+
+        <xsl:choose>
+            <xsl:when test="string-length($text) &gt; $colWidth">
+                <xsl:value-of select="concat(substring($text, 0, $colWidth - 1), '.')" />
+
+                <xsl:call-template name="line">
+                    <xsl:with-param name="char" select="' '" />
+                    <xsl:with-param name="length" select="1" />
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$text" />
+
+                <xsl:call-template name="line">
+                    <xsl:with-param name="char" select="' '" />
+                    <xsl:with-param name="length" select="$colWidth - string-length($text)" />
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template name="line">
